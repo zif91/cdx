@@ -2933,7 +2933,7 @@ button { font-family: inherit; cursor: pointer; }
   backdrop-filter: blur(10px);
   border: 1px solid var(--ink-line-2);
   border-radius: 18px;
-  max-width: 540px;
+  max-width: 660px;
 }
 .sales-quick-form-label {
   font-family: var(--sans);
@@ -2948,10 +2948,12 @@ button { font-family: inherit; cursor: pointer; }
   content: ""; width: 14px; height: 1px; background: var(--accent);
 }
 .sales-quick-form-row {
-  display: flex; gap: 10px; flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: 10px;
 }
 .sales-quick-form-row input {
-  flex: 1; min-width: 160px;
+  min-width: 0;
   height: 50px;
   padding: 0 18px;
   background: rgba(127,127,127,0.04);
@@ -2962,6 +2964,10 @@ button { font-family: inherit; cursor: pointer; }
   font-size: 14.5px;
   outline: none;
   transition: all .3s;
+  width: 100%;
+}
+@media (max-width: 680px) {
+  .sales-quick-form-row { grid-template-columns: 1fr; }
 }
 .sales-quick-form-row input:focus {
   border-color: var(--accent);
