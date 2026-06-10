@@ -1,0 +1,676 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>ТР ТС 037/2016 «Об ограничении применения опасных веществ в изделиях электротехники» — CDX</title>
+<meta name="description" content="Технический регламент Таможенного союза ТР ТС 037/2016 («RoHS ЕАЭС»). Полный текст, дата принятия, область применения, схемы оценки соответствия." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;500;600;700;800&family=Onest:wght@300;400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap&subset=cyrillic,cyrillic-ext,latin,latin-ext" rel="stylesheet" />
+<link rel="stylesheet" href="cdx.css">
+
+<style>
+  .npa-layout {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: clamp(40px, 5vw, 80px);
+    align-items: start;
+  }
+  @media (max-width: 1100px) {
+    .npa-layout { grid-template-columns: 1fr; }
+  }
+
+  /* Big NPA banner card */
+  .npa-banner {
+    padding: 36px 40px;
+    background: linear-gradient(135deg, var(--ink-elev) 0%, var(--ink-bg-2) 100%);
+    border: 1px solid var(--ink-line-2);
+    border-radius: 20px;
+    margin-bottom: 48px;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 36px;
+    align-items: center;
+  }
+  @media (max-width: 800px) {
+    .npa-banner { grid-template-columns: 1fr; padding: 28px 24px; }
+  }
+  .npa-banner-stamp {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 12px;
+    background: color-mix(in oklab, var(--accent) 14%, transparent);
+    border: 1px solid color-mix(in oklab, var(--accent) 40%, transparent);
+    border-radius: 999px;
+    font-family: var(--sans);
+    font-weight: 500;
+    font-size: 11px;
+    color: var(--accent-soft);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 18px;
+  }
+  .npa-banner-stamp.warn {
+    background: color-mix(in oklab, var(--warm) 14%, transparent);
+    border-color: color-mix(in oklab, var(--warm) 40%, transparent);
+    color: var(--warm);
+  }
+  .npa-banner-stamp::before {
+    content: ""; width: 6px; height: 6px; border-radius: 50%;
+    background: currentColor;
+  }
+  .npa-banner-num {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--fg-400);
+    letter-spacing: 0.04em;
+    margin-bottom: 12px;
+  }
+  .npa-banner-title {
+    font-family: var(--display);
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    color: var(--fg-100);
+    margin: 0;
+  }
+  .npa-banner-actions {
+    display: flex; flex-direction: column; gap: 10px;
+  }
+
+  /* Document info card */
+  .doc-info {
+    padding: 24px 26px;
+    background: var(--ink-elev);
+    border: 1px solid var(--ink-line);
+    border-radius: 16px;
+    position: sticky;
+    top: 100px;
+  }
+  .doc-info-title {
+    font-family: var(--sans);
+    font-weight: 500;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--fg-400);
+    margin: 0 0 18px;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .doc-info-title::before {
+    content: ""; width: 14px; height: 1px; background: var(--accent);
+  }
+  .doc-info dl {
+    margin: 0;
+    display: flex; flex-direction: column;
+    gap: 14px;
+  }
+  .doc-info > dl > div {
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--ink-line);
+  }
+  .doc-info > dl > div:last-child { border-bottom: none; padding-bottom: 0; }
+  .doc-info dt {
+    font-family: var(--sans);
+    font-size: 11px;
+    color: var(--fg-400);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .doc-info dd {
+    margin: 0;
+    font-family: var(--display);
+    font-weight: 500;
+    font-size: 14.5px;
+    color: var(--fg-100);
+    letter-spacing: -0.01em;
+    line-height: 1.4;
+  }
+  .doc-info dd .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 3px 9px;
+    border-radius: 999px;
+    font-family: var(--sans);
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: 0;
+  }
+  .doc-info dd .badge.live {
+    background: color-mix(in oklab, var(--live) 14%, transparent);
+    color: var(--live);
+  }
+  .doc-info dd .badge.live::before {
+    content: ""; width: 5px; height: 5px; border-radius: 50%; background: var(--live);
+  }
+
+  /* Article navigation inside NPA */
+  .articles-toc {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+    border-left: 1px solid var(--ink-line);
+    border-top: 1px solid var(--ink-line);
+    margin-top: 24px;
+  }
+  .article-link {
+    padding: 18px 22px;
+    border-right: 1px solid var(--ink-line);
+    border-bottom: 1px solid var(--ink-line);
+    display: flex;
+    gap: 14px;
+    background: var(--ink-bg-2);
+    transition: all .3s;
+  }
+  .article-link:hover { background: var(--ink-elev); }
+  .article-link-num {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--fg-500);
+    letter-spacing: 0.04em;
+    flex-shrink: 0;
+    padding-top: 2px;
+    min-width: 38px;
+  }
+  .article-link-title {
+    font-family: var(--display);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+    color: var(--fg-100);
+  }
+  @media (max-width: 680px) {
+    .articles-toc { grid-template-columns: 1fr; }
+    .article-link { border-right: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-mono">
+        <svg viewBox="0 0 200 200" aria-hidden="true">
+          <rect x="0" y="0" width="200" height="200" rx="40" fill="#042C53"/>
+          <text x="100" y="138" font-family="Inter, -apple-system, sans-serif" font-weight="500" font-size="86" letter-spacing="-3" fill="#FFFFFF" text-anchor="middle">CD<tspan fill="#378ADD">X</tspan></text>
+        </svg>
+      </span>
+      <span class="brand-suffix">Customs · Delivery<br>Compliance</span>
+    </a>
+    <div class="nav-links">
+      <a href="services.html">Услуги</a>
+      <a href="reference.html">Справочник</a>
+      <a href="about.html">О компании</a>
+      <a href="blog.html">Блог</a>
+      <a href="contacts.html">Контакты</a>
+    </div>
+    <div class="nav-right">
+      <a href="tel:+74952483800" class="nav-phone"><span class="pulse"></span>+7 (495) 248-38-00</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Сменить тему">
+        <svg class="ico-moon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <path d="M13 9.5 A6 6 0 1 1 6.5 3 A4.5 4.5 0 0 0 13 9.5 Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+        </svg>
+        <svg class="ico-sun" width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <circle cx="8" cy="8" r="3.2" stroke="currentColor" stroke-width="1.4"/>
+          <path d="M8 1.5 V3 M8 13 V14.5 M1.5 8 H3 M13 8 H14.5 M3.5 3.5 L4.5 4.5 M11.5 11.5 L12.5 12.5 M3.5 12.5 L4.5 11.5 M11.5 4.5 L12.5 3.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <a href="#cta" class="btn-cta">
+        <span>Оставить заявку</span>
+        <svg class="arrow" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 9 L9 3 M9 3 H4.5 M9 3 V7.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- PAGE HEAD -->
+<section class="page-head">
+  <div class="container">
+    <nav class="breadcrumbs reveal">
+      <a href="index.html">Главная</a>
+      <span class="sep">/</span>
+      <a href="reference.html">Справочник</a>
+      <span class="sep">/</span>
+      <a href="npa-index.html">Нормативные акты</a>
+      <span class="sep">/</span>
+      <a href="npa-index.html">Техническое регулирование ЕАЭС</a>
+      <span class="sep">/</span>
+      <span class="current">ТР ТС 037/2016</span>
+    </nav>
+    <h1 class="page-title reveal" style="max-width:28ch">
+      ТР ТС 037/2016 «Об ограничении применения опасных веществ в изделиях электротехники и радиоэлектроники»
+    </h1>
+    <p class="page-lede reveal">
+      Технический регламент Таможенного союза, устанавливающий ограничения по содержанию свинца, кадмия, ртути, хрома и других опасных веществ в электронике. Российский аналог европейской директивы RoHS.
+    </p>
+    <div class="page-meta reveal">
+      <span class="chip accent">Действующий</span>
+      <span class="chip">Принят 18.10.2016</span>
+      <span class="chip">Вступил в силу 01.03.2018</span>
+      <span class="chip warm">Применяется в ЕАЭС</span>
+    </div>
+  </div>
+</section>
+
+<!-- BODY -->
+<section class="section" style="padding-top: 60px;">
+  <div class="container">
+
+    <!-- Banner card -->
+    <div class="npa-banner reveal">
+      <div>
+        <span class="npa-banner-stamp">Действующий регламент</span>
+        <div class="npa-banner-num">ТР ТС 037/2016 · Решение Совета ЕЭК № 113</div>
+        <h2 class="npa-banner-title">Об ограничении применения опасных веществ в изделиях электротехники и радиоэлектроники</h2>
+      </div>
+      <div class="npa-banner-actions">
+        <a href="#" class="btn btn-primary">
+          <span>Скачать PDF (2.4 МБ)</span>
+          <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path d="M7 2 V10 M3 7 L7 11 L11 7 M2 12 H12" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" fill="none"/>
+          </svg>
+        </a>
+        <a href="#" class="btn btn-ghost">
+          <span>DOCX версия</span>
+        </a>
+        <a href="#" class="btn btn-ghost">
+          <span>Открыть на eaeunion.org</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="npa-layout">
+
+      <div class="prose reveal">
+
+        <h2 id="purpose">Назначение регламента</h2>
+
+        <p>ТР ТС 037/2016 устанавливает обязательные требования к продукции электротехнической и радиоэлектронной промышленности с целью защиты окружающей среды и здоровья человека путём ограничения применения опасных веществ при производстве, а также при утилизации выводимой из эксплуатации продукции.</p>
+
+        <p>Регламент <strong>применяется во всех странах ЕАЭС</strong>: Российская Федерация, Республика Беларусь, Республика Казахстан, Кыргызская Республика, Республика Армения.</p>
+
+        <div class="callout">
+          <div class="callout-title">Простыми словами</div>
+          <p>Любая электроника, которая ввозится или производится в ЕАЭС, должна соответствовать нормам по содержанию опасных веществ. Это аналог европейской директивы RoHS (Restriction of Hazardous Substances). Без соответствия — нет выпуска ТД.</p>
+        </div>
+
+        <h2 id="scope">Область применения</h2>
+
+        <p>Регламент распространяется на следующие категории продукции электротехники и радиоэлектроники, выпускаемой в обращение на территории ЕАЭС:</p>
+
+        <ol>
+          <li>Электробытовые приборы (холодильники, стиральные машины, кухонная техника)</li>
+          <li>Электронно-вычислительные машины и подключаемые к ним устройства</li>
+          <li>Средства электросвязи (телефоны, факсы, модемы, маршрутизаторы)</li>
+          <li>Радиоэлектронная аппаратура бытового назначения</li>
+          <li>Электрифицированный инструмент</li>
+          <li>Светотехнические изделия (лампы, светильники)</li>
+          <li>Электромузыкальные инструменты</li>
+          <li>Игровое оборудование и игрушки с электронными компонентами</li>
+          <li>Кассовые аппараты, банкоматы, торговое оборудование</li>
+          <li>Средства автоматизации и оргтехника</li>
+        </ol>
+
+        <h2 id="limits">Предельные нормы содержания</h2>
+
+        <p>Установлены следующие максимально допустимые концентрации опасных веществ в однородном материале (в массовых долях):</p>
+
+        <table>
+          <thead>
+            <tr><th>Опасное вещество</th><th>Допустимая концентрация</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Свинец (Pb)</td><td>0,1%</td></tr>
+            <tr><td>Кадмий (Cd)</td><td>0,01%</td></tr>
+            <tr><td>Ртуть (Hg)</td><td>0,1%</td></tr>
+            <tr><td>Шестивалентный хром (Cr⁶⁺)</td><td>0,1%</td></tr>
+            <tr><td>Полибромированные бифенилы (PBB)</td><td>0,1%</td></tr>
+            <tr><td>Полибромированные дифениловые эфиры (PBDE)</td><td>0,1%</td></tr>
+          </tbody>
+        </table>
+
+        <h2 id="forms">Формы подтверждения соответствия</h2>
+
+        <p>Подтверждение соответствия требованиям ТР ТС 037/2016 проводится в форме <strong>декларирования</strong> по одной из трёх схем:</p>
+
+        <ul>
+          <li><strong>Схема 1Д</strong> — для серийного выпуска, на основании собственных доказательств</li>
+          <li><strong>Схема 3Д</strong> — для серийного выпуска, на основании протоколов испытаний аккредитованной лаборатории</li>
+          <li><strong>Схема 6Д</strong> — для серийного выпуска, на основании сертификата системы менеджмента качества</li>
+        </ul>
+
+        <p>В большинстве случаев применяется <strong>схема 3Д</strong> — она универсальна и принимается всеми таможенными органами без дополнительных вопросов.</p>
+
+        <h2 id="articles">Структура регламента</h2>
+
+        <p>Документ состоит из основного текста и трёх приложений:</p>
+
+        <nav class="articles-toc">
+          <a href="#" class="article-link">
+            <span class="article-link-num">Ст. 1</span>
+            <span class="article-link-title">Область применения</span>
+          </a>
+          <a href="#" class="article-link">
+            <span class="article-link-num">Ст. 2</span>
+            <span class="article-link-title">Определения</span>
+          </a>
+          <a href="#" class="article-link">
+            <span class="article-link-num">Ст. 3</span>
+            <span class="article-link-title">Правила обращения на рынке</span>
+          </a>
+          <a href="#" class="article-link">
+            <span class="article-link-num">Ст. 4</span>
+            <span class="article-link-title">Требования безопасности</span>
+          </a>
+          <a href="#" class="article-link">
+            <span class="article-link-num">Ст. 5</span>
+            <span class="article-link-title">Обеспечение соответствия</span>
+          </a>
+          <a href="#" class="article-link">
+            <span class="article-link-num">Ст. 6</span>
+            <span class="article-link-title">Подтверждение соответствия</span>
+          </a>
+          <a href="#" class="article-link">
+            <span class="article-link-num">Прил. 1</span>
+            <span class="article-link-title">Перечень изделий, на которые распространяется регламент</span>
+          </a>
+          <a href="#" class="article-link">
+            <span class="article-link-num">Прил. 2</span>
+            <span class="article-link-title">Перечень опасных веществ и нормы их содержания</span>
+          </a>
+        </nav>
+
+        <h2 id="practice" style="margin-top:2em">Практика применения</h2>
+
+        <p>Декларация о соответствии ТР ТС 037/2016 — один из самых частых документов в работе с электроникой. Сроки оформления — от <strong>7 до 14 дней</strong> по схеме 3Д. Стоимость испытаний зависит от количества контролируемых веществ и сложности изделия (от 35 000 до 120 000 ₽).</p>
+
+        <p>На практике большинство современной электроники зарубежных производителей <strong>уже соответствует RoHS</strong>, что упрощает процедуру: достаточно протоколов испытаний материнской компании. CDX переводит и адаптирует эти протоколы под российский регламент за 5–7 дней.</p>
+
+        <hr/>
+
+        <p><em>Нужна декларация о соответствии ТР ТС 037/2016 — оформим под ключ от 35 000 ₽. <a href="contacts.html">Получить расчёт →</a></em></p>
+      </div>
+
+      <aside>
+        <div class="doc-info reveal">
+          <div class="doc-info-title">Реквизиты документа</div>
+          <dl>
+            <div>
+              <dt>Статус</dt>
+              <dd><span class="badge live">действующий</span></dd>
+            </div>
+            <div>
+              <dt>Принят</dt>
+              <dd>Решение Совета ЕЭК № 113 от 18.10.2016</dd>
+            </div>
+            <div>
+              <dt>Вступил в силу</dt>
+              <dd>01.03.2018</dd>
+            </div>
+            <div>
+              <dt>Орган-разработчик</dt>
+              <dd>Евразийская экономическая комиссия</dd>
+            </div>
+            <div>
+              <dt>Применяется в</dt>
+              <dd>ЕАЭС (5 стран)</dd>
+            </div>
+            <div>
+              <dt>Форма подтверждения</dt>
+              <dd>Декларация о соответствии</dd>
+            </div>
+            <div>
+              <dt>Схемы декларирования</dt>
+              <dd>1Д, 3Д, 6Д</dd>
+            </div>
+            <div>
+              <dt>Источник</dt>
+              <dd>eaeunion.org</dd>
+            </div>
+          </dl>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+</section>
+
+<!-- RELATED NPAs -->
+<section class="section" style="background:var(--ink-bg-2); border-top: 1px solid var(--ink-line); border-bottom: 1px solid var(--ink-line);">
+  <div class="container">
+    <div class="section-head reveal single">
+      <div>
+        <h2 class="h-section">Связанные<br><span class="soft">нормативные акты</span></h2>
+      </div>
+    </div>
+
+    <div class="docs-list reveal">
+
+      <a href="npa.html" class="doc-card">
+        <div class="doc-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+            <path d="M7 3 H15 L20 8 V21 H7 Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+            <path d="M15 3 V8 H20" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+            <path d="M10 13 H17 M10 16 H15 M10 19 H13" stroke="currentColor" stroke-width="1.4" stroke-linecap="square"/>
+          </svg>
+        </div>
+        <div class="doc-text">
+          <div class="doc-num">ТР ТС 020/2011</div>
+          <h3 class="doc-title">Электромагнитная совместимость технических средств</h3>
+        </div>
+        <div class="doc-meta">
+          Решение № 879<br>
+          <strong>от 09.12.2011</strong>
+        </div>
+        <div class="doc-go">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M4 12 L12 4 M12 4 H6 M12 4 V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
+          </svg>
+        </div>
+      </a>
+
+      <a href="npa.html" class="doc-card">
+        <div class="doc-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+            <path d="M7 3 H15 L20 8 V21 H7 Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+            <path d="M15 3 V8 H20" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+            <path d="M10 13 H17 M10 16 H15 M10 19 H13" stroke="currentColor" stroke-width="1.4" stroke-linecap="square"/>
+          </svg>
+        </div>
+        <div class="doc-text">
+          <div class="doc-num">ТР ТС 004/2011</div>
+          <h3 class="doc-title">О безопасности низковольтного оборудования</h3>
+        </div>
+        <div class="doc-meta">
+          Решение № 768<br>
+          <strong>от 16.08.2011</strong>
+        </div>
+        <div class="doc-go">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M4 12 L12 4 M12 4 H6 M12 4 V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
+          </svg>
+        </div>
+      </a>
+
+      <a href="npa.html" class="doc-card">
+        <div class="doc-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+            <path d="M7 3 H15 L20 8 V21 H7 Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+            <path d="M15 3 V8 H20" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+            <path d="M10 13 H17 M10 16 H15 M10 19 H13" stroke="currentColor" stroke-width="1.4" stroke-linecap="square"/>
+          </svg>
+        </div>
+        <div class="doc-text">
+          <div class="doc-num">ФЗ № 184-ФЗ</div>
+          <h3 class="doc-title">О техническом регулировании</h3>
+        </div>
+        <div class="doc-meta">
+          Российская Федерация<br>
+          <strong>от 27.12.2002</strong>
+        </div>
+        <div class="doc-go">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M4 12 L12 4 M12 4 H6 M12 4 V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
+          </svg>
+        </div>
+      </a>
+
+      <a href="npa.html" class="doc-card">
+        <div class="doc-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+            <path d="M7 3 H15 L20 8 V21 H7 Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+            <path d="M15 3 V8 H20" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+            <path d="M10 13 H17 M10 16 H15 M10 19 H13" stroke="currentColor" stroke-width="1.4" stroke-linecap="square"/>
+          </svg>
+        </div>
+        <div class="doc-text">
+          <div class="doc-num">Решение Коллегии ЕЭК № 299</div>
+          <h3 class="doc-title">О единой системе оценки соответствия в ЕАЭС</h3>
+        </div>
+        <div class="doc-meta">
+          ЕЭК<br>
+          <strong>от 24.03.2020</strong>
+        </div>
+        <div class="doc-go">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M4 12 L12 4 M12 4 H6 M12 4 V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
+          </svg>
+        </div>
+      </a>
+
+      <a href="npa.html" class="doc-card">
+        <div class="doc-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+            <path d="M7 3 H15 L20 8 V21 H7 Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+            <path d="M15 3 V8 H20" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+            <path d="M10 13 H17 M10 16 H15 M10 19 H13" stroke="currentColor" stroke-width="1.4" stroke-linecap="square"/>
+          </svg>
+        </div>
+        <div class="doc-text">
+          <div class="doc-num">ПП РФ № 2425</div>
+          <h3 class="doc-title">Об утверждении правил выпуска товаров в свободное обращение</h3>
+        </div>
+        <div class="doc-meta">
+          Российская Федерация<br>
+          <strong>от 23.12.2021</strong>
+        </div>
+        <div class="doc-go">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M4 12 L12 4 M12 4 H6 M12 4 V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
+          </svg>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section cta" id="cta">
+  <div class="container">
+    <div class="cta-inner reveal">
+      <div class="cta-text">
+        <h2 class="cta-headline">
+          Нужна декларация<br><span class="soft">по этому регламенту?</span>
+        </h2>
+        <p class="cta-sub">
+          Оформим декларацию о соответствии ТР ТС 037/2016 за 7–14 дней. Подберём схему, проведём испытания, зарегистрируем в реестре Росаккредитации.
+        </p>
+        <div class="cta-actions">
+          <a href="contacts.html" class="btn btn-primary">
+            <span>Получить расчёт</span>
+            <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 11 L11 3 M11 3 H5 M11 3 V9" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg>
+          </a>
+          <a href="service-hub.html" class="btn btn-ghost">Все услуги по сертификации</a>
+        </div>
+      </div>
+      <div class="cta-card">
+        <h4>В пакет включено</h4>
+        <ul class="cta-list">
+          <li>Подбор схемы декларирования</li>
+          <li>Испытания в аккредитованной лаборатории</li>
+          <li>Регистрация в реестре Росаккредитации</li>
+          <li>Срок 7–14 дней, от 35 000 ₽</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand-block">
+        <a href="index.html" class="brand">
+          <span class="brand-mono">
+            <svg viewBox="0 0 200 200" aria-hidden="true" style="width:48px;height:48px">
+              <rect x="0" y="0" width="200" height="200" rx="40" fill="#042C53"/>
+              <text x="100" y="138" font-family="Inter, -apple-system, sans-serif" font-weight="500" font-size="86" letter-spacing="-3" fill="#FFFFFF" text-anchor="middle">CD<tspan fill="#378ADD">X</tspan></text>
+            </svg>
+          </span>
+        </a>
+        <p class="footer-tag">Customs · Delivery · Compliance.<br>Полный цикл внешнеэкономической деятельности под одной крышей. С 2016 года.</p>
+        <div class="footer-contacts">
+          <div class="footer-phone">+7 (495) 248-38-00</div>
+          <div class="footer-contacts-row">hello@cdx.ru · Москва, Пресненская наб. 12</div>
+        </div>
+      </div>
+      <div class="footer-col"><h5>Услуги</h5><ul>
+        <li><a href="service-hub.html">Таможенное оформление</a></li>
+        <li><a href="service-hub.html">Международная доставка</a></li>
+        <li><a href="service-hub.html">Разрешительная документация</a></li>
+        <li><a href="service-hub.html">Сертификация и испытания</a></li>
+        <li><a href="service-hub.html">Юридическое сопровождение</a></li>
+      </ul></div>
+      <div class="footer-col"><h5>Компания</h5><ul>
+        <li><a href="about.html">О нас</a></li>
+        <li><a href="about.html">Команда</a></li>
+        <li><a href="article.html">Кейсы</a></li>
+        <li><a href="npa.html">Документы</a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+      </ul></div>
+      <div class="footer-col"><h5>Ресурсы</h5><ul>
+        <li><a href="reference.html">Справочник ТН ВЭД</a></li>
+        <li><a href="npa.html">Нормативные акты</a></li>
+        <li><a href="reference.html">Глоссарий ВЭД</a></li>
+        <li><a href="article.html">Блог · Новости</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 CDX · все права защищены</span>
+      <span><a href="#">Политика конфиденциальности</a> &nbsp;·&nbsp; <a href="#">Договор-оферта</a> &nbsp;·&nbsp; <a href="#">Cookies</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav');
+  const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 24);
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+  document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+  const root = document.documentElement;
+  const stored = localStorage.getItem('cdx-theme');
+  if (stored === 'light') root.setAttribute('data-theme', 'light');
+  document.getElementById('themeToggle').addEventListener('click', () => {
+    const isLight = root.getAttribute('data-theme') === 'light';
+    if (isLight) { root.removeAttribute('data-theme'); localStorage.setItem('cdx-theme', 'dark'); }
+    else { root.setAttribute('data-theme', 'light'); localStorage.setItem('cdx-theme', 'light'); }
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,926 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Нотификация ФСБ — оформление в ЦЛСЗ за 10–25 дней | CDX</title>
+<meta name="description" content="Получение нотификации ФСБ на радиоэлектронные средства и шифровальную технику. Подача в ЦЛСЗ под ключ, регистрация в реестре ЕАЭС. Срок — от 10 дней." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;500;600;700;800&family=Onest:wght@300;400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap&subset=cyrillic,cyrillic-ext,latin,latin-ext" rel="stylesheet" />
+<link rel="stylesheet" href="cdx.css">
+
+<style>
+  .lead-2col {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: clamp(40px, 5vw, 80px);
+    align-items: start;
+  }
+  @media (max-width: 1100px) {
+    .lead-2col { grid-template-columns: 1fr; }
+  }
+  .key-facts {
+    background: var(--ink-elev);
+    border: 1px solid var(--ink-line);
+    border-radius: 18px;
+    padding: 28px 30px;
+    position: sticky;
+    top: 100px;
+  }
+  .key-facts-title {
+    font-family: var(--sans);
+    font-weight: 500;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--fg-400);
+    margin: 0 0 18px;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .key-facts-title::before { content: ""; width: 14px; height: 1px; background: var(--accent); }
+  .key-facts dl { margin: 0; display: flex; flex-direction: column; gap: 14px; }
+  .key-facts > dl > div {
+    display: flex; justify-content: space-between; gap: 16px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--ink-line);
+  }
+  .key-facts > dl > div:last-child { border-bottom: none; padding-bottom: 0; }
+  .key-facts dt { font-family: var(--sans); font-size: 12.5px; color: var(--fg-400); line-height: 1.4; flex: 1; }
+  .key-facts dd {
+    margin: 0;
+    font-family: var(--display);
+    font-weight: 500;
+    font-size: 15px;
+    color: var(--fg-100);
+    letter-spacing: -0.01em;
+    text-align: right;
+    flex-shrink: 0;
+  }
+  .key-facts dd.warm { color: var(--warm); }
+  .key-facts dd.accent { color: var(--accent-soft); }
+  .key-facts .btn { width: 100%; margin-top: 18px; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-mono">
+        <svg viewBox="0 0 200 200" aria-hidden="true">
+          <rect x="0" y="0" width="200" height="200" rx="40" fill="#042C53"/>
+          <text x="100" y="138" font-family="Inter, -apple-system, sans-serif" font-weight="500" font-size="86" letter-spacing="-3" fill="#FFFFFF" text-anchor="middle">CD<tspan fill="#378ADD">X</tspan></text>
+        </svg>
+      </span>
+      <span class="brand-suffix">Customs · Delivery<br>Compliance</span>
+    </a>
+    <div class="nav-links">
+      <a href="services.html">Услуги</a>
+      <a href="reference.html">Справочник</a>
+      <a href="about.html">О компании</a>
+      <a href="blog.html">Блог</a>
+      <a href="contacts.html">Контакты</a>
+    </div>
+    <div class="nav-right">
+      <a href="tel:+74952483800" class="nav-phone"><span class="pulse"></span>+7 (495) 248-38-00</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Сменить тему">
+        <svg class="ico-moon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <path d="M13 9.5 A6 6 0 1 1 6.5 3 A4.5 4.5 0 0 0 13 9.5 Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+        </svg>
+        <svg class="ico-sun" width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <circle cx="8" cy="8" r="3.2" stroke="currentColor" stroke-width="1.4"/>
+          <path d="M8 1.5 V3 M8 13 V14.5 M1.5 8 H3 M13 8 H14.5 M3.5 3.5 L4.5 4.5 M11.5 11.5 L12.5 12.5 M3.5 12.5 L4.5 11.5 M11.5 4.5 L12.5 3.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <a href="#cta" class="btn-cta">
+        <span>Оставить заявку</span>
+        <svg class="arrow" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 9 L9 3 M9 3 H4.5 M9 3 V7.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- SALES HERO -->
+<section class="sales-hero">
+  <div class="container">
+    <nav class="breadcrumbs reveal" style="margin-bottom:20px">
+      <a href="index.html">Главная</a>
+      <span class="sep">/</span>
+      <a href="services.html">Услуги</a>
+      <span class="sep">/</span>
+      <a href="service-hub.html">Нетарифное регулирование</a>
+      <span class="sep">/</span>
+      <span class="current">Нотификация ФСБ</span>
+    </nav>
+
+    <div class="sales-hero-inner">
+
+      <div class="reveal">
+        <span class="sales-hero-pre">Нотификация ФСБ · криптотехника</span>
+
+        <h1 class="sales-headline">
+          Нотификация за <em>10 дней.</em><br>
+          Без участия<br>
+          <span class="accent">в ЦЛСЗ ФСБ.</span>
+        </h1>
+
+        <p class="sales-sub">
+          Без нотификации таможня не выпустит ни смартфон, ни роутер, ни любую технику с шифрованием. Берём весь цикл на себя — от проверки криптофункций до получения регистрации в реестре ЕЭК.
+        </p>
+
+        <ul class="sales-bullets">
+          <li><strong>Бесплатная проверка</strong> криптофункций товара за 1 день</li>
+          <li><strong>Получение разрешения от производителя</strong> — для OEM и ЧТМ</li>
+          <li><strong>Полный пакет под ключ</strong> — перевод, спецификации, подача</li>
+          <li><strong>Бессрочное действие</strong> нотификации — оформляется один раз</li>
+        </ul>
+
+        <div class="sales-meta">
+          <div class="sales-price">
+            <span class="from">От</span>35 000<span class="sales-price-currency">₽</span>
+          </div>
+          <div class="sales-time">10–25 дней</div>
+        </div>
+
+        <form class="sales-quick-form" onsubmit="event.preventDefault(); this.querySelector('button span').textContent='Готово, перезвоним!';">
+          <div class="sales-quick-form-label">Бесплатная проверка криптофункций товара</div>
+          <div class="sales-quick-form-row">
+            <input type="text" placeholder="Ваше имя" required/>
+            <input type="tel" placeholder="+7 ___ ___ __ __" required/>
+            <button type="submit">
+              <span>Проверить товар</span>
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 11 L11 3 M11 3 H5 M11 3 V9" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg>
+            </button>
+          </div>
+          <div class="sales-quick-form-hint">Скажем за 1 час, нужна ли нотификация вашему товару — без обязательств.</div>
+        </form>
+      </div>
+
+      <!-- Visual: lock + crypto waves -->
+      <div class="sales-visual reveal" style="transition-delay:.15s">
+        <svg viewBox="0 0 480 520" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <radialGradient id="lockOrb" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" style="stop-color: var(--accent); stop-opacity: 0.32"/>
+              <stop offset="60%" style="stop-color: var(--accent); stop-opacity: 0.06"/>
+              <stop offset="100%" style="stop-color: var(--accent); stop-opacity: 0"/>
+            </radialGradient>
+            <linearGradient id="shieldFill" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" style="stop-color: var(--accent); stop-opacity: 0.18"/>
+              <stop offset="100%" style="stop-color: var(--accent); stop-opacity: 0.02"/>
+            </linearGradient>
+            <radialGradient id="approvedGlow">
+              <stop offset="0%" style="stop-color: var(--live); stop-opacity: 0.4"/>
+              <stop offset="100%" style="stop-color: var(--live); stop-opacity: 0"/>
+            </radialGradient>
+          </defs>
+
+          <!-- ambient orb -->
+          <circle cx="240" cy="260" r="220" fill="url(#lockOrb)"/>
+
+          <!-- concentric crypto rings -->
+          <g stroke="var(--accent)" fill="none">
+            <circle cx="240" cy="260" r="180" stroke-width="1" stroke-dasharray="2 6" opacity="0.35"/>
+            <circle cx="240" cy="260" r="140" stroke-width="1" stroke-dasharray="3 4" opacity="0.45"/>
+            <circle cx="240" cy="260" r="100" stroke-width="1" opacity="0.4"/>
+          </g>
+
+          <!-- Device dots around shield (RF, Wi-Fi, Bluetooth nodes) -->
+          <g>
+            <!-- top devices -->
+            <g transform="translate(240, 90)">
+              <rect x="-12" y="-18" width="24" height="36" rx="3" fill="none" stroke="var(--accent-soft)" stroke-width="1.4"/>
+              <circle cx="0" cy="14" r="1.5" fill="var(--accent-soft)"/>
+              <text x="0" y="36" fill="var(--fg-400)" text-anchor="middle" font-family="Onest,sans-serif" font-weight="500" font-size="9" letter-spacing="1.2">SMARTPHONE</text>
+            </g>
+            <!-- left router -->
+            <g transform="translate(105, 220)">
+              <rect x="-18" y="-10" width="36" height="20" rx="3" fill="none" stroke="var(--accent-soft)" stroke-width="1.4"/>
+              <path d="M-10 -16 L-6 -22 M0 -16 L0 -24 M10 -16 L6 -22" stroke="var(--accent-soft)" stroke-width="1.3" stroke-linecap="square"/>
+              <circle cx="-8" cy="0" r="1.2" fill="var(--accent-soft)"/>
+              <circle cx="0" cy="0" r="1.2" fill="var(--accent-soft)"/>
+              <circle cx="8" cy="0" r="1.2" fill="var(--accent-soft)"/>
+              <text x="0" y="26" fill="var(--fg-400)" text-anchor="middle" font-family="Onest,sans-serif" font-weight="500" font-size="9" letter-spacing="1.2">ROUTER</text>
+            </g>
+            <!-- right laptop -->
+            <g transform="translate(375, 220)">
+              <path d="M-20 -10 L-20 8 L20 8 L20 -10 Z" fill="none" stroke="var(--accent-soft)" stroke-width="1.4"/>
+              <path d="M-24 8 L24 8 L22 14 L-22 14 Z" fill="none" stroke="var(--accent-soft)" stroke-width="1.4"/>
+              <text x="0" y="32" fill="var(--fg-400)" text-anchor="middle" font-family="Onest,sans-serif" font-weight="500" font-size="9" letter-spacing="1.2">LAPTOP</text>
+            </g>
+            <!-- bottom IoT -->
+            <g transform="translate(240, 420)">
+              <circle r="14" fill="none" stroke="var(--accent-soft)" stroke-width="1.4"/>
+              <circle r="4" fill="var(--accent-soft)"/>
+              <text x="0" y="32" fill="var(--fg-400)" text-anchor="middle" font-family="Onest,sans-serif" font-weight="500" font-size="9" letter-spacing="1.2">IoT-DEVICE</text>
+            </g>
+          </g>
+
+          <!-- Connection lines -->
+          <g stroke="var(--accent)" stroke-width="1" stroke-dasharray="3 4" opacity="0.4" fill="none">
+            <line x1="240" y1="120" x2="240" y2="180"/>
+            <line x1="135" y1="220" x2="180" y2="240"/>
+            <line x1="345" y1="220" x2="300" y2="240"/>
+            <line x1="240" y1="390" x2="240" y2="340"/>
+          </g>
+
+          <!-- Central shield with lock -->
+          <g transform="translate(240, 260)">
+            <!-- Shield -->
+            <path d="M0 -80 L60 -55 L60 25 C60 60 30 80 0 90 C-30 80 -60 60 -60 25 L-60 -55 Z"
+                  fill="url(#shieldFill)"
+                  stroke="var(--accent)"
+                  stroke-width="2"
+                  stroke-linejoin="round"/>
+
+            <!-- Inner shield decoration -->
+            <path d="M0 -65 L48 -45 L48 22 C48 50 24 65 0 75 C-24 65 -48 50 -48 22 L-48 -45 Z"
+                  fill="none"
+                  stroke="var(--accent-soft)"
+                  stroke-width="0.8"
+                  stroke-dasharray="1 3"
+                  opacity="0.5"/>
+
+            <!-- Lock body -->
+            <rect x="-22" y="-15" width="44" height="38" rx="5" fill="var(--ink-elev)" stroke="var(--accent-soft)" stroke-width="1.6"/>
+            <path d="M-14 -15 L-14 -25 A14 14 0 0 1 14 -25 L14 -15"
+                  fill="none"
+                  stroke="var(--accent-soft)"
+                  stroke-width="2.5"
+                  stroke-linecap="round"/>
+
+            <!-- Lock keyhole -->
+            <circle cx="0" cy="0" r="4" fill="var(--accent)"/>
+            <rect x="-1.5" y="0" width="3" height="10" fill="var(--accent)"/>
+
+            <!-- Approved checkmark below -->
+            <g transform="translate(35, 50)">
+              <circle r="22" fill="url(#approvedGlow)"/>
+              <circle r="16" fill="var(--ink-elev)" stroke="var(--live)" stroke-width="1.8"/>
+              <path d="M-7 0 L-2 5 L8 -6" stroke="var(--live)" stroke-width="2.2" fill="none" stroke-linecap="square"/>
+            </g>
+          </g>
+
+          <!-- Code label -->
+          <g transform="translate(70, 480)">
+            <text fill="var(--fg-400)" font-family="JetBrains Mono,monospace" font-weight="500" font-size="11" letter-spacing="1">ЦЛСЗ ФСБ · РЕЕСТР ЕЭК</text>
+          </g>
+        </svg>
+
+        <div class="live-card">
+          <span class="live-card-dot"></span>
+          <span class="live-card-text"><strong>сейчас в работе</strong> · 12 нотификаций</span>
+        </div>
+
+        <div class="rating-card">
+          <div class="rating-card-num">100%</div>
+          <div class="rating-card-text">
+            <div class="rating-card-label" style="font-family:var(--sans);font-weight:500;font-size:12.5px;color:var(--fg-100)">Гарантия выдачи</div>
+            <div class="rating-card-label">за 10 лет · 0 отказов</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- RISKS -->
+<section class="section risks">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <h2 class="h-section">Что будет,<br><span class="soft">если ввезти без нотификации</span></h2>
+      </div>
+      <div class="right">
+        Криптотехника без нотификации ФСБ — это автоматическая остановка груза на границе. ФТС включает контрольный индикатор по всем кодам с возможным шифрованием.
+      </div>
+    </div>
+
+    <div class="risks-grid reveal">
+
+      <div class="risk-card">
+        <span class="risk-card-tag">На таможне</span>
+        <h3>Груз помещается на СВХ</h3>
+        <ul>
+          <li>Простой груза до получения нотификации — <strong>10–25 дней</strong></li>
+          <li>Расходы на СВХ — <strong>от 25 000 ₽/день</strong></li>
+          <li>Срыв сроков обязательств перед покупателями</li>
+          <li>Невозможность отгрузки на маркетплейсы к сезону</li>
+        </ul>
+      </div>
+
+      <div class="risk-card">
+        <span class="risk-card-tag">Штрафы</span>
+        <h3>До 200% стоимости товара</h3>
+        <ul>
+          <li>Недекларирование криптофункций — <strong>ст. 16.2 КоАП РФ</strong></li>
+          <li>Конфискация партии — <strong>возможна по решению ФТС</strong></li>
+          <li>Привлечение должностных лиц — <strong>до 20 000 ₽</strong></li>
+          <li>Запрет ввоза партий до устранения нарушения</li>
+        </ul>
+      </div>
+
+      <div class="risk-card">
+        <span class="risk-card-tag">Маркетплейсы</span>
+        <h3>Блокировка карточек</h3>
+        <ul>
+          <li>Wildberries и Ozon требуют нотификацию <strong>для всех Wi-Fi устройств</strong></li>
+          <li>Карточки без документа снимаются с витрины <strong>в течение 24 часов</strong></li>
+          <li>Потери рекламного бюджета и отзывов</li>
+          <li>Падение позиций в выдаче на 6–8 недель</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="risks-cite reveal">
+      <div>Регламентируется <strong>Решением Коллегии ЕЭК № 30 от 21.04.2015</strong> «О мерах нетарифного регулирования» и <strong>Положением о ввозе шифровальных средств</strong> (Указ Президента РФ № 1268).</div>
+    </div>
+  </div>
+</section>
+
+<!-- QUIZ -->
+<section class="section" style="background:var(--ink-bg);">
+  <div class="container">
+    <div class="quiz reveal">
+      <div class="quiz-inner">
+
+        <div>
+          <span class="quiz-tag">60 секунд · 4 вопроса</span>
+          <h2 class="quiz-headline">
+            Проверим товар<br>на криптофункции —<br>
+            <em>бесплатно за 60 секунд</em>
+          </h2>
+          <p class="quiz-sub">
+            Ответьте на 4 вопроса о товаре — скажем, нужна ли нотификация ФСБ, какая именно и сколько займёт оформление. Если не нужна — пришлём отказное письмо в подарок.
+          </p>
+          <ul class="quiz-bullets">
+            <li>Бесплатная техническая экспертиза</li>
+            <li>Расчёт стоимости и сроков сразу</li>
+            <li>Отказное письмо в подарок, если нотификация не нужна</li>
+          </ul>
+        </div>
+
+        <div class="quiz-card" id="quizCard">
+          <div class="quiz-progress">
+            <span class="quiz-progress-label">Проверка криптофункций</span>
+            <span class="quiz-progress-step" id="quizStep">Шаг 1 из 4</span>
+          </div>
+          <div class="quiz-progress-bar">
+            <div class="quiz-progress-bar-fill" id="quizFill" style="width: 25%"></div>
+          </div>
+
+          <div id="quizContent">
+            <h3 class="quiz-question">Какой тип товара планируете ввезти?</h3>
+            <div class="quiz-options">
+              <label class="quiz-option" data-value="phone">
+                <span class="quiz-option-radio"></span>
+                Смартфоны, планшеты или ноутбуки
+              </label>
+              <label class="quiz-option" data-value="network">
+                <span class="quiz-option-radio"></span>
+                Сетевое оборудование (роутеры, точки доступа)
+              </label>
+              <label class="quiz-option" data-value="iot">
+                <span class="quiz-option-radio"></span>
+                IoT и носимые устройства (часы, датчики, камеры)
+              </label>
+              <label class="quiz-option" data-value="industrial">
+                <span class="quiz-option-radio"></span>
+                Промышленные контроллеры или POS-системы
+              </label>
+              <label class="quiz-option" data-value="other">
+                <span class="quiz-option-radio"></span>
+                Другое — расскажу при звонке
+              </label>
+            </div>
+            <div class="quiz-actions">
+              <button class="btn btn-primary" onclick="quizNext()">
+                <span>Дальше</span>
+                <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 11 L11 3 M11 3 H5 M11 3 V9" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LEAD -->
+<section class="section">
+  <div class="container">
+    <div class="lead-2col reveal">
+      <div class="prose">
+        <p>Нотификация ФСБ — это документ, которым производитель уведомляет ФСБ России о технических характеристиках товара, содержащего криптографические функции. Без неё <strong>ввоз в ЕАЭС криптотехники невозможен</strong> — таможня не выпустит товар без записи в реестре ЕЭК.</p>
+
+        <h2>Когда нужна нотификация</h2>
+        <p>Если товар содержит криптографические алгоритмы — нужна нотификация. Это касается, в частности:</p>
+        <ul>
+          <li>Смартфонов, ноутбуков, планшетов</li>
+          <li>Wi-Fi-роутеров, точек доступа, маршрутизаторов</li>
+          <li>Сетевого оборудования с шифрованием канала (VPN, IPSec)</li>
+          <li>Систем видеонаблюдения с шифрованием потока</li>
+          <li>Платёжных терминалов и POS-систем</li>
+          <li>Носимой электроники с Bluetooth/NFC</li>
+          <li>Промышленных IoT-устройств с защищённым каналом</li>
+        </ul>
+
+        <div class="callout">
+          <div class="callout-title">Важно</div>
+          <p>Нотификация регистрируется на конкретного производителя и модель. Если ввозите OEM-продукцию под своей маркой — нужна отдельная нотификация на ваш бренд. Мы возьмём на себя получение разрешения от производителя на использование его технической документации.</p>
+        </div>
+
+        <h2>Что входит в нашу услугу</h2>
+        <p>Под ключ — от первичной проверки криптофункций товара до получения готовой нотификации с регистрационным номером в реестре ЕЭК:</p>
+        <ul>
+          <li>Проверка товара на наличие криптоэлементов и определение типа документа</li>
+          <li>Сбор технической документации, спецификаций, описания алгоритмов</li>
+          <li>Подготовка комплекта документов на русском языке (включая перевод спецификаций)</li>
+          <li>Подача в ЦЛСЗ ФСБ России и сопровождение рассмотрения</li>
+          <li>Регистрация в реестре нотификаций ЕЭК</li>
+          <li>Получение оригинала и его передача вам</li>
+        </ul>
+      </div>
+
+      <aside class="key-facts">
+        <div class="key-facts-title">Параметры услуги</div>
+        <dl>
+          <div><dt>Срок оформления</dt><dd>10–25 дней</dd></div>
+          <div><dt>Стоимость от</dt><dd class="accent">35 000 ₽</dd></div>
+          <div><dt>Срок действия</dt><dd>бессрочно</dd></div>
+          <div><dt>Где регистрируется</dt><dd>реестр ЕЭК</dd></div>
+          <div><dt>Где принимается</dt><dd>ЦЛСЗ ФСБ</dd></div>
+          <div><dt>Гарантия выдачи</dt><dd class="warm">100%</dd></div>
+        </dl>
+        <a href="#cta" class="btn btn-primary" style="margin-top:18px">
+          <span>Оставить заявку</span>
+          <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path d="M3 11 L11 3 M11 3 H5 M11 3 V9" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/>
+          </svg>
+        </a>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- TARIFFS -->
+<section class="section" style="background:var(--ink-bg-2); border-top: 1px solid var(--ink-line); border-bottom: 1px solid var(--ink-line);">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <h2 class="h-section">Тарифы<br><span class="soft">на оформление</span></h2>
+      </div>
+      <div class="right">
+        Цена зависит от срочности и сложности технической документации. Большинство нотификаций — стандартный тариф.
+      </div>
+    </div>
+
+    <div class="pricing reveal">
+      <div class="tariff">
+        <h3 class="tariff-name">Стандарт</h3>
+        <div class="tariff-price">35 000 <span class="from">₽</span></div>
+        <div class="tariff-unit">срок 18–25 дней</div>
+        <ul class="tariff-features">
+          <li>Проверка товара на криптофункции</li>
+          <li>Подготовка комплекта документов</li>
+          <li>Подача в ЦЛСЗ ФСБ</li>
+          <li>Регистрация в реестре ЕЭК</li>
+          <li>Перевод спецификаций (до 10 страниц)</li>
+        </ul>
+        <a href="#cta" class="btn-tariff">Выбрать</a>
+      </div>
+
+      <div class="tariff featured">
+        <h3 class="tariff-name">Срочный</h3>
+        <div class="tariff-price">55 000 <span class="from">₽</span></div>
+        <div class="tariff-unit">срок 10–14 дней</div>
+        <ul class="tariff-features">
+          <li>Всё из тарифа «Стандарт»</li>
+          <li>Приоритетная подача в ЦЛСЗ</li>
+          <li>Менеджер на сопровождении 24/7</li>
+          <li>Доплата за срочность включена</li>
+          <li>Расширенный перевод (до 30 стр.)</li>
+        </ul>
+        <a href="#cta" class="btn-tariff">Выбрать</a>
+      </div>
+
+      <div class="tariff">
+        <h3 class="tariff-name">Сложный кейс</h3>
+        <div class="tariff-price">от 85 000 <span class="from">₽</span></div>
+        <div class="tariff-unit">срок индивидуально</div>
+        <ul class="tariff-features">
+          <li>OEM / частные торговые марки</li>
+          <li>Получение разрешения производителя</li>
+          <li>Сопровождение нестандартных алгоритмов</li>
+          <li>Полная техническая экспертиза</li>
+          <li>Защита в случае запроса доп. материалов</li>
+        </ul>
+        <a href="#cta" class="btn-tariff">Обсудить</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DOCS REQUIRED -->
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <h2 class="h-section">Что от вас<br><span class="soft">нужно</span></h2>
+      </div>
+      <div class="right">
+        Простой комплект документов. Если чего-то нет — поможем запросить у производителя.
+      </div>
+    </div>
+
+    <div class="prose reveal">
+      <table>
+        <thead>
+          <tr>
+            <th>Документ</th>
+            <th>Кто предоставляет</th>
+            <th>Формат</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Техническая спецификация товара</td>
+            <td>Производитель</td>
+            <td>PDF</td>
+          </tr>
+          <tr>
+            <td>Описание криптографических функций</td>
+            <td>Производитель</td>
+            <td>PDF / DOCX</td>
+          </tr>
+          <tr>
+            <td>Доверенность на представление интересов</td>
+            <td>Клиент</td>
+            <td>оригинал</td>
+          </tr>
+          <tr>
+            <td>Карточка компании (заявитель)</td>
+            <td>Клиент</td>
+            <td>PDF</td>
+          </tr>
+          <tr>
+            <td>Договор с производителем / инвойс</td>
+            <td>Клиент</td>
+            <td>PDF</td>
+          </tr>
+          <tr>
+            <td>Фото / каталог товара</td>
+            <td>Клиент</td>
+            <td>JPG / PDF</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="section process" style="background:var(--ink-bg-2); border-top: 1px solid var(--ink-line); border-bottom: 1px solid var(--ink-line);">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <h2 class="h-section">Этапы<br><span class="soft">оформления</span></h2>
+      </div>
+      <div class="right">
+        От заявки до получения нотификации — 4 шага. Контролируем сроки на каждом этапе.
+      </div>
+    </div>
+
+    <div class="process-line reveal">
+      <div class="process-steps">
+        <div class="step">
+          <div class="step-num">01</div>
+          <div class="step-stage">Шаг 01 · 1 день</div>
+          <h3 class="step-title">Заявка и проверка</h3>
+          <p class="step-desc">Присылаете описание товара. Проверяем наличие криптофункций, подбираем нужный документ.</p>
+          <div class="step-meta">Результат: <strong>смета и план</strong></div>
+        </div>
+        <div class="step">
+          <div class="step-num">02</div>
+          <div class="step-stage">Шаг 02 · 2–4 дня</div>
+          <h3 class="step-title">Сбор документов</h3>
+          <p class="step-desc">Получаем от вас комплект, при необходимости запрашиваем разрешения у производителя.</p>
+          <div class="step-meta">Результат: <strong>пакет на подачу</strong></div>
+        </div>
+        <div class="step">
+          <div class="step-num">03</div>
+          <div class="step-stage">Шаг 03 · 7–18 дней</div>
+          <h3 class="step-title">Подача в ЦЛСЗ ФСБ</h3>
+          <p class="step-desc">Подаём комплект, сопровождаем рассмотрение, отвечаем на запросы.</p>
+          <div class="step-meta">Результат: <strong>положительное решение</strong></div>
+        </div>
+        <div class="step">
+          <div class="step-num">04</div>
+          <div class="step-stage">Шаг 04 · 1–2 дня</div>
+          <h3 class="step-title">Регистрация в ЕЭК</h3>
+          <p class="step-desc">Регистрируем нотификацию в реестре ЕЭК. Получаете готовый документ.</p>
+          <div class="step-meta">Результат: <strong>нотификация в руках</strong></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <h2 class="h-section">Частые<br><span class="soft">вопросы</span></h2>
+      </div>
+      <div class="right">
+        Если не нашли ответ — задайте вопрос через форму, ответим за час.
+      </div>
+    </div>
+
+    <div class="faq-list reveal">
+      <details class="faq-item" open>
+        <summary class="faq-q">
+          Сколько действует нотификация?
+          <span class="ico"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 2 V12 M2 7 H12" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg></span>
+        </summary>
+        <div class="faq-a">
+          Нотификация действует <strong>бессрочно</strong> — пока не меняется производитель, модель или криптоалгоритм. Если выпускается новая ревизия товара с другим чипом или прошивкой — нужна новая нотификация.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q">
+          Можно ли использовать нотификацию другой компании?
+          <span class="ico"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 2 V12 M2 7 H12" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg></span>
+        </summary>
+        <div class="faq-a">
+          Да, но только с письменного согласия владельца нотификации. На практике большинство производителей разрешают использование своей нотификации официальным дистрибьюторам — этот вопрос решается на этапе ВЭД-контракта.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q">
+          Что делать, если в ЦЛСЗ запросили доп. документы?
+          <span class="ico"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 2 V12 M2 7 H12" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg></span>
+        </summary>
+        <div class="faq-a">
+          Помогаем оперативно подготовить ответ: запрашиваем недостающие данные у производителя, готовим пояснительные записки, при необходимости — техническую экспертизу. Эти работы входят в тариф «Сложный кейс».
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q">
+          Можно ли оформить нотификацию задним числом?
+          <span class="ico"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 2 V12 M2 7 H12" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg></span>
+        </summary>
+        <div class="faq-a">
+          Нет. Если товар уже на таможне без нотификации — груз будет помещён на склад временного хранения до получения документа. Чтобы избежать простоя — оформляйте нотификацию заранее, мы можем уложиться в 10 дней по срочному тарифу.
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- RELATED -->
+<section class="section" style="background:var(--ink-bg-2); border-top: 1px solid var(--ink-line); border-bottom: 1px solid var(--ink-line);">
+  <div class="container">
+    <div class="section-head reveal single">
+      <div>
+        <h2 class="h-section">Смежные<br><span class="soft">услуги</span></h2>
+      </div>
+    </div>
+
+    <div class="related-grid reveal">
+      <a href="service.html" class="related-card">
+        <div class="related-label">Сертификация</div>
+        <div class="related-title">Сертификат связи в Россвязи</div>
+      </a>
+      <a href="service.html" class="related-card">
+        <div class="related-label">Нетарифное регулирование</div>
+        <div class="related-title">Разрешение на временный ввоз РЭС</div>
+      </a>
+      <a href="service.html" class="related-card">
+        <div class="related-label">Нетарифное регулирование</div>
+        <div class="related-title">Выписка из реестра РКН</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section cta" id="cta">
+  <div class="container">
+    <div class="cta-inner reveal">
+      <div class="cta-text">
+        <h2 class="cta-headline">
+          Опишите товар —<br><span class="soft">скажем за час, нужна ли нотификация.</span>
+        </h2>
+        <p class="cta-sub">
+          Бесплатно проверим товар на наличие криптофункций и подскажем, какой документ нужен. Если нотификация не требуется — оформим отказное письмо.
+        </p>
+        <div class="cta-actions">
+          <a href="contacts.html" class="btn btn-primary">
+            <span>Получить расчёт</span>
+            <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 11 L11 3 M11 3 H5 M11 3 V9" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg>
+          </a>
+          <a href="tel:+74952483800" class="btn btn-ghost">+7 (495) 248-38-00</a>
+        </div>
+      </div>
+      <div class="cta-card">
+        <h4>Ответим за 1 час</h4>
+        <ul class="cta-list">
+          <li>Бесплатная проверка криптофункций</li>
+          <li>Подбор оптимального тарифа</li>
+          <li>Фиксированная стоимость в договоре</li>
+          <li>Гарантия выдачи или возврат</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand-block">
+        <a href="index.html" class="brand">
+          <span class="brand-mono">
+            <svg viewBox="0 0 200 200" aria-hidden="true" style="width:48px;height:48px">
+              <rect x="0" y="0" width="200" height="200" rx="40" fill="#042C53"/>
+              <text x="100" y="138" font-family="Inter, -apple-system, sans-serif" font-weight="500" font-size="86" letter-spacing="-3" fill="#FFFFFF" text-anchor="middle">CD<tspan fill="#378ADD">X</tspan></text>
+            </svg>
+          </span>
+        </a>
+        <p class="footer-tag">Customs · Delivery · Compliance.<br>Полный цикл внешнеэкономической деятельности под одной крышей. С 2016 года.</p>
+        <div class="footer-contacts">
+          <div class="footer-phone">+7 (495) 248-38-00</div>
+          <div class="footer-contacts-row">hello@cdx.ru · Москва, Пресненская наб. 12</div>
+        </div>
+      </div>
+      <div class="footer-col"><h5>Услуги</h5><ul>
+        <li><a href="service-hub.html">Таможенное оформление</a></li>
+        <li><a href="service-hub.html">Международная доставка</a></li>
+        <li><a href="service-hub.html">Разрешительная документация</a></li>
+        <li><a href="service-hub.html">Сертификация и испытания</a></li>
+        <li><a href="service-hub.html">Юридическое сопровождение</a></li>
+      </ul></div>
+      <div class="footer-col"><h5>Компания</h5><ul>
+        <li><a href="about.html">О нас</a></li>
+        <li><a href="about.html">Команда</a></li>
+        <li><a href="article.html">Кейсы</a></li>
+        <li><a href="npa.html">Документы</a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+      </ul></div>
+      <div class="footer-col"><h5>Ресурсы</h5><ul>
+        <li><a href="reference.html">Справочник ТН ВЭД</a></li>
+        <li><a href="npa.html">Нормативные акты</a></li>
+        <li><a href="reference.html">Глоссарий ВЭД</a></li>
+        <li><a href="article.html">Блог · Новости</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 CDX · все права защищены</span>
+      <span><a href="#">Политика конфиденциальности</a> &nbsp;·&nbsp; <a href="#">Договор-оферта</a> &nbsp;·&nbsp; <a href="#">Cookies</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav');
+  const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 24);
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+  document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+  const root = document.documentElement;
+  const stored = localStorage.getItem('cdx-theme');
+  if (stored === 'light') root.setAttribute('data-theme', 'light');
+  document.getElementById('themeToggle').addEventListener('click', () => {
+    const isLight = root.getAttribute('data-theme') === 'light';
+    if (isLight) { root.removeAttribute('data-theme'); localStorage.setItem('cdx-theme', 'dark'); }
+    else { root.setAttribute('data-theme', 'light'); localStorage.setItem('cdx-theme', 'light'); }
+  });
+
+  // Quiz logic — tailored for Нотификация ФСБ
+  let quizStep = 1;
+  const quizAnswers = {};
+  const quizSteps = [
+    {
+      q: 'Какой тип товара планируете ввезти?',
+      opts: [
+        ['phone', 'Смартфоны, планшеты или ноутбуки'],
+        ['network', 'Сетевое оборудование (роутеры, точки доступа)'],
+        ['iot', 'IoT и носимые устройства'],
+        ['industrial', 'Промышленные контроллеры или POS-системы'],
+        ['other', 'Другое — расскажу при звонке'],
+      ]
+    },
+    {
+      q: 'Кто производитель товара?',
+      opts: [
+        ['known', 'Известный мировой бренд (Apple, Samsung, Huawei...)'],
+        ['oem', 'OEM или малый китайский производитель'],
+        ['own', 'Своя торговая марка / частный лейбл'],
+        ['contract', 'Контрактное производство под заказ'],
+        ['unknown', 'Не знаю — нужно уточнить'],
+      ]
+    },
+    {
+      q: 'Когда планируете ввезти?',
+      opts: [
+        ['urgent', 'Срочно — груз уже в пути или на таможне'],
+        ['week', 'В течение 1–2 недель'],
+        ['month', 'В течение месяца'],
+        ['planning', 'Планирую — точных сроков пока нет'],
+      ]
+    },
+    {
+      q: 'Куда отправить результат проверки?',
+      form: true
+    }
+  ];
+
+  function renderQuiz() {
+    const content = document.getElementById('quizContent');
+    const stepEl = document.getElementById('quizStep');
+    const fillEl = document.getElementById('quizFill');
+    const data = quizSteps[quizStep - 1];
+
+    stepEl.textContent = `Шаг ${quizStep} из 4`;
+    fillEl.style.width = (quizStep / 4 * 100) + '%';
+
+    if (data.form) {
+      content.innerHTML = `
+        <h3 class="quiz-question">${data.q}</h3>
+        <div style="display:flex;flex-direction:column;gap:14px;margin-bottom:24px">
+          <input type="tel" placeholder="+7 ___ ___ __ __" required style="height:50px;padding:0 18px;background:rgba(127,127,127,0.04);border:1px solid var(--ink-line);border-radius:999px;color:var(--fg-100);font-family:var(--sans);font-size:14.5px;outline:none"/>
+          <input type="text" placeholder="Telegram или email (по желанию)" style="height:50px;padding:0 18px;background:rgba(127,127,127,0.04);border:1px solid var(--ink-line);border-radius:999px;color:var(--fg-100);font-family:var(--sans);font-size:14.5px;outline:none"/>
+        </div>
+        <div class="quiz-actions">
+          <button class="btn btn-ghost" onclick="quizBack()">Назад</button>
+          <button class="btn btn-primary" onclick="quizSubmit()">
+            <span>Получить результат</span>
+            <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 11 L11 3 M11 3 H5 M11 3 V9" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg>
+          </button>
+        </div>`;
+    } else {
+      content.innerHTML = `
+        <h3 class="quiz-question">${data.q}</h3>
+        <div class="quiz-options">
+          ${data.opts.map(([v, t]) => `<label class="quiz-option" data-value="${v}"><span class="quiz-option-radio"></span>${t}</label>`).join('')}
+        </div>
+        <div class="quiz-actions">
+          ${quizStep > 1 ? '<button class="btn btn-ghost" onclick="quizBack()">Назад</button>' : ''}
+          <button class="btn btn-primary" onclick="quizNext()">
+            <span>Дальше</span>
+            <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 11 L11 3 M11 3 H5 M11 3 V9" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg>
+          </button>
+        </div>`;
+      content.querySelectorAll('.quiz-option').forEach(o => {
+        o.addEventListener('click', () => {
+          content.querySelectorAll('.quiz-option').forEach(x => x.classList.remove('selected'));
+          o.classList.add('selected');
+          quizAnswers[`q${quizStep}`] = o.dataset.value;
+        });
+      });
+    }
+  }
+  function quizNext() {
+    if (quizStep < 4) { quizStep++; renderQuiz(); }
+  }
+  function quizBack() {
+    if (quizStep > 1) { quizStep--; renderQuiz(); }
+  }
+  function quizSubmit() {
+    const card = document.getElementById('quizCard');
+    card.innerHTML = `
+      <div style="text-align:center;padding:24px 0">
+        <div style="width:64px;height:64px;border-radius:50%;background:color-mix(in oklab,var(--live) 18%,transparent);display:grid;place-items:center;margin:0 auto 18px">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M7 14 L12 19 L21 8" stroke="#4ADE80" stroke-width="2.4" stroke-linecap="square" fill="none"/></svg>
+        </div>
+        <h3 style="font-family:var(--display);font-weight:500;font-size:22px;letter-spacing:-0.02em;color:var(--fg-100);margin:0 0 10px">Готово!</h3>
+        <p style="font-size:14.5px;color:var(--fg-300);line-height:1.55;margin:0 0 4px">Эксперт проверит товар и пришлёт результат с расчётом.</p>
+        <p style="font-size:13px;color:var(--fg-400);margin:0">Перезвонит в течение часа в рабочее время.</p>
+      </div>`;
+  }
+  document.querySelectorAll('#quizContent .quiz-option').forEach(o => {
+    o.addEventListener('click', () => {
+      document.querySelectorAll('#quizContent .quiz-option').forEach(x => x.classList.remove('selected'));
+      o.classList.add('selected');
+      quizAnswers['q1'] = o.dataset.value;
+    });
+  });
+</script>
+
+</body>
+</html>

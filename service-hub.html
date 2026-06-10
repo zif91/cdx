@@ -1,0 +1,952 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Сертификация и испытания — CDX</title>
+<meta name="description" content="Полный цикл сертификации в ЕАЭС: ТР ТС, ГОСТ Р, СГР, связь, пожарная безопасность. От подачи заявки до выдачи документа — в аккредитованных лабораториях." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;500;600;700;800&family=Onest:wght@300;400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap&subset=cyrillic,cyrillic-ext,latin,latin-ext" rel="stylesheet" />
+<link rel="stylesheet" href="cdx.css">
+
+<style>
+  /* Service hub — page-specific */
+  .lead-2col {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: clamp(40px, 5vw, 80px);
+    align-items: start;
+  }
+  @media (max-width: 1100px) {
+    .lead-2col { grid-template-columns: 1fr; }
+  }
+
+  .key-facts {
+    background: var(--ink-elev);
+    border: 1px solid var(--ink-line);
+    border-radius: 18px;
+    padding: 28px 30px;
+    position: sticky;
+    top: 100px;
+  }
+  .key-facts-title {
+    font-family: var(--sans);
+    font-weight: 500;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--fg-400);
+    margin: 0 0 18px;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .key-facts-title::before {
+    content: ""; width: 14px; height: 1px;
+    background: var(--accent);
+  }
+  .key-facts dl {
+    margin: 0;
+    display: flex; flex-direction: column;
+    gap: 14px;
+  }
+  .key-facts > dl > div {
+    display: flex; justify-content: space-between;
+    gap: 16px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--ink-line);
+  }
+  .key-facts > dl > div:last-child { border-bottom: none; padding-bottom: 0; }
+  .key-facts dt {
+    font-family: var(--sans);
+    font-size: 12.5px;
+    color: var(--fg-400);
+    line-height: 1.4;
+    flex: 1;
+  }
+  .key-facts dd {
+    margin: 0;
+    font-family: var(--display);
+    font-weight: 500;
+    font-size: 15px;
+    color: var(--fg-100);
+    letter-spacing: -0.01em;
+    text-align: right;
+    flex-shrink: 0;
+  }
+  .key-facts dd.warm { color: var(--warm); }
+  .key-facts dd.accent { color: var(--accent-soft); }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-mono">
+        <svg viewBox="0 0 200 200" aria-hidden="true">
+          <rect x="0" y="0" width="200" height="200" rx="40" fill="#042C53"/>
+          <text x="100" y="138" font-family="Inter, -apple-system, sans-serif" font-weight="500" font-size="86" letter-spacing="-3" fill="#FFFFFF" text-anchor="middle">CD<tspan fill="#378ADD">X</tspan></text>
+        </svg>
+      </span>
+      <span class="brand-suffix">Customs · Delivery<br>Compliance</span>
+    </a>
+
+    <div class="nav-links">
+      <a href="services.html">Услуги</a>
+      <a href="reference.html">Справочник</a>
+      <a href="about.html">О компании</a>
+      <a href="blog.html">Блог</a>
+      <a href="contacts.html">Контакты</a>
+    </div>
+
+    <div class="nav-right">
+      <a href="tel:+74952483800" class="nav-phone">
+        <span class="pulse"></span>
+        +7 (495) 248-38-00
+      </a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Сменить тему">
+        <svg class="ico-moon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <path d="M13 9.5 A6 6 0 1 1 6.5 3 A4.5 4.5 0 0 0 13 9.5 Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+        </svg>
+        <svg class="ico-sun" width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <circle cx="8" cy="8" r="3.2" stroke="currentColor" stroke-width="1.4"/>
+          <path d="M8 1.5 V3 M8 13 V14.5 M1.5 8 H3 M13 8 H14.5 M3.5 3.5 L4.5 4.5 M11.5 11.5 L12.5 12.5 M3.5 12.5 L4.5 11.5 M11.5 4.5 L12.5 3.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <a href="#cta" class="btn-cta">
+        <span>Оставить заявку</span>
+        <svg class="arrow" width="12" height="12" viewBox="0 0 12 12" fill="none">
+          <path d="M3 9 L9 3 M9 3 H4.5 M9 3 V7.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- SALES HERO -->
+<section class="sales-hero">
+  <div class="container">
+    <nav class="breadcrumbs reveal" style="margin-bottom:20px">
+      <a href="index.html">Главная</a>
+      <span class="sep">/</span>
+      <a href="services.html">Услуги</a>
+      <span class="sep">/</span>
+      <span class="current">Сертификация и испытания</span>
+    </nav>
+
+    <div class="sales-hero-inner">
+
+      <div class="reveal">
+        <span class="sales-hero-pre">Сертификация в ЕАЭС · под ключ</span>
+
+        <h1 class="sales-headline">
+          Сертификат за <em>7 дней.</em><br>
+          Гарантия выдачи —<br>
+          <span class="accent">100% или возврат.</span>
+        </h1>
+
+        <p class="sales-sub">
+          Подберём документ под ваш код ТН ВЭД, организуем испытания в аккредитованной лаборатории и зарегистрируем сертификат в реестрах Росаккредитации и ЕАЭС. Без участия клиента в технической части.
+        </p>
+
+        <ul class="sales-bullets">
+          <li><strong>15 типов документов</strong> — ТР ТС, ГОСТ Р, СГР, связь, пожарные, ИСО</li>
+          <li><strong>40+ аккредитованных лабораторий</strong> по всем направлениям</li>
+          <li><strong>Фиксированная цена в договоре</strong> — никаких допусков «по факту»</li>
+          <li><strong>Возврат 100% оплаты</strong>, если документ невозможно получить</li>
+        </ul>
+
+        <div class="sales-meta">
+          <div class="sales-price">
+            <span class="from">От</span>35 000<span class="sales-price-currency">₽</span>
+          </div>
+          <div class="sales-time">5–30 дней</div>
+        </div>
+
+        <form class="sales-quick-form" onsubmit="event.preventDefault(); this.querySelector('button span').textContent='Готово, перезвоним!';">
+          <div class="sales-quick-form-label">Узнать стоимость для вашего товара</div>
+          <div class="sales-quick-form-row">
+            <input type="text" placeholder="Ваше имя" required/>
+            <input type="tel" placeholder="+7 ___ ___ __ __" required/>
+            <button type="submit">
+              <span>Получить расчёт</span>
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 11 L11 3 M11 3 H5 M11 3 V9" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg>
+            </button>
+          </div>
+          <div class="sales-quick-form-hint">Перезвоним в течение часа в рабочее время. Согласие на обработку ПД подтверждается нажатием кнопки.</div>
+        </form>
+      </div>
+
+      <!-- Visual: stacked certificates + EAEU accent -->
+      <div class="sales-visual reveal" style="transition-delay:.15s">
+        <svg viewBox="0 0 480 520" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="docFill" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" style="stop-color: var(--ink-elev); stop-opacity: 1"/>
+              <stop offset="100%" style="stop-color: var(--ink-bg-2); stop-opacity: 1"/>
+            </linearGradient>
+            <radialGradient id="stampGlow">
+              <stop offset="0%" style="stop-color: var(--live); stop-opacity: 0.35"/>
+              <stop offset="100%" style="stop-color: var(--live); stop-opacity: 0"/>
+            </radialGradient>
+            <radialGradient id="orbBg" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" style="stop-color: var(--accent); stop-opacity: 0.18"/>
+              <stop offset="100%" style="stop-color: var(--accent); stop-opacity: 0"/>
+            </radialGradient>
+          </defs>
+
+          <!-- ambient orb -->
+          <circle cx="240" cy="260" r="220" fill="url(#orbBg)"/>
+
+          <!-- EAEU 5-flag accent dots arranged in arc -->
+          <g>
+            <circle cx="140" cy="80" r="10" fill="#FFFFFF" opacity="0.92"/>
+            <circle cx="140" cy="80" r="5" fill="#D52B1E"/>
+            <text x="140" y="106" fill="var(--fg-400)" text-anchor="middle" font-family="Onest,sans-serif" font-weight="500" font-size="9" letter-spacing="1.2">РФ</text>
+
+            <circle cx="190" cy="58" r="10" fill="#009A49" opacity="0.92"/>
+            <path d="M186 58 L194 58" stroke="#FFD200" stroke-width="2"/>
+            <text x="190" y="84" fill="var(--fg-400)" text-anchor="middle" font-family="Onest,sans-serif" font-weight="500" font-size="9" letter-spacing="1.2">БЛ</text>
+
+            <circle cx="240" cy="48" r="10" fill="#00AFCA" opacity="0.92"/>
+            <circle cx="240" cy="48" r="3.5" fill="#FFCD00"/>
+            <text x="240" y="74" fill="var(--fg-400)" text-anchor="middle" font-family="Onest,sans-serif" font-weight="500" font-size="9" letter-spacing="1.2">KZ</text>
+
+            <circle cx="290" cy="58" r="10" fill="#E8112D" opacity="0.92"/>
+            <circle cx="290" cy="58" r="3.5" fill="#FFEF00"/>
+            <text x="290" y="84" fill="var(--fg-400)" text-anchor="middle" font-family="Onest,sans-serif" font-weight="500" font-size="9" letter-spacing="1.2">KG</text>
+
+            <circle cx="340" cy="80" r="10" fill="#D90012" opacity="0.92"/>
+            <path d="M336 78 L344 78 M336 82 L344 82" stroke="#FF9933" stroke-width="1"/>
+            <text x="340" y="106" fill="var(--fg-400)" text-anchor="middle" font-family="Onest,sans-serif" font-weight="500" font-size="9" letter-spacing="1.2">AM</text>
+
+            <!-- arc connecting -->
+            <path d="M 130,90 Q 240,30 350,90" stroke="var(--accent)" stroke-width="1" stroke-dasharray="2 4" fill="none" opacity="0.4"/>
+          </g>
+
+          <!-- Stacked certificate documents (3 layered) -->
+          <g transform="translate(60, 130)">
+            <!-- back card -->
+            <g transform="rotate(-6 180 200)">
+              <rect x="20" y="20" width="320" height="380" rx="12" fill="url(#docFill)" stroke="var(--ink-line-2)" stroke-width="1"/>
+              <rect x="20" y="20" width="320" height="50" rx="12" fill="var(--brand-navy)"/>
+              <text x="180" y="51" fill="#FFFFFF" text-anchor="middle" font-family="Inter,sans-serif" font-weight="500" font-size="13" letter-spacing="2">ТР ТС 037/2016</text>
+            </g>
+            <!-- middle card -->
+            <g transform="rotate(3 180 200)">
+              <rect x="10" y="10" width="320" height="380" rx="12" fill="url(#docFill)" stroke="var(--ink-line-2)" stroke-width="1"/>
+              <rect x="10" y="10" width="320" height="50" rx="12" fill="#1B3E70"/>
+              <text x="170" y="41" fill="#FFFFFF" text-anchor="middle" font-family="Inter,sans-serif" font-weight="500" font-size="13" letter-spacing="2">ГОСТ Р</text>
+            </g>
+            <!-- front card -->
+            <g>
+              <rect x="0" y="0" width="320" height="380" rx="14" fill="url(#docFill)" stroke="var(--accent)" stroke-width="1.5"/>
+              <rect x="0" y="0" width="320" height="60" rx="14" fill="var(--accent)"/>
+              <text x="160" y="38" fill="#FFFFFF" text-anchor="middle" font-family="Inter,sans-serif" font-weight="500" font-size="15" letter-spacing="3">СЕРТИФИКАТ ЕАЭС</text>
+
+              <!-- body lines -->
+              <text x="30" y="100" fill="var(--fg-300)" font-family="Onest,sans-serif" font-weight="500" font-size="9" letter-spacing="1.5">№ RU C-DE.AB99.A.00123/26</text>
+              <line x1="30" y1="115" x2="290" y2="115" stroke="var(--ink-line)" stroke-width="1"/>
+
+              <text x="30" y="140" fill="var(--fg-400)" font-family="Onest,sans-serif" font-size="9" letter-spacing="0.5">ЗАЯВИТЕЛЬ</text>
+              <text x="30" y="158" fill="var(--fg-100)" font-family="Onest,sans-serif" font-weight="500" font-size="12">ООО «Импорт Партнёр»</text>
+
+              <text x="30" y="190" fill="var(--fg-400)" font-family="Onest,sans-serif" font-size="9" letter-spacing="0.5">ПРОДУКЦИЯ</text>
+              <text x="30" y="208" fill="var(--fg-100)" font-family="Onest,sans-serif" font-weight="500" font-size="12">Маршрутизатор беспроводной</text>
+
+              <text x="30" y="240" fill="var(--fg-400)" font-family="Onest,sans-serif" font-size="9" letter-spacing="0.5">КОД ТН ВЭД</text>
+              <text x="30" y="258" fill="var(--accent-soft)" font-family="JetBrains Mono,monospace" font-weight="500" font-size="13">8517 62 000 0</text>
+
+              <text x="30" y="290" fill="var(--fg-400)" font-family="Onest,sans-serif" font-size="9" letter-spacing="0.5">СРОК ДЕЙСТВИЯ</text>
+              <text x="30" y="308" fill="var(--fg-100)" font-family="Onest,sans-serif" font-weight="500" font-size="12">5 лет · до 09.06.2031</text>
+
+              <!-- Approved stamp -->
+              <g transform="translate(220, 280)">
+                <circle cx="40" cy="40" r="55" fill="url(#stampGlow)"/>
+                <circle cx="40" cy="40" r="38" fill="none" stroke="var(--live)" stroke-width="1.5"/>
+                <circle cx="40" cy="40" r="32" fill="none" stroke="var(--live)" stroke-width="0.6" stroke-dasharray="2 3"/>
+                <text x="40" y="36" fill="var(--live)" text-anchor="middle" font-family="Inter,sans-serif" font-weight="600" font-size="9" letter-spacing="1.5">ВЫДАН</text>
+                <path d="M28 44 L37 53 L54 36" stroke="var(--live)" stroke-width="2.5" fill="none" stroke-linecap="square"/>
+              </g>
+            </g>
+          </g>
+        </svg>
+
+        <!-- Live operations card -->
+        <div class="live-card">
+          <span class="live-card-dot"></span>
+          <span class="live-card-text"><strong>сейчас в работе</strong> · 47 сертификатов</span>
+        </div>
+
+        <!-- Rating card -->
+        <div class="rating-card">
+          <div class="rating-card-num">4.9</div>
+          <div class="rating-card-text">
+            <div class="rating-card-stars">
+              <svg viewBox="0 0 16 16" fill="currentColor"><polygon points="8,1 10,6 15,6 11,9 13,15 8,12 3,15 5,9 1,6 6,6"/></svg>
+              <svg viewBox="0 0 16 16" fill="currentColor"><polygon points="8,1 10,6 15,6 11,9 13,15 8,12 3,15 5,9 1,6 6,6"/></svg>
+              <svg viewBox="0 0 16 16" fill="currentColor"><polygon points="8,1 10,6 15,6 11,9 13,15 8,12 3,15 5,9 1,6 6,6"/></svg>
+              <svg viewBox="0 0 16 16" fill="currentColor"><polygon points="8,1 10,6 15,6 11,9 13,15 8,12 3,15 5,9 1,6 6,6"/></svg>
+              <svg viewBox="0 0 16 16" fill="currentColor"><polygon points="8,1 10,6 15,6 11,9 13,15 8,12 3,15 5,9 1,6 6,6"/></svg>
+            </div>
+            <div class="rating-card-label"><strong>286 отзывов</strong> · Яндекс.Карты</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- RISKS — что будет без сертификата -->
+<section class="section risks">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <h2 class="h-section">Что будет,<br><span class="soft">если без сертификата</span></h2>
+      </div>
+      <div class="right">
+        Сертификация в ЕАЭС — обязательное условие выпуска большинства товаров на рынок. Без документа — потери в каждом звене цепочки от производства до маркетплейса.
+      </div>
+    </div>
+
+    <div class="risks-grid reveal">
+
+      <div class="risk-card">
+        <span class="risk-card-tag">Производитель</span>
+        <h3>Остановка производства</h3>
+        <ul>
+          <li>Отказы федеральных сетей принимать продукцию</li>
+          <li>Изъятие партии со склада дистрибьютора</li>
+          <li>Штраф <strong>до 500 000 ₽</strong> от Роспотребнадзора</li>
+          <li>Репутационные потери на B2B-рынке</li>
+        </ul>
+      </div>
+
+      <div class="risk-card">
+        <span class="risk-card-tag">Импортёр</span>
+        <h3>Задержка на таможне</h3>
+        <ul>
+          <li>Помещение груза на склад временного хранения</li>
+          <li>Доп. расходы на хранение — <strong>от 25 000 ₽/день</strong></li>
+          <li>Штраф за недостоверное декларирование — <strong>до 200% стоимости</strong></li>
+          <li>Срыв сроков поставки и обязательств перед клиентами</li>
+        </ul>
+      </div>
+
+      <div class="risk-card">
+        <span class="risk-card-tag">Селлер на маркетплейсах</span>
+        <h3>Блокировка карточек</h3>
+        <ul>
+          <li>Снятие товара с витрины Wildberries, Ozon, Я.Маркет</li>
+          <li>Снижение рейтинга продавца, потеря рекламной выдачи</li>
+          <li>Штрафы от площадки — <strong>до 100 000 ₽</strong></li>
+          <li>Риск полной блокировки аккаунта и потери бизнеса</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="risks-cite reveal">
+      <div>Ответственность установлена <strong>ст. 14.43 и ст. 14.47 КоАП РФ</strong> «Нарушение требований технических регламентов» и <strong>ст. 16.2 КоАП РФ</strong> «Недекларирование либо недостоверное декларирование товаров».</div>
+    </div>
+  </div>
+</section>
+
+<!-- QUIZ — подбор за 60 секунд + скидка -->
+<section class="section" style="background:var(--ink-bg);">
+  <div class="container">
+    <div class="quiz reveal">
+      <div class="quiz-inner">
+
+        <div>
+          <span class="quiz-tag">60 секунд · 4 вопроса</span>
+          <h2 class="quiz-headline">
+            Подберём документ<br>под ваш товар —<br>
+            <em>и подарим скидку 10%</em>
+          </h2>
+          <p class="quiz-sub">
+            Ответьте на 4 вопроса о товаре — за 60 секунд покажем, какой сертификат нужен, сколько он стоит и сколько займёт. Скидка действует при оформлении в течение 48 часов.
+          </p>
+          <ul class="quiz-bullets">
+            <li>Без обязательств и звонков «как там?»</li>
+            <li>Готовая смета на почту или в Telegram</li>
+            <li>Скидка 10% автоматически применяется</li>
+          </ul>
+        </div>
+
+        <div class="quiz-card" id="quizCard">
+          <div class="quiz-progress">
+            <span class="quiz-progress-label">Подбор сертификата</span>
+            <span class="quiz-progress-step" id="quizStep">Шаг 1 из 4</span>
+          </div>
+          <div class="quiz-progress-bar">
+            <div class="quiz-progress-bar-fill" id="quizFill" style="width: 25%"></div>
+          </div>
+
+          <div id="quizContent">
+            <h3 class="quiz-question">Что вы планируете сертифицировать?</h3>
+            <div class="quiz-options">
+              <label class="quiz-option" data-value="electronics">
+                <span class="quiz-option-radio"></span>
+                Электронику или бытовую технику
+              </label>
+              <label class="quiz-option" data-value="cosmetics">
+                <span class="quiz-option-radio"></span>
+                Косметику, БАДы или товары для детей
+              </label>
+              <label class="quiz-option" data-value="food">
+                <span class="quiz-option-radio"></span>
+                Продукты питания или напитки
+              </label>
+              <label class="quiz-option" data-value="industrial">
+                <span class="quiz-option-radio"></span>
+                Промышленное оборудование
+              </label>
+              <label class="quiz-option" data-value="other">
+                <span class="quiz-option-radio"></span>
+                Другое — расскажу при звонке
+              </label>
+            </div>
+            <div class="quiz-actions">
+              <button class="btn btn-primary" onclick="quizNext()">
+                <span>Дальше</span>
+                <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 11 L11 3 M11 3 H5 M11 3 V9" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LEAD: text + key facts -->
+<section class="section">
+  <div class="container">
+    <div class="lead-2col reveal">
+      <div class="prose">
+        <p>Сертификация — обязательное условие выпуска большинства товаров на рынок ЕАЭС. Без неё таможня не выпустит груз, а маркетплейсы (Wildberries, Ozon, Яндекс.Маркет) не примут карточку. CDX закрывает весь цикл: подбирает нужный документ под код ТН ВЭД, организует испытания в аккредитованной лаборатории, оформляет регистрацию в реестрах Росаккредитации и ЕАЭС.</p>
+
+        <h2>Когда нужна обязательная сертификация</h2>
+        <p>Любой товар, попадающий под действие технических регламентов ЕАЭС или Российской Федерации, должен пройти процедуру оценки соответствия. Это означает один из вариантов:</p>
+        <ul>
+          <li>Сертификат соответствия требованиям ТР ТС / ТР ЕАЭС</li>
+          <li>Декларация о соответствии (регистрируется в ФГИС Росаккредитации)</li>
+          <li>Государственная регистрация (СГР) — для пищевой продукции, БАДов, детских товаров, бытовой химии</li>
+          <li>Сертификат пожарной безопасности — для строительных материалов, кабелей, оборудования</li>
+          <li>Документы для радиоэлектронной техники — нотификация ФСБ, сертификат связи</li>
+        </ul>
+
+        <div class="callout">
+          <div class="callout-title">Что делаем мы</div>
+          <p>Подбираем подходящую схему оценки соответствия (1С–7С), готовим техническую документацию, организуем отбор образцов и испытания, выпускаем готовый документ с регистрацией в реестрах. Под ключ, без участия клиента в технических деталях.</p>
+        </div>
+
+        <h2>Когда обязательная не нужна — а добровольная даёт преимущество</h2>
+        <p>Если товар не входит в обязательные техрегламенты, можно оформить <strong>отказное письмо</strong> (документ, подтверждающий, что сертификация не требуется) или <strong>добровольный сертификат</strong> — например, сертификат ИСО 9001, экологический, антибактериальный. Часто их требуют тендеры и крупные ритейлеры.</p>
+      </div>
+
+      <aside class="key-facts">
+        <div class="key-facts-title">Параметры услуги</div>
+        <dl>
+          <div><dt>Срок выпуска документа</dt><dd>5–30 дней</dd></div>
+          <div><dt>Стоимость от</dt><dd class="accent">35 000 ₽</dd></div>
+          <div><dt>Виды документов</dt><dd>15+</dd></div>
+          <div><dt>Срок действия сертификата</dt><dd>1–5 лет</dd></div>
+          <div><dt>Лабораторий-партнёров</dt><dd>40+</dd></div>
+          <div><dt>Гарантия выдачи</dt><dd class="warm">100%</dd></div>
+        </dl>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- SUBSERVICES -->
+<section class="section" style="background:var(--ink-bg-2); border-top: 1px solid var(--ink-line); border-bottom: 1px solid var(--ink-line);">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <h2 class="h-section">Что оформляем<br><span class="soft">в рамках сертификации</span></h2>
+      </div>
+      <div class="right">
+        Закрываем все 15 видов разрешительных документов в сфере сертификации. Подбираем нужный документ под код ТН ВЭД за 1 день.
+      </div>
+    </div>
+
+    <div class="subs-grid reveal">
+      <a href="service.html" class="sub-tile">
+        <div class="sub-tile-icon">ТР</div>
+        <div class="sub-tile-text">
+          <h3 class="sub-tile-title">Сертификат ТР ТС / ТР ЕАЭС</h3>
+          <div class="sub-tile-meta">10–25 дней · от 45 000 ₽</div>
+        </div>
+        <span class="sub-tile-go"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12 L12 4 M12 4 H6 M12 4 V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></svg></span>
+      </a>
+
+      <a href="service.html" class="sub-tile">
+        <div class="sub-tile-icon">ДС</div>
+        <div class="sub-tile-text">
+          <h3 class="sub-tile-title">Декларация ТР ЕАЭС</h3>
+          <div class="sub-tile-meta">7–14 дней · от 35 000 ₽</div>
+        </div>
+        <span class="sub-tile-go"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12 L12 4 M12 4 H6 M12 4 V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></svg></span>
+      </a>
+
+      <a href="service.html" class="sub-tile">
+        <div class="sub-tile-icon">СГР</div>
+        <div class="sub-tile-text">
+          <h3 class="sub-tile-title">Свидетельство о госрегистрации</h3>
+          <div class="sub-tile-meta">25–40 дней · от 65 000 ₽</div>
+        </div>
+        <span class="sub-tile-go"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12 L12 4 M12 4 H6 M12 4 V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></svg></span>
+      </a>
+
+      <a href="service.html" class="sub-tile">
+        <div class="sub-tile-icon">ОП</div>
+        <div class="sub-tile-text">
+          <h3 class="sub-tile-title">Отказное письмо</h3>
+          <div class="sub-tile-meta">3–5 дней · от 8 000 ₽</div>
+        </div>
+        <span class="sub-tile-go"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12 L12 4 M12 4 H6 M12 4 V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></svg></span>
+      </a>
+
+      <a href="service.html" class="sub-tile">
+        <div class="sub-tile-icon">ОР</div>
+        <div class="sub-tile-text">
+          <h3 class="sub-tile-title">Отрицательное решение</h3>
+          <div class="sub-tile-meta">7–10 дней · от 12 000 ₽</div>
+        </div>
+        <span class="sub-tile-go"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12 L12 4 M12 4 H6 M12 4 V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></svg></span>
+      </a>
+
+      <a href="service.html" class="sub-tile">
+        <div class="sub-tile-icon">ОПС</div>
+        <div class="sub-tile-text">
+          <h3 class="sub-tile-title">Отказное письмо СГР</h3>
+          <div class="sub-tile-meta">5–7 дней · от 10 000 ₽</div>
+        </div>
+        <span class="sub-tile-go"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12 L12 4 M12 4 H6 M12 4 V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></svg></span>
+      </a>
+
+      <a href="service.html" class="sub-tile">
+        <div class="sub-tile-icon">ГР</div>
+        <div class="sub-tile-text">
+          <h3 class="sub-tile-title">Сертификат ГОСТ Р</h3>
+          <div class="sub-tile-meta">10–20 дней · от 38 000 ₽</div>
+        </div>
+        <span class="sub-tile-go"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12 L12 4 M12 4 H6 M12 4 V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></svg></span>
+      </a>
+
+      <a href="service.html" class="sub-tile">
+        <div class="sub-tile-icon">ДГ</div>
+        <div class="sub-tile-text">
+          <h3 class="sub-tile-title">Декларация ГОСТ Р</h3>
+          <div class="sub-tile-meta">7–12 дней · от 28 000 ₽</div>
+        </div>
+        <span class="sub-tile-go"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12 L12 4 M12 4 H6 M12 4 V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></svg></span>
+      </a>
+
+      <a href="service.html" class="sub-tile">
+        <div class="sub-tile-icon">СС</div>
+        <div class="sub-tile-text">
+          <h3 class="sub-tile-title">Сертификат связи</h3>
+          <div class="sub-tile-meta">14–30 дней · от 95 000 ₽</div>
+        </div>
+        <span class="sub-tile-go"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12 L12 4 M12 4 H6 M12 4 V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></svg></span>
+      </a>
+
+      <a href="service.html" class="sub-tile">
+        <div class="sub-tile-icon">ДС</div>
+        <div class="sub-tile-text">
+          <h3 class="sub-tile-title">Декларация связи</h3>
+          <div class="sub-tile-meta">10–14 дней · от 60 000 ₽</div>
+        </div>
+        <span class="sub-tile-go"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12 L12 4 M12 4 H6 M12 4 V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></svg></span>
+      </a>
+
+      <a href="service.html" class="sub-tile">
+        <div class="sub-tile-icon">ТБ</div>
+        <div class="sub-tile-text">
+          <h3 class="sub-tile-title">Сертификат ТБ (ПП 969)</h3>
+          <div class="sub-tile-meta">12–18 дней · от 55 000 ₽</div>
+        </div>
+        <span class="sub-tile-go"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12 L12 4 M12 4 H6 M12 4 V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></svg></span>
+      </a>
+
+      <a href="service.html" class="sub-tile">
+        <div class="sub-tile-icon">ДС</div>
+        <div class="sub-tile-text">
+          <h3 class="sub-tile-title">Добровольная сертификация</h3>
+          <div class="sub-tile-meta">7–10 дней · от 25 000 ₽</div>
+        </div>
+        <span class="sub-tile-go"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12 L12 4 M12 4 H6 M12 4 V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></svg></span>
+      </a>
+
+      <a href="service.html" class="sub-tile">
+        <div class="sub-tile-icon">ИСО</div>
+        <div class="sub-tile-text">
+          <h3 class="sub-tile-title">Сертификат ИСО 9001 / 14001</h3>
+          <div class="sub-tile-meta">21–35 дней · от 85 000 ₽</div>
+        </div>
+        <span class="sub-tile-go"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12 L12 4 M12 4 H6 M12 4 V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></svg></span>
+      </a>
+
+      <a href="service.html" class="sub-tile">
+        <div class="sub-tile-icon">ПБ</div>
+        <div class="sub-tile-text">
+          <h3 class="sub-tile-title">Пожарный сертификат</h3>
+          <div class="sub-tile-meta">14–28 дней · от 70 000 ₽</div>
+        </div>
+        <span class="sub-tile-go"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12 L12 4 M12 4 H6 M12 4 V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></svg></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="section process" id="process">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <h2 class="h-section">Как проходит<br><span class="soft">оформление</span></h2>
+      </div>
+      <div class="right">
+        Четыре этапа от первого расчёта до выдачи сертификата. Вы только присылаете образцы и подписываете документы — остальное на нас.
+      </div>
+    </div>
+
+    <div class="process-line reveal">
+      <div class="process-steps">
+        <div class="step">
+          <div class="step-num">01</div>
+          <div class="step-stage">Шаг 01 · 1 день</div>
+          <h3 class="step-title">Подбор схемы</h3>
+          <p class="step-desc">По коду ТН ВЭД и описанию товара определяем нужный документ и схему оценки соответствия (1С–7С).</p>
+          <div class="step-meta">Результат: <strong>чек-лист документов</strong></div>
+        </div>
+        <div class="step">
+          <div class="step-num">02</div>
+          <div class="step-stage">Шаг 02 · 3–5 дней</div>
+          <h3 class="step-title">Договор и образцы</h3>
+          <p class="step-desc">Подписываем договор с фиксированной стоимостью. Вы передаёте образцы — сами или с нашего склада.</p>
+          <div class="step-meta">Результат: <strong>акт отбора образцов</strong></div>
+        </div>
+        <div class="step">
+          <div class="step-num">03</div>
+          <div class="step-stage">Шаг 03 · 7–25 дней</div>
+          <h3 class="step-title">Испытания</h3>
+          <p class="step-desc">Аккредитованная лаборатория проводит испытания, оформляет протокол.</p>
+          <div class="step-meta">Результат: <strong>протокол испытаний</strong></div>
+        </div>
+        <div class="step">
+          <div class="step-num">04</div>
+          <div class="step-stage">Шаг 04 · 1–2 дня</div>
+          <h3 class="step-title">Регистрация</h3>
+          <p class="step-desc">Регистрируем документ в реестре Росаккредитации и/или ЕАЭС. Получаете оригинал.</p>
+          <div class="step-meta">Результат: <strong>готовый сертификат</strong></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" style="background:var(--ink-bg-2); border-top: 1px solid var(--ink-line); border-bottom: 1px solid var(--ink-line);">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <h2 class="h-section">Частые<br><span class="soft">вопросы</span></h2>
+      </div>
+      <div class="right">
+        Если не нашли ответ — задайте вопрос через форму, ответим за час.
+      </div>
+    </div>
+
+    <div class="faq-list reveal">
+      <details class="faq-item" open>
+        <summary class="faq-q">
+          Можно ли пройти сертификацию без образцов?
+          <span class="ico"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 2 V12 M2 7 H12" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg></span>
+        </summary>
+        <div class="faq-a">
+          Нет, для большинства схем требуются физические образцы продукции. Исключение — добровольная сертификация по схеме 1С на основании готовых протоколов испытаний производителя и отказное письмо (документарная процедура).
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q">
+          Что делать, если товар не проходит испытания?
+          <span class="ico"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 2 V12 M2 7 H12" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg></span>
+        </summary>
+        <div class="faq-a">
+          Если товар по объективным причинам не соответствует требованиям — мы возвращаем 100% оплаты услуг. Если есть возможность доработать продукт — подскажем, что именно нужно изменить. По нашей вине отказов не было ни разу за 10 лет.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q">
+          Сколько действует сертификат?
+          <span class="ico"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 2 V12 M2 7 H12" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg></span>
+        </summary>
+        <div class="faq-a">
+          От 1 года до 5 лет в зависимости от схемы. На партию — действует до её реализации. На серийное производство — 5 лет с инспекционным контролем раз в год. Перед окончанием срока напомним и продлим без перерыва.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q">
+          Можно ли сертифицировать товар, ввезённый по «серой» схеме?
+          <span class="ico"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 2 V12 M2 7 H12" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg></span>
+        </summary>
+        <div class="faq-a">
+          Сертифицировать сам товар — можно. Но при таможенной проверке могут быть вопросы по происхождению. Мы рекомендуем оформлять сертификацию параллельно с легальным импортом, чтобы избежать рисков. Если уже есть проблема — поможет наш юридический отдел.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q">
+          Работаете ли вы с маркетплейсами (Wildberries, Ozon)?
+          <span class="ico"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 2 V12 M2 7 H12" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg></span>
+        </summary>
+        <div class="faq-a">
+          Да, это одно из основных направлений. Оформляем декларации, СГР, отказные письма под требования конкретного маркетплейса. Знаем все нюансы их проверочных систем — заранее закладываем правильные коды и формулировки, чтобы карточка прошла модерацию с первого раза.
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section cta" id="cta">
+  <div class="container">
+    <div class="cta-inner reveal">
+      <div class="cta-text">
+        <h2 class="cta-headline">
+          Подберём документ<br><span class="soft">за 24 часа.</span>
+        </h2>
+        <p class="cta-sub">
+          Пришлите код ТН ВЭД или описание товара — за день определим, какой сертификат нужен, сколько он стоит и сколько займёт. Без обязательств.
+        </p>
+        <div class="cta-actions">
+          <a href="contacts.html" class="btn btn-primary">
+            <span>Получить расчёт</span>
+            <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <path d="M3 11 L11 3 M11 3 H5 M11 3 V9" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/>
+            </svg>
+          </a>
+          <a href="tel:+74952483800" class="btn btn-ghost">+7 (495) 248-38-00</a>
+        </div>
+      </div>
+
+      <div class="cta-card">
+        <h4>В стоимость включено</h4>
+        <ul class="cta-list">
+          <li>Подбор схемы сертификации</li>
+          <li>Все испытания в аккредитованной лаборатории</li>
+          <li>Подготовка технической документации</li>
+          <li>Регистрация в Росаккредитации и ЕАЭС</li>
+          <li>Гарантия выдачи или возврат</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand-block">
+        <a href="index.html" class="brand">
+          <span class="brand-mono">
+            <svg viewBox="0 0 200 200" aria-hidden="true" style="width:48px;height:48px">
+              <rect x="0" y="0" width="200" height="200" rx="40" fill="#042C53"/>
+              <text x="100" y="138" font-family="Inter, -apple-system, sans-serif" font-weight="500" font-size="86" letter-spacing="-3" fill="#FFFFFF" text-anchor="middle">CD<tspan fill="#378ADD">X</tspan></text>
+            </svg>
+          </span>
+        </a>
+        <p class="footer-tag">
+          Customs · Delivery · Compliance.<br>
+          Полный цикл внешнеэкономической деятельности под одной крышей. С 2016 года.
+        </p>
+        <div class="footer-contacts">
+          <div class="footer-phone">+7 (495) 248-38-00</div>
+          <div class="footer-contacts-row">hello@cdx.ru · Москва, Пресненская наб. 12</div>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Услуги</h5>
+        <ul>
+          <li><a href="service-hub.html">Таможенное оформление</a></li>
+          <li><a href="service-hub.html">Международная доставка</a></li>
+          <li><a href="service-hub.html">Разрешительная документация</a></li>
+          <li><a href="service-hub.html">Сертификация и испытания</a></li>
+          <li><a href="service-hub.html">Юридическое сопровождение</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Компания</h5>
+        <ul>
+          <li><a href="about.html">О нас</a></li>
+          <li><a href="about.html">Команда</a></li>
+          <li><a href="article.html">Кейсы</a></li>
+          <li><a href="npa.html">Документы</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Ресурсы</h5>
+        <ul>
+          <li><a href="reference.html">Справочник ТН ВЭД</a></li>
+          <li><a href="npa.html">Нормативные акты</a></li>
+          <li><a href="reference.html">Глоссарий ВЭД</a></li>
+          <li><a href="article.html">Блог · Новости</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 CDX · все права защищены</span>
+      <span><a href="#">Политика конфиденциальности</a> &nbsp;·&nbsp; <a href="#">Договор-оферта</a> &nbsp;·&nbsp; <a href="#">Cookies</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav');
+  const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 24);
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+  document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+
+  const root = document.documentElement;
+  const stored = localStorage.getItem('cdx-theme');
+  if (stored === 'light') root.setAttribute('data-theme', 'light');
+  document.getElementById('themeToggle').addEventListener('click', () => {
+    const isLight = root.getAttribute('data-theme') === 'light';
+    if (isLight) { root.removeAttribute('data-theme'); localStorage.setItem('cdx-theme', 'dark'); }
+    else { root.setAttribute('data-theme', 'light'); localStorage.setItem('cdx-theme', 'light'); }
+  });
+
+  // Quiz logic — radio-style options + multi-step
+  let quizStep = 1;
+  const quizAnswers = {};
+  const quizSteps = [
+    {
+      q: 'Что вы планируете сертифицировать?',
+      opts: [
+        ['electronics', 'Электронику или бытовую технику'],
+        ['cosmetics', 'Косметику, БАДы или товары для детей'],
+        ['food', 'Продукты питания или напитки'],
+        ['industrial', 'Промышленное оборудование'],
+        ['other', 'Другое — расскажу при звонке'],
+      ]
+    },
+    {
+      q: 'Откуда планируете ввозить?',
+      opts: [
+        ['china', 'Китай или Гонконг'],
+        ['turkey', 'Турция'],
+        ['eu', 'Европейский Союз'],
+        ['uae', 'ОАЭ'],
+        ['other2', 'Другая страна'],
+      ]
+    },
+    {
+      q: 'Где будете продавать?',
+      opts: [
+        ['marketplaces', 'Маркетплейсы (Wildberries, Ozon, Я.Маркет)'],
+        ['retail', 'Розничные сети'],
+        ['b2b', 'B2B / тендеры'],
+        ['online', 'Собственный интернет-магазин'],
+        ['mixed', 'Несколько каналов'],
+      ]
+    },
+    {
+      q: 'Куда отправить расчёт со скидкой 10%?',
+      form: true
+    }
+  ];
+
+  function renderQuiz() {
+    const content = document.getElementById('quizContent');
+    const stepEl = document.getElementById('quizStep');
+    const fillEl = document.getElementById('quizFill');
+    const data = quizSteps[quizStep - 1];
+
+    stepEl.textContent = `Шаг ${quizStep} из 4`;
+    fillEl.style.width = (quizStep / 4 * 100) + '%';
+
+    if (data.form) {
+      content.innerHTML = `
+        <h3 class="quiz-question">${data.q}</h3>
+        <div style="display:flex;flex-direction:column;gap:14px;margin-bottom:24px">
+          <input type="tel" placeholder="+7 ___ ___ __ __" required style="height:50px;padding:0 18px;background:rgba(127,127,127,0.04);border:1px solid var(--ink-line);border-radius:999px;color:var(--fg-100);font-family:var(--sans);font-size:14.5px;outline:none"/>
+          <input type="text" placeholder="Telegram или email (по желанию)" style="height:50px;padding:0 18px;background:rgba(127,127,127,0.04);border:1px solid var(--ink-line);border-radius:999px;color:var(--fg-100);font-family:var(--sans);font-size:14.5px;outline:none"/>
+        </div>
+        <div class="quiz-actions">
+          <button class="btn btn-ghost" onclick="quizBack()">Назад</button>
+          <button class="btn btn-primary" onclick="quizSubmit()">
+            <span>Получить расчёт со скидкой</span>
+            <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 11 L11 3 M11 3 H5 M11 3 V9" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg>
+          </button>
+        </div>`;
+    } else {
+      content.innerHTML = `
+        <h3 class="quiz-question">${data.q}</h3>
+        <div class="quiz-options">
+          ${data.opts.map(([v, t]) => `<label class="quiz-option" data-value="${v}"><span class="quiz-option-radio"></span>${t}</label>`).join('')}
+        </div>
+        <div class="quiz-actions">
+          ${quizStep > 1 ? '<button class="btn btn-ghost" onclick="quizBack()">Назад</button>' : ''}
+          <button class="btn btn-primary" onclick="quizNext()">
+            <span>Дальше</span>
+            <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 11 L11 3 M11 3 H5 M11 3 V9" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg>
+          </button>
+        </div>`;
+      content.querySelectorAll('.quiz-option').forEach(o => {
+        o.addEventListener('click', () => {
+          content.querySelectorAll('.quiz-option').forEach(x => x.classList.remove('selected'));
+          o.classList.add('selected');
+          quizAnswers[`q${quizStep}`] = o.dataset.value;
+        });
+      });
+    }
+  }
+  function quizNext() {
+    if (quizStep < 4) { quizStep++; renderQuiz(); }
+  }
+  function quizBack() {
+    if (quizStep > 1) { quizStep--; renderQuiz(); }
+  }
+  function quizSubmit() {
+    const card = document.getElementById('quizCard');
+    card.innerHTML = `
+      <div style="text-align:center;padding:24px 0">
+        <div style="width:64px;height:64px;border-radius:50%;background:color-mix(in oklab,var(--live) 18%,transparent);display:grid;place-items:center;margin:0 auto 18px">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M7 14 L12 19 L21 8" stroke="#4ADE80" stroke-width="2.4" stroke-linecap="square" fill="none"/></svg>
+        </div>
+        <h3 style="font-family:var(--display);font-weight:500;font-size:22px;letter-spacing:-0.02em;color:var(--fg-100);margin:0 0 10px">Готово!</h3>
+        <p style="font-size:14.5px;color:var(--fg-300);line-height:1.55;margin:0 0 4px">Отправили расчёт со скидкой 10%.</p>
+        <p style="font-size:13px;color:var(--fg-400);margin:0">Брокер CDX перезвонит в течение часа.</p>
+      </div>`;
+  }
+  // wire up initial quiz options
+  document.querySelectorAll('#quizContent .quiz-option').forEach(o => {
+    o.addEventListener('click', () => {
+      document.querySelectorAll('#quizContent .quiz-option').forEach(x => x.classList.remove('selected'));
+      o.classList.add('selected');
+      quizAnswers['q1'] = o.dataset.value;
+    });
+  });
+</script>
+
+</body>
+</html>

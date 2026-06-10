@@ -1,0 +1,497 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>О компании CDX — Customs · Delivery · Compliance</title>
+<meta name="description" content="CDX — компания полного цикла ВЭД с 2016 года. 280+ клиентов в России и СНГ, 5000+ выпущенных деклараций, 0% штрафов по нашей вине." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;500;600;700;800&family=Onest:wght@300;400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap&subset=cyrillic,cyrillic-ext,latin,latin-ext" rel="stylesheet" />
+<link rel="stylesheet" href="cdx.css">
+
+<style>
+  /* About — page-specific */
+  .story-visual {
+    aspect-ratio: 4/5;
+    border-radius: 20px;
+    background:
+      radial-gradient(60% 50% at 50% 30%, color-mix(in oklab, var(--accent) 24%, transparent) 0%, transparent 60%),
+      linear-gradient(160deg, var(--brand-navy) 0%, var(--ink-elev) 100%);
+    border: 1px solid var(--ink-line-2);
+    position: relative;
+    overflow: hidden;
+  }
+  .story-visual::before {
+    content: "";
+    position: absolute; inset: 0;
+    background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.06) 1px, transparent 0);
+    background-size: 20px 20px;
+    mask-image: radial-gradient(ellipse 90% 80% at 50% 50%, black 30%, transparent 80%);
+  }
+  .story-visual-card {
+    position: absolute;
+    left: 30px; bottom: 30px; right: 30px;
+    background: rgba(15, 22, 38, 0.85);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--ink-line-2);
+    border-radius: 14px;
+    padding: 22px 24px;
+  }
+  .story-visual-card-label {
+    font-family: var(--sans);
+    font-weight: 500;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--accent-soft);
+    margin-bottom: 8px;
+  }
+  .story-visual-card-text {
+    font-family: var(--display);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.25;
+    letter-spacing: -0.015em;
+    color: var(--fg-100);
+  }
+
+  /* Licenses strip */
+  .licenses-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0;
+    border-left: 1px solid var(--ink-line);
+    border-top: 1px solid var(--ink-line);
+  }
+  .lic {
+    padding: 32px 24px;
+    border-right: 1px solid var(--ink-line);
+    border-bottom: 1px solid var(--ink-line);
+    text-align: center;
+    color: var(--fg-300);
+    transition: all .3s;
+  }
+  .lic:hover { background: var(--ink-bg-2); color: var(--fg-100); }
+  .lic-num {
+    font-family: var(--display);
+    font-weight: 500;
+    font-size: 22px;
+    letter-spacing: -0.02em;
+    color: var(--fg-100);
+    margin-bottom: 6px;
+  }
+  .lic-label {
+    font-size: 12px;
+    color: var(--fg-400);
+    line-height: 1.4;
+  }
+  @media (max-width: 1100px) {
+    .licenses-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+  @media (max-width: 680px) {
+    .licenses-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-mono">
+        <svg viewBox="0 0 200 200" aria-hidden="true">
+          <rect x="0" y="0" width="200" height="200" rx="40" fill="#042C53"/>
+          <text x="100" y="138" font-family="Inter, -apple-system, sans-serif" font-weight="500" font-size="86" letter-spacing="-3" fill="#FFFFFF" text-anchor="middle">CD<tspan fill="#378ADD">X</tspan></text>
+        </svg>
+      </span>
+      <span class="brand-suffix">Customs · Delivery<br>Compliance</span>
+    </a>
+
+    <div class="nav-links">
+      <a href="services.html">Услуги</a>
+      <a href="reference.html">Справочник</a>
+      <a href="about.html">О компании</a>
+      <a href="blog.html">Блог</a>
+      <a href="contacts.html">Контакты</a>
+    </div>
+
+    <div class="nav-right">
+      <a href="tel:+74952483800" class="nav-phone">
+        <span class="pulse"></span>
+        +7 (495) 248-38-00
+      </a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Сменить тему">
+        <svg class="ico-moon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <path d="M13 9.5 A6 6 0 1 1 6.5 3 A4.5 4.5 0 0 0 13 9.5 Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+        </svg>
+        <svg class="ico-sun" width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <circle cx="8" cy="8" r="3.2" stroke="currentColor" stroke-width="1.4"/>
+          <path d="M8 1.5 V3 M8 13 V14.5 M1.5 8 H3 M13 8 H14.5 M3.5 3.5 L4.5 4.5 M11.5 11.5 L12.5 12.5 M3.5 12.5 L4.5 11.5 M11.5 4.5 L12.5 3.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <a href="contacts.html" class="btn-cta">
+        <span>Оставить заявку</span>
+        <svg class="arrow" width="12" height="12" viewBox="0 0 12 12" fill="none">
+          <path d="M3 9 L9 3 M9 3 H4.5 M9 3 V7.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- PAGE HEAD -->
+<section class="page-head">
+  <div class="container">
+    <nav class="breadcrumbs reveal">
+      <a href="index.html">Главная</a>
+      <span class="sep">/</span>
+      <span class="current">О компании</span>
+    </nav>
+    <h1 class="page-title reveal">О компании CDX</h1>
+    <p class="page-lede reveal">
+      CDX — компания полного цикла ВЭД. С 2016 года делаем то, что обычно требует пяти подрядчиков — под одной крышей. Один договор, один ответственный, одна точка ответственности.
+    </p>
+    <div class="page-meta reveal">
+      <span class="chip">С 2016 года</span>
+      <span class="chip accent">280+ клиентов</span>
+      <span class="chip warm">0% штрафов по нашей вине</span>
+    </div>
+  </div>
+</section>
+
+<!-- STATS STRIP -->
+<section class="container" style="margin-top: -1px;">
+  <div class="stats-strip reveal">
+    <div class="stat">
+      <div class="stat-value">10<span class="suffix">+</span></div>
+      <div class="stat-label">лет на рынке ВЭД</div>
+    </div>
+    <div class="stat">
+      <div class="stat-value">280<span class="suffix">+</span></div>
+      <div class="stat-label">клиентов в России и СНГ</div>
+    </div>
+    <div class="stat">
+      <div class="stat-value">5000<span class="suffix">+</span></div>
+      <div class="stat-label">выпущенных деклараций</div>
+    </div>
+    <div class="stat">
+      <div class="stat-value">0<span class="suffix warm">%</span></div>
+      <div class="stat-label">штрафов по нашей вине</div>
+    </div>
+  </div>
+</section>
+
+<!-- STORY -->
+<section class="section">
+  <div class="container">
+    <div class="split-2-narrow reveal">
+      <div>
+        <h2 class="h-section" style="margin-bottom:32px">
+          От первого расчёта<br><span class="soft">до товара на складе</span>
+        </h2>
+        <div class="prose">
+          <p>Мы начинали как одна из сотен брокерских компаний на московском направлении. Быстро поняли: основная боль клиентов — не таможня сама по себе, а гонка между логистом, брокером, юристом и сертифицирующим органом. Каждый подрядчик кивает на другого, цена «по факту» растёт на 30%, сроки уходят.</p>
+          <p>В 2018 году собрали под одной крышей всё, что нужно для внешнеторговой сделки: брокеров, логистов, юристов, специалистов по разрешительной документации, бухгалтеров ВЭД. С тех пор работаем по одной схеме — <strong>один договор, фиксированная стоимость, один менеджер от расчёта до закрывающих документов.</strong></p>
+          <p>Сегодня CDX обслуживает 280+ компаний из FMCG, e-commerce, производства, фармы, IT и дистрибуции. Среди них — публичные ритейлеры, российские контрактные производители и зарубежные бренды, выходящие на рынок ЕАЭС.</p>
+        </div>
+      </div>
+
+      <div class="story-visual">
+        <div class="story-visual-card">
+          <div class="story-visual-card-label">Офис в Москве</div>
+          <div class="story-visual-card-text">Пресненская наб. 12, БЦ «Башня Федерация»</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRINCIPLES -->
+<section class="section" style="background:var(--ink-bg-2); border-top: 1px solid var(--ink-line); border-bottom: 1px solid var(--ink-line);">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <h2 class="h-section">Принципы<br><span class="soft">по которым работаем</span></h2>
+      </div>
+      <div class="right">
+        Четыре правила, без которых не запускаем ни одну сделку. Они написаны в договоре и в SLA по каждому этапу.
+      </div>
+    </div>
+
+    <div class="principles reveal">
+      <div class="principle">
+        <div class="principle-num">01</div>
+        <div>
+          <h3>Прозрачность ценообразования</h3>
+          <p>Стоимость в договоре — окончательная. Если по ходу сделки появляются дополнительные расходы — согласовываем с клиентом до их возникновения, а не задним числом.</p>
+        </div>
+      </div>
+      <div class="principle">
+        <div class="principle-num">02</div>
+        <div>
+          <h3>Полный цикл внутри</h3>
+          <p>Все этапы — брокер, логист, юрист, сертифицирующий орган — наши штатные специалисты. Никаких «договоримся с подрядчиком», никаких задержек на стыках.</p>
+        </div>
+      </div>
+      <div class="principle">
+        <div class="principle-num">03</div>
+        <div>
+          <h3>Один договор — одна ответственность</h3>
+          <p>Никаких субподрядных схем «договор с нами + договор с логистом + договор с лабораторией». Весь цикл — одним договором, ответственность за результат — на CDX.</p>
+        </div>
+      </div>
+      <div class="principle">
+        <div class="principle-num">04</div>
+        <div>
+          <h3>Никаких допусков без согласия</h3>
+          <p>Любое решение, влияющее на цену или сроки, согласовываем с клиентом письменно. Никаких «потом разберёмся» и «потом доплатите».</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <h2 class="h-section">Команда</h2>
+      </div>
+      <div class="right">
+        25 специалистов с профильным опытом 8–18 лет. На каждое направление — своя экспертиза, в каждой сделке — выделенный менеджер.
+      </div>
+    </div>
+
+    <div class="team-grid reveal">
+      <div class="team-card">
+        <div class="team-avatar">АВ</div>
+        <h3 class="team-name">Александр Воронов</h3>
+        <p class="team-role">Генеральный директор, основатель</p>
+        <div class="team-meta">
+          <span>16 лет в ВЭД</span>
+          <span>· МГИМО</span>
+        </div>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">МК</div>
+        <h3 class="team-name">Мария Кузнецова</h3>
+        <p class="team-role">Главный таможенный брокер</p>
+        <div class="team-meta">
+          <span>14 лет</span>
+          <span>· ВАВТ</span>
+        </div>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">ДО</div>
+        <h3 class="team-name">Дмитрий Орлов</h3>
+        <p class="team-role">Руководитель направления логистики</p>
+        <div class="team-meta">
+          <span>11 лет</span>
+          <span>· МАДИ</span>
+        </div>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">ЕС</div>
+        <h3 class="team-name">Екатерина Соколова</h3>
+        <p class="team-role">Главный юрист по таможенному праву</p>
+        <div class="team-meta">
+          <span>13 лет</span>
+          <span>· МГЮА</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LICENSES / MEMBERSHIPS -->
+<section class="section" style="background:var(--ink-bg-2); border-top: 1px solid var(--ink-line); border-bottom: 1px solid var(--ink-line);">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <h2 class="h-section">Лицензии<br><span class="soft">и членство</span></h2>
+      </div>
+      <div class="right">
+        Включены в Реестр таможенных представителей ФТС России. Состоим в профильных деловых объединениях.
+      </div>
+    </div>
+
+    <div class="licenses-grid reveal">
+      <div class="lic">
+        <div class="lic-num">№ 0123/01</div>
+        <div class="lic-label">Реестр таможенных представителей ФТС России</div>
+      </div>
+      <div class="lic">
+        <div class="lic-num">10000000</div>
+        <div class="lic-label">Обеспечение обязанности — банковская гарантия</div>
+      </div>
+      <div class="lic">
+        <div class="lic-num">ISO 9001:2015</div>
+        <div class="lic-label">Система менеджмента качества</div>
+      </div>
+      <div class="lic">
+        <div class="lic-num">ТПП РФ</div>
+        <div class="lic-label">Член Торгово-промышленной палаты</div>
+      </div>
+      <div class="lic">
+        <div class="lic-num">ГНК</div>
+        <div class="lic-label">Гильдия профессиональных участников ВЭД</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section cta" id="contact">
+  <div class="container">
+    <div class="cta-inner reveal">
+      <div class="cta-text">
+        <h2 class="cta-headline">
+          Хотите познакомиться<br><span class="soft">лично?</span>
+        </h2>
+        <p class="cta-sub">
+          Приезжайте в наш офис на Пресненской набережной. Покажем, как организован полный цикл, познакомим с менеджером, обсудим конкретные задачи.
+        </p>
+        <div class="cta-actions">
+          <a href="contacts.html" class="btn btn-primary">
+            <span>Записаться на встречу</span>
+            <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <path d="M3 11 L11 3 M11 3 H5 M11 3 V9" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/>
+            </svg>
+          </a>
+          <a href="contacts.html" class="btn btn-ghost">Все контакты</a>
+        </div>
+      </div>
+
+      <div class="cta-card">
+        <h4>Контакты</h4>
+        <ul class="cta-list">
+          <li>
+            
+            +7 (495) 248-38-00
+          </li>
+          <li>
+            
+            hello@cdx.ru
+          </li>
+          <li>
+            
+            Москва, Пресненская наб. 12
+          </li>
+          <li>
+            
+            пн–пт 09:00–19:00 (МСК)
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand-block">
+        <a href="index.html" class="brand">
+          <span class="brand-mono">
+            <svg viewBox="0 0 200 200" aria-hidden="true" style="width:48px;height:48px">
+              <rect x="0" y="0" width="200" height="200" rx="40" fill="#042C53"/>
+              <text x="100" y="138" font-family="Inter, -apple-system, sans-serif" font-weight="500" font-size="86" letter-spacing="-3" fill="#FFFFFF" text-anchor="middle">CD<tspan fill="#378ADD">X</tspan></text>
+            </svg>
+          </span>
+        </a>
+        <p class="footer-tag">
+          Customs · Delivery · Compliance.<br>
+          Полный цикл внешнеэкономической деятельности под одной крышей. С 2016 года.
+        </p>
+        <div class="footer-contacts">
+          <div class="footer-phone">+7 (495) 248-38-00</div>
+          <div class="footer-contacts-row">hello@cdx.ru · Москва, Пресненская наб. 12</div>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h5>Услуги</h5>
+        <ul>
+          <li><a href="service-hub.html">Таможенное оформление</a></li>
+          <li><a href="service-hub.html">Международная доставка</a></li>
+          <li><a href="service-hub.html">Разрешительная документация</a></li>
+          <li><a href="service-hub.html">Сертификация и испытания</a></li>
+          <li><a href="service-hub.html">Юридическое сопровождение</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Компания</h5>
+        <ul>
+          <li><a href="about.html">О нас</a></li>
+          <li><a href="about.html">Команда</a></li>
+          <li><a href="article.html">Кейсы</a></li>
+          <li><a href="npa.html">Документы</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Ресурсы</h5>
+        <ul>
+          <li><a href="reference.html">Справочник ТН ВЭД</a></li>
+          <li><a href="npa.html">Нормативные акты</a></li>
+          <li><a href="reference.html">Глоссарий ВЭД</a></li>
+          <li><a href="article.html">Блог · Новости</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 CDX · все права защищены</span>
+      <span>
+        <a href="#">Политика конфиденциальности</a> &nbsp;·&nbsp;
+        <a href="#">Договор-оферта</a> &nbsp;·&nbsp;
+        <a href="#">Cookies</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Sticky nav
+  const nav = document.getElementById('nav');
+  const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 24);
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // Reveal on scroll
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e) => {
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+  document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+
+  // Theme toggle
+  const root = document.documentElement;
+  const stored = localStorage.getItem('cdx-theme');
+  if (stored === 'light') root.setAttribute('data-theme', 'light');
+
+  document.getElementById('themeToggle').addEventListener('click', () => {
+    const isLight = root.getAttribute('data-theme') === 'light';
+    if (isLight) {
+      root.removeAttribute('data-theme');
+      localStorage.setItem('cdx-theme', 'dark');
+    } else {
+      root.setAttribute('data-theme', 'light');
+      localStorage.setItem('cdx-theme', 'light');
+    }
+  });
+</script>
+
+</body>
+</html>

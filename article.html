@@ -1,0 +1,487 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Параллельный импорт в 2026 году: что изменилось и как работать — Блог CDX</title>
+<meta name="description" content="Разбираем новые правила параллельного импорта на 2026 год: какие коды ТН ВЭД остались в перечне Минпромторга, как оформлять документы, какие риски учитывать." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;500;600;700;800&family=Onest:wght@300;400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap&subset=cyrillic,cyrillic-ext,latin,latin-ext" rel="stylesheet" />
+<link rel="stylesheet" href="cdx.css">
+
+<style>
+  .article-layout {
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    gap: clamp(40px, 5vw, 80px);
+    align-items: start;
+  }
+  @media (max-width: 1100px) {
+    .article-layout { grid-template-columns: 1fr; }
+    .toc { position: static; }
+  }
+
+  /* Featured image */
+  .article-hero {
+    aspect-ratio: 21/9;
+    border-radius: 20px;
+    background:
+      radial-gradient(60% 80% at 70% 30%, color-mix(in oklab, var(--accent) 30%, transparent) 0%, transparent 60%),
+      radial-gradient(40% 60% at 20% 80%, color-mix(in oklab, var(--warm) 18%, transparent) 0%, transparent 60%),
+      linear-gradient(135deg, var(--brand-navy) 0%, var(--ink-elev) 100%);
+    border: 1px solid var(--ink-line-2);
+    margin-bottom: 56px;
+    position: relative;
+    overflow: hidden;
+  }
+  .article-hero::before {
+    content: "";
+    position: absolute; inset: 0;
+    background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.06) 1px, transparent 0);
+    background-size: 28px 28px;
+    mask-image: radial-gradient(ellipse 90% 80% at 50% 50%, black 30%, transparent 80%);
+  }
+  .article-hero-tag {
+    position: absolute;
+    top: 28px; left: 28px;
+    padding: 8px 14px;
+    background: rgba(15, 22, 38, 0.75);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--ink-line-2);
+    border-radius: 999px;
+    font-family: var(--sans);
+    font-weight: 500;
+    font-size: 12px;
+    color: var(--accent-soft);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  /* Author card */
+  .author-card {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding: 24px 26px;
+    background: var(--ink-elev);
+    border: 1px solid var(--ink-line);
+    border-radius: 16px;
+    margin: 60px 0;
+  }
+  .author-avatar {
+    width: 60px; height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--brand-navy) 0%, var(--accent) 100%);
+    display: grid; place-items: center;
+    font-family: var(--display);
+    font-weight: 500;
+    font-size: 20px;
+    color: #fff;
+    flex-shrink: 0;
+  }
+  .author-name {
+    font-family: var(--display);
+    font-weight: 500;
+    font-size: 17px;
+    color: var(--fg-100);
+    letter-spacing: -0.01em;
+    margin: 0 0 4px;
+  }
+  .author-role { font-size: 13px; color: var(--fg-400); margin: 0; }
+
+  /* Share strip */
+  .share-strip {
+    margin: 48px 0 0;
+    padding: 24px 0;
+    border-top: 1px solid var(--ink-line);
+    border-bottom: 1px solid var(--ink-line);
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .share-label {
+    font-family: var(--sans);
+    font-weight: 500;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--fg-400);
+  }
+  .share-actions { display: flex; gap: 10px; }
+  .share-btn {
+    width: 38px; height: 38px;
+    border-radius: 999px;
+    background: rgba(127,127,127,0.05);
+    border: 1px solid var(--ink-line);
+    display: grid; place-items: center;
+    color: var(--fg-200);
+    transition: all .3s;
+  }
+  .share-btn:hover { background: var(--accent); border-color: var(--accent); color: #fff; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-mono">
+        <svg viewBox="0 0 200 200" aria-hidden="true">
+          <rect x="0" y="0" width="200" height="200" rx="40" fill="#042C53"/>
+          <text x="100" y="138" font-family="Inter, -apple-system, sans-serif" font-weight="500" font-size="86" letter-spacing="-3" fill="#FFFFFF" text-anchor="middle">CD<tspan fill="#378ADD">X</tspan></text>
+        </svg>
+      </span>
+      <span class="brand-suffix">Customs · Delivery<br>Compliance</span>
+    </a>
+    <div class="nav-links">
+      <a href="services.html">Услуги</a>
+      <a href="reference.html">Справочник</a>
+      <a href="about.html">О компании</a>
+      <a href="blog.html">Блог</a>
+      <a href="contacts.html">Контакты</a>
+    </div>
+    <div class="nav-right">
+      <a href="tel:+74952483800" class="nav-phone"><span class="pulse"></span>+7 (495) 248-38-00</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Сменить тему">
+        <svg class="ico-moon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <path d="M13 9.5 A6 6 0 1 1 6.5 3 A4.5 4.5 0 0 0 13 9.5 Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+        </svg>
+        <svg class="ico-sun" width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <circle cx="8" cy="8" r="3.2" stroke="currentColor" stroke-width="1.4"/>
+          <path d="M8 1.5 V3 M8 13 V14.5 M1.5 8 H3 M13 8 H14.5 M3.5 3.5 L4.5 4.5 M11.5 11.5 L12.5 12.5 M3.5 12.5 L4.5 11.5 M11.5 4.5 L12.5 3.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <a href="#cta" class="btn-cta">
+        <span>Оставить заявку</span>
+        <svg class="arrow" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 9 L9 3 M9 3 H4.5 M9 3 V7.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- PAGE HEAD -->
+<section class="page-head">
+  <div class="container">
+    <nav class="breadcrumbs reveal">
+      <a href="index.html">Главная</a>
+      <span class="sep">/</span>
+      <a href="blog.html">Блог</a>
+      <span class="sep">/</span>
+      <a href="blog.html">Экспертные статьи</a>
+      <span class="sep">/</span>
+      <span class="current">Параллельный импорт в 2026 году</span>
+    </nav>
+    <h1 class="page-title reveal" style="max-width:24ch">
+      Параллельный импорт в 2026 году: что изменилось и как работать
+    </h1>
+    <div class="page-meta reveal">
+      <span class="chip accent">Параллельный импорт</span>
+      <span class="chip">12 минут чтения</span>
+      <span class="chip">Опубликовано 03.06.2026</span>
+      <span class="chip">Обновлено 07.06.2026</span>
+    </div>
+  </div>
+</section>
+
+<!-- ARTICLE BODY -->
+<section class="section" style="padding-top: 60px;">
+  <div class="container">
+
+    <div class="article-hero reveal">
+      <span class="article-hero-tag">Экспертная статья</span>
+    </div>
+
+    <div class="article-layout">
+
+      <article class="prose reveal">
+        <p><strong>Параллельный импорт — единственный легальный способ ввезти в Россию товары брендов, ушедших с рынка после 2022 года.</strong> В 2026 году правила его применения изменились: Минпромторг сократил перечень разрешённых брендов на 12%, ФТС ужесточила проверку «легализующих» документов, а с июня 2026 года вступает в силу новый порядок подтверждения происхождения товара. Разбираем, что важно знать импортёру.</p>
+
+        <h2 id="what-is">Что такое параллельный импорт</h2>
+
+        <p>Параллельный импорт — это ввоз оригинальной продукции зарубежных брендов без согласия правообладателя. Возможен, если:</p>
+        <ul>
+          <li>Бренд официально <strong>ушёл с российского рынка</strong> или приостановил поставки</li>
+          <li>Код ТН ВЭД и/или товарный знак включён в <strong>Перечень Минпромторга</strong> (Приказ № 1532)</li>
+          <li>Товар <strong>оригинальный</strong>, легально приобретён у дистрибьютора в третьей стране</li>
+        </ul>
+
+        <p>Главное юридическое основание — <strong>статья 18 Федерального закона «О мерах воздействия на недружественные действия»</strong>, а также Постановление Правительства РФ № 506 от 2022 года, разрешающее ввоз без согласия правообладателя для товаров из утверждённого перечня.</p>
+
+        <div class="callout">
+          <div class="callout-title">Важно понимать</div>
+          <p>Параллельный импорт ≠ контрафакт. Это легальный ввоз оригинальной продукции. Контрафактом считается товар-подделка или товар, ввезённый <em>не из перечня</em> Минпромторга. За контрафакт — административная и уголовная ответственность (ст. 14.10 КоАП, ст. 180 УК РФ).</p>
+        </div>
+
+        <h2 id="changes-2026">Что изменилось в 2026 году</h2>
+
+        <h3>1. Сокращение перечня Минпромторга</h3>
+        <p>С 1 января 2026 года перечень разрешённых брендов сократился на <strong>132 позиции</strong>. В основном — категории, где появились российские аналоги или налажены поставки из дружественных стран:</p>
+        <ul>
+          <li>Бытовая электроника начального ценового сегмента</li>
+          <li>Часть автозапчастей (Bosch, Siemens — остались; премиум-сегмент Brembo, Sachs — выведены)</li>
+          <li>Косметика среднего ценового сегмента</li>
+          <li>Часть одежды масс-маркет</li>
+        </ul>
+
+        <p>В перечне остались: компьютерная техника (Apple, Dell, HP, Lenovo), премиум-автозапчасти, специализированное промышленное оборудование, медицинская техника, премиум-косметика и парфюмерия.</p>
+
+        <h3>2. Новые требования к легализующим документам</h3>
+
+        <p>С июня 2026 года ФТС требует более полный пакет документов, подтверждающих <strong>происхождение и легальность</strong> товара:</p>
+
+        <table>
+          <thead>
+            <tr><th>Документ</th><th>До 2026</th><th>С 2026</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Инвойс от поставщика в третьей стране</td><td>обязательно</td><td>обязательно</td></tr>
+            <tr><td>Сертификат происхождения CT-1 / CT-2</td><td>опционально</td><td><strong>обязательно</strong></td></tr>
+            <tr><td>Контракт + спецификация</td><td>обязательно</td><td>обязательно</td></tr>
+            <tr><td>Подтверждение легальности приобретения у первичного производителя</td><td>—</td><td><strong>обязательно</strong></td></tr>
+            <tr><td>Карточка маркировки (Честный знак — для применимых категорий)</td><td>с 2024</td><td>обязательно</td></tr>
+          </tbody>
+        </table>
+
+        <h3>3. Проверка цепочки поставок</h3>
+        <p>ФТС с 2026 года выборочно запрашивает у импортёра подтверждение полной цепочки: производитель → официальный дистрибьютор → реселлер → импортёр в РФ. Если хоть одно звено не подтверждено документально — груз может быть задержан на складе временного хранения до выяснения.</p>
+
+        <h2 id="risks">Основные риски и как их избежать</h2>
+
+        <ol>
+          <li><strong>Контрафакт под видом параллельного импорта.</strong> Самый частый и самый рискованный сценарий. Решение: работать только с проверенными поставщиками, требовать оригиналы инвойсов и сертификаты происхождения.</li>
+          <li><strong>Выпадение бренда из перечня.</strong> Перечень обновляется 1–2 раза в год. Если на момент пересечения границы товар уже не в перечне — таможня не выпустит. Решение: проверять статус кода и бренда непосредственно перед отгрузкой.</li>
+          <li><strong>Корректировка таможенной стоимости (КТС).</strong> ФТС часто оспаривает занижение стоимости параллельного товара. Решение: запрашивать у поставщика официальные прайс-листы, готовить обоснование цены.</li>
+          <li><strong>Гарантийные обязательства.</strong> Параллельно ввезённый товар не подлежит гарантийному обслуживанию производителем. Импортёр должен взять гарантию на себя — этот пункт обязательно прописывается в договоре с конечным покупателем.</li>
+        </ol>
+
+        <h2 id="how-cdx">Как с этим работаем мы</h2>
+
+        <p>CDX закрывает полный цикл параллельного импорта под ключ:</p>
+
+        <ul>
+          <li>Проверяем код ТН ВЭД и товарный знак в актуальной редакции перечня Минпромторга — за 1 день</li>
+          <li>Оцениваем риски корректировки стоимости, готовим обоснование</li>
+          <li>Помогаем подобрать поставщика в третьей стране (Турция, ОАЭ, Казахстан, Сербия, Армения)</li>
+          <li>Оформляем сертификаты происхождения CT-1 / CT-2, контракты, инвойсы</li>
+          <li>Сопровождаем выпуск ТД, при необходимости — юридическое представительство в спорах с ФТС</li>
+        </ul>
+
+        <blockquote>
+          Параллельный импорт работает, но требует ответственного подхода к документам. В 2026 году цена ошибки выросла — ФТС стала жёстче, перечень короче. Зато оставшиеся в нём бренды импортируются стабильно: при правильно собранном пакете выпуск идёт за 5–7 дней.
+        </blockquote>
+
+        <h2 id="checklist">Чек-лист импортёра 2026</h2>
+
+        <ul>
+          <li>✓ Проверить код ТН ВЭД и бренд в актуальной редакции перечня Минпромторга</li>
+          <li>✓ Запросить у поставщика инвойс, контракт, спецификацию, прайс-лист</li>
+          <li>✓ Получить сертификат происхождения CT-1 / CT-2</li>
+          <li>✓ Подготовить обоснование цены (на случай КТС)</li>
+          <li>✓ Проверить применимость маркировки «Честный знак»</li>
+          <li>✓ Прописать в договоре с покупателем гарантийные обязательства</li>
+          <li>✓ Готовить пакет на 30% объёмнее, чем требуется по официальному регламенту</li>
+        </ul>
+
+        <hr/>
+
+        <p><em>Если планируете ввезти товар по параллельной схеме — пришлите код ТН ВЭД и описание. За 24 часа подготовим оценку рисков и финальную смету. <a href="contacts.html">Получить расчёт →</a></em></p>
+
+        <div class="share-strip">
+          <span class="share-label">Поделиться статьёй</span>
+          <div class="share-actions">
+            <a href="#" class="share-btn" aria-label="Telegram">
+              <svg width="16" height="16" viewBox="0 0 20 20" fill="none">
+                <circle cx="10" cy="10" r="8" stroke="currentColor" stroke-width="1.4"/>
+                <path d="M6 10.5 L14 7 L12.5 14 L10 12 L9 14 L9 11.5 L14 7" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round" fill="none"/>
+              </svg>
+            </a>
+            <a href="#" class="share-btn" aria-label="WhatsApp">
+              <svg width="16" height="16" viewBox="0 0 20 20" fill="none">
+                <path d="M3 17 L4.5 13.5 C3.5 12 3 10.5 3 9 C3 5.5 6 3 9.5 3 C13 3 16 5.5 16 9 C16 12.5 13 15 9.5 15 C8 15 6.5 14.5 5 13.5 Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+              </svg>
+            </a>
+            <a href="#" class="share-btn" aria-label="Email">
+              <svg width="16" height="16" viewBox="0 0 20 20" fill="none">
+                <rect x="2.5" y="4" width="15" height="12" rx="1.5" stroke="currentColor" stroke-width="1.4"/>
+                <path d="M3 5 L10 11 L17 5" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+              </svg>
+            </a>
+            <a href="#" class="share-btn" aria-label="Скопировать ссылку">
+              <svg width="16" height="16" viewBox="0 0 20 20" fill="none">
+                <path d="M8 12 L12 8 M7 13 L10 16 A2 2 0 0 0 13 16 L16 13 A2 2 0 0 0 13 10 L11 12 M13 7 L10 4 A2 2 0 0 0 7 4 L4 7 A2 2 0 0 0 7 10 L9 8" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="author-card">
+          <div class="author-avatar">МК</div>
+          <div>
+            <h4 class="author-name">Мария Кузнецова</h4>
+            <p class="author-role">Главный таможенный брокер CDX · 14 лет опыта в ВЭД · ВАВТ</p>
+          </div>
+        </div>
+
+      </article>
+
+      <aside>
+        <nav class="toc reveal">
+          <div class="toc-title">В этой статье</div>
+          <ol>
+            <li><a href="#what-is">Что такое параллельный импорт</a></li>
+            <li><a href="#changes-2026">Что изменилось в 2026 году</a></li>
+            <li><a href="#risks">Основные риски и как их избежать</a></li>
+            <li><a href="#how-cdx">Как с этим работаем мы</a></li>
+            <li><a href="#checklist">Чек-лист импортёра 2026</a></li>
+          </ol>
+        </nav>
+      </aside>
+
+    </div>
+  </div>
+</section>
+
+<!-- RELATED -->
+<section class="section" style="background:var(--ink-bg-2); border-top: 1px solid var(--ink-line); border-bottom: 1px solid var(--ink-line);">
+  <div class="container">
+    <div class="section-head reveal single">
+      <div>
+        <h2 class="h-section">Читайте<br><span class="soft">также</span></h2>
+      </div>
+    </div>
+
+    <div class="posts-grid reveal">
+      <a href="article.html" class="post-card">
+        <span class="post-tag accent">Таможня</span>
+        <h3 class="post-title">Корректировка таможенной стоимости: как защититься от КТС в 2026</h3>
+        <p class="post-excerpt">ФТС всё чаще оспаривает заявленную стоимость импорта. Разбираем, как готовить документы, чтобы свести риск КТС к минимуму.</p>
+        <div class="post-meta">
+          <span>28 мая 2026</span>
+          <span>9 мин</span>
+        </div>
+      </a>
+      <a href="article.html" class="post-card">
+        <span class="post-tag warm">Сертификация</span>
+        <h3 class="post-title">Маркировка «Честный знак»: какие категории добавятся в 2026 году</h3>
+        <p class="post-excerpt">Расширение перечня обязательной маркировки. Что нужно успеть до 1 сентября — список категорий и порядок действий.</p>
+        <div class="post-meta">
+          <span>20 мая 2026</span>
+          <span>7 мин</span>
+        </div>
+      </a>
+      <a href="article.html" class="post-card">
+        <span class="post-tag">Логистика</span>
+        <h3 class="post-title">Турция или ОАЭ: какой хаб выбрать для параллельного импорта</h3>
+        <p class="post-excerpt">Сравнение по срокам, стоимости, документообороту и санкционным рискам. Реальная статистика по 80+ маршрутам.</p>
+        <div class="post-meta">
+          <span>15 мая 2026</span>
+          <span>11 мин</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section cta" id="cta">
+  <div class="container">
+    <div class="cta-inner reveal">
+      <div class="cta-text">
+        <h2 class="cta-headline">
+          Есть товар на ввоз?<br><span class="soft">Проверим за 24 часа.</span>
+        </h2>
+        <p class="cta-sub">
+          Пришлите код ТН ВЭД и описание. Скажем, можно ли ввезти по параллельной схеме, оценим риски и предложим маршрут.
+        </p>
+        <div class="cta-actions">
+          <a href="contacts.html" class="btn btn-primary">
+            <span>Получить расчёт</span>
+            <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 11 L11 3 M11 3 H5 M11 3 V9" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg>
+          </a>
+          <a href="tel:+74952483800" class="btn btn-ghost">+7 (495) 248-38-00</a>
+        </div>
+      </div>
+      <div class="cta-card">
+        <h4>Что входит в проверку</h4>
+        <ul class="cta-list">
+          <li>Статус в перечне Минпромторга</li>
+          <li>Оценка рисков КТС</li>
+          <li>Подбор оптимального маршрута</li>
+          <li>Список разрешительных документов</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand-block">
+        <a href="index.html" class="brand">
+          <span class="brand-mono">
+            <svg viewBox="0 0 200 200" aria-hidden="true" style="width:48px;height:48px">
+              <rect x="0" y="0" width="200" height="200" rx="40" fill="#042C53"/>
+              <text x="100" y="138" font-family="Inter, -apple-system, sans-serif" font-weight="500" font-size="86" letter-spacing="-3" fill="#FFFFFF" text-anchor="middle">CD<tspan fill="#378ADD">X</tspan></text>
+            </svg>
+          </span>
+        </a>
+        <p class="footer-tag">Customs · Delivery · Compliance.<br>Полный цикл внешнеэкономической деятельности под одной крышей. С 2016 года.</p>
+        <div class="footer-contacts">
+          <div class="footer-phone">+7 (495) 248-38-00</div>
+          <div class="footer-contacts-row">hello@cdx.ru · Москва, Пресненская наб. 12</div>
+        </div>
+      </div>
+      <div class="footer-col"><h5>Услуги</h5><ul>
+        <li><a href="service-hub.html">Таможенное оформление</a></li>
+        <li><a href="service-hub.html">Международная доставка</a></li>
+        <li><a href="service-hub.html">Разрешительная документация</a></li>
+        <li><a href="service-hub.html">Сертификация и испытания</a></li>
+        <li><a href="service-hub.html">Юридическое сопровождение</a></li>
+      </ul></div>
+      <div class="footer-col"><h5>Компания</h5><ul>
+        <li><a href="about.html">О нас</a></li>
+        <li><a href="about.html">Команда</a></li>
+        <li><a href="article.html">Кейсы</a></li>
+        <li><a href="npa.html">Документы</a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+      </ul></div>
+      <div class="footer-col"><h5>Ресурсы</h5><ul>
+        <li><a href="reference.html">Справочник ТН ВЭД</a></li>
+        <li><a href="npa.html">Нормативные акты</a></li>
+        <li><a href="reference.html">Глоссарий ВЭД</a></li>
+        <li><a href="article.html">Блог · Новости</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 CDX · все права защищены</span>
+      <span><a href="#">Политика конфиденциальности</a> &nbsp;·&nbsp; <a href="#">Договор-оферта</a> &nbsp;·&nbsp; <a href="#">Cookies</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav');
+  const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 24);
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+  document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+  const root = document.documentElement;
+  const stored = localStorage.getItem('cdx-theme');
+  if (stored === 'light') root.setAttribute('data-theme', 'light');
+  document.getElementById('themeToggle').addEventListener('click', () => {
+    const isLight = root.getAttribute('data-theme') === 'light';
+    if (isLight) { root.removeAttribute('data-theme'); localStorage.setItem('cdx-theme', 'dark'); }
+    else { root.setAttribute('data-theme', 'light'); localStorage.setItem('cdx-theme', 'light'); }
+  });
+</script>
+
+</body>
+</html>
