@@ -53,7 +53,7 @@
   --mono:    "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
 
   --rail-x: clamp(20px, 4vw, 64px);
-  --section-y: clamp(96px, 12vw, 168px);
+  --section-y: clamp(28px, 3.5vw, 56px);
   --container: 1320px;
 
   --ease-out: cubic-bezier(.16,.84,.32,1);
@@ -145,9 +145,9 @@ button { font-family: inherit; cursor: pointer; }
 .h-section {
   font-family: var(--display);
   font-weight: 500;
-  font-size: clamp(34px, 4.6vw, 60px);
-  line-height: 1.02;
-  letter-spacing: -0.025em;
+  font-size: clamp(22px, 2.6vw, 34px);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
   color: var(--fg-100);
   margin: 0;
 }
@@ -538,8 +538,8 @@ button { font-family: inherit; cursor: pointer; }
 .section-head {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  margin-bottom: 80px;
+  gap: 40px;
+  margin-bottom: 32px;
   align-items: end;
 }
 .section-head .right { color: var(--fg-300); max-width: 44ch; }
@@ -1438,7 +1438,7 @@ button { font-family: inherit; cursor: pointer; }
 /* Page head (smaller than hero) */
 .page-head {
   position: relative;
-  padding: 140px 0 80px;
+  padding: 110px 0 32px;
   overflow: hidden;
   background:
     radial-gradient(70% 100% at 50% 0%, var(--accent-glow) 0%, transparent 55%),
@@ -1480,12 +1480,12 @@ button { font-family: inherit; cursor: pointer; }
   position: relative; z-index: 2;
   font-family: var(--display);
   font-weight: 500;
-  font-size: clamp(40px, 5.6vw, 84px);
-  line-height: 1;
-  letter-spacing: -0.03em;
-  margin: 0 0 24px;
+  font-size: clamp(24px, 2.8vw, 40px);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin: 0 0 18px;
   color: var(--fg-100);
-  max-width: 22ch;
+  max-width: 28ch;
 }
 .page-title .soft {
   display: block;
@@ -2782,7 +2782,7 @@ button { font-family: inherit; cursor: pointer; }
    ========================================================= */
 .sales-hero {
   position: relative;
-  padding: 110px 0 80px;
+  padding: 110px 0 40px;
   overflow: hidden;
   background:
     radial-gradient(70% 70% at 85% 20%, var(--accent-glow) 0%, transparent 55%),
@@ -2837,11 +2837,11 @@ button { font-family: inherit; cursor: pointer; }
 .sales-headline {
   font-family: var(--display);
   font-weight: 500;
-  font-size: clamp(40px, 5.8vw, 78px);
-  line-height: 1;
-  letter-spacing: -0.035em;
+  font-size: clamp(28px, 3.6vw, 50px);
+  line-height: 1.05;
+  letter-spacing: -0.025em;
   color: var(--fg-100);
-  margin: 0 0 22px;
+  margin: 0 0 18px;
 }
 .sales-headline em {
   font-style: normal;

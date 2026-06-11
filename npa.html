@@ -88,8 +88,6 @@
     background: var(--ink-elev);
     border: 1px solid var(--ink-line);
     border-radius: 16px;
-    position: sticky;
-    top: 100px;
   }
   .doc-info-title {
     font-family: var(--sans);
@@ -232,10 +230,11 @@
   </div>
 </nav>
 
-<!-- PAGE HEAD -->
-<section class="page-head">
+<!-- BODY -->
+<section class="section" style="padding-top: 110px;">
   <div class="container">
-    <nav class="breadcrumbs reveal">
+
+    <nav class="breadcrumbs reveal" style="margin-bottom: 24px">
       <a href="index.html">Главная</a>
       <span class="sep">/</span>
       <a href="reference.html">Справочник</a>
@@ -246,51 +245,14 @@
       <span class="sep">/</span>
       <span class="current">ТР ТС 037/2016</span>
     </nav>
-    <h1 class="page-title reveal" style="max-width:28ch">
-      ТР ТС 037/2016 «Об ограничении применения опасных веществ в изделиях электротехники и радиоэлектроники»
-    </h1>
-    <p class="page-lede reveal">
-      Технический регламент Таможенного союза, устанавливающий ограничения по содержанию свинца, кадмия, ртути, хрома и других опасных веществ в электронике. Российский аналог европейской директивы RoHS.
-    </p>
-    <div class="page-meta reveal">
-      <span class="chip accent">Действующий</span>
-      <span class="chip">Принят 18.10.2016</span>
-      <span class="chip">Вступил в силу 01.03.2018</span>
-      <span class="chip warm">Применяется в ЕАЭС</span>
-    </div>
-  </div>
-</section>
-
-<!-- BODY -->
-<section class="section" style="padding-top: 60px;">
-  <div class="container">
-
-    <!-- Banner card -->
-    <div class="npa-banner reveal">
-      <div>
-        <span class="npa-banner-stamp">Действующий регламент</span>
-        <div class="npa-banner-num">ТР ТС 037/2016 · Решение Совета ЕЭК № 113</div>
-        <h2 class="npa-banner-title">Об ограничении применения опасных веществ в изделиях электротехники и радиоэлектроники</h2>
-      </div>
-      <div class="npa-banner-actions">
-        <a href="#" class="btn btn-primary">
-          <span>Скачать PDF (2.4 МБ)</span>
-          <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none">
-            <path d="M7 2 V10 M3 7 L7 11 L11 7 M2 12 H12" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" fill="none"/>
-          </svg>
-        </a>
-        <a href="#" class="btn btn-ghost">
-          <span>DOCX версия</span>
-        </a>
-        <a href="#" class="btn btn-ghost">
-          <span>Открыть на eaeunion.org</span>
-        </a>
-      </div>
-    </div>
 
     <div class="npa-layout">
 
       <div class="prose reveal">
+
+        <div style="font-family:var(--mono);font-size:12px;letter-spacing:0.04em;color:var(--accent-soft);margin-bottom:8px">ТР ТС 037/2016 · Решение Совета ЕЭК № 113 от 18.10.2016</div>
+        <h1 style="font-family:var(--display);font-weight:500;font-size:clamp(22px, 2.6vw, 32px);line-height:1.2;letter-spacing:-0.02em;color:var(--fg-100);margin:0 0 14px">Об ограничении применения опасных веществ в изделиях электротехники и радиоэлектроники</h1>
+        <p style="font-size:15px;color:var(--fg-300);margin:0 0 28px">Российский аналог европейской директивы RoHS — ограничения по содержанию свинца, кадмия, ртути, хрома, PBB и PBDE в электронике, выпускаемой в обращение на территории ЕАЭС.</p>
 
         <h2 id="purpose">Назначение регламента</h2>
 
@@ -400,7 +362,28 @@
         <p><em>Нужна декларация о соответствии ТР ТС 037/2016 — оформим под ключ от 35 000 ₽. <a href="contacts.html">Получить расчёт →</a></em></p>
       </div>
 
-      <aside>
+      <aside style="display:flex;flex-direction:column;gap:18px">
+
+        <nav class="toc reveal">
+          <div class="toc-title">В этом документе</div>
+          <ol>
+            <li><a href="#purpose">Назначение регламента</a></li>
+            <li><a href="#scope">Область применения</a></li>
+            <li><a href="#limits">Предельные нормы содержания</a></li>
+            <li><a href="#forms">Формы подтверждения</a></li>
+            <li><a href="#articles">Структура регламента</a></li>
+            <li><a href="#practice">Практика применения</a></li>
+          </ol>
+        </nav>
+
+        <div style="display:flex;flex-direction:column;gap:8px" class="reveal">
+          <a href="#" class="btn btn-primary" style="height:44px;font-size:13px">
+            <span>Скачать PDF (2.4 МБ)</span>
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 2 V10 M3 7 L7 11 L11 7 M2 12 H12" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" fill="none"/></svg>
+          </a>
+          <a href="#" class="btn btn-ghost" style="height:44px;font-size:13px"><span>DOCX версия</span></a>
+        </div>
+
         <div class="doc-info reveal">
           <div class="doc-info-title">Реквизиты документа</div>
           <dl>
