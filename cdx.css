@@ -1438,7 +1438,7 @@ button { font-family: inherit; cursor: pointer; }
 /* Page head (smaller than hero) */
 .page-head {
   position: relative;
-  padding: 110px 0 32px;
+  padding: 60px 0 24px;
   overflow: hidden;
   background:
     radial-gradient(70% 100% at 50% 0%, var(--accent-glow) 0%, transparent 55%),
@@ -2782,7 +2782,7 @@ button { font-family: inherit; cursor: pointer; }
    ========================================================= */
 .sales-hero {
   position: relative;
-  padding: 110px 0 40px;
+  padding: 60px 0 32px;
   overflow: hidden;
   background:
     radial-gradient(70% 70% at 85% 20%, var(--accent-glow) 0%, transparent 55%),
