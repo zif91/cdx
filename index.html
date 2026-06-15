@@ -66,7 +66,7 @@
   --mono:    "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
 
   --rail-x: clamp(20px, 4vw, 64px);
-  --section-y: clamp(96px, 12vw, 168px);
+  --section-y: clamp(18px, 2.2vw, 36px);
   --container: 1320px;
 
   --ease-out: cubic-bezier(.16,.84,.32,1);
@@ -366,7 +366,7 @@ button { font-family: inherit; cursor: pointer; }
    ========================================================= */
 .hero {
   position: relative;
-  padding: 110px 0 80px;
+  padding: 60px 0 50px;
   overflow: hidden;
   background:
     radial-gradient(80% 60% at 80% 10%, var(--accent-glow) 0%, transparent 55%),
@@ -407,7 +407,7 @@ button { font-family: inherit; cursor: pointer; }
   z-index: 2;
   display: flex;
   flex-direction: column;
-  gap: clamp(20px, 2.4vw, 36px);
+  gap: clamp(14px, 1.6vw, 24px);
 }
 
 .hero-title {
@@ -415,7 +415,7 @@ button { font-family: inherit; cursor: pointer; }
   z-index: 3;
   font-family: var(--display);
   font-weight: 500;
-  font-size: clamp(54px, 8.6vw, 138px);
+  font-size: clamp(18px, 2.9vw, 46px);
   line-height: 0.94;
   letter-spacing: -0.04em;
   margin: 0;
@@ -442,13 +442,13 @@ button { font-family: inherit; cursor: pointer; }
   line-height: 1.55;
   color: var(--fg-300);
   max-width: 50ch;
-  margin: 0 0 44px;
+  margin: 0 0 28px;
   font-weight: 400;
 }
 
 .hero-cta {
   display: flex; gap: 14px; flex-wrap: wrap;
-  margin-bottom: 56px;
+  margin-bottom: 36px;
 }
 
 .hero-metrics {
@@ -731,7 +731,7 @@ button { font-family: inherit; cursor: pointer; }
    ========================================================= */
 .process { background: var(--ink-bg); }
 
-.process-line { position: relative; margin-top: 60px; }
+.process-line { position: relative; margin-top: 36px; }
 .process-line::before {
   content: "";
   position: absolute;
@@ -934,7 +934,7 @@ button { font-family: inherit; cursor: pointer; }
   grid-template-columns: repeat(7, 1fr);
   border-top: 1px solid var(--ink-line);
   border-bottom: 1px solid var(--ink-line);
-  margin-top: 60px;
+  margin-top: 36px;
 }
 .ind {
   padding: 36px 18px;
@@ -984,10 +984,10 @@ button { font-family: inherit; cursor: pointer; }
     linear-gradient(135deg, var(--cta-stop-a) 0%, var(--cta-stop-b) 100%);
   border: 1px solid var(--ink-line-2);
   border-radius: 28px;
-  padding: clamp(40px, 5vw, 72px);
+  padding: clamp(28px, 3.5vw, 48px);
   display: grid;
   grid-template-columns: 1.05fr 1fr;
-  gap: clamp(40px, 5vw, 64px);
+  gap: clamp(24px, 3vw, 40px);
   align-items: stretch;
   position: relative;
   overflow: hidden;
@@ -1324,7 +1324,7 @@ button { font-family: inherit; cursor: pointer; }
    FOOTER
    ========================================================= */
 .footer {
-  padding: 80px 0 40px;
+  padding: 50px 0 30px;
   background: var(--ink-bg);
   border-top: 1px solid var(--ink-line);
 }
