@@ -53,7 +53,7 @@
   --mono:    "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
 
   --rail-x: clamp(20px, 4vw, 64px);
-  --section-y: clamp(28px, 3.5vw, 56px);
+  --section-y: clamp(18px, 2.2vw, 36px);
   --container: 1320px;
 
   --ease-out: cubic-bezier(.16,.84,.32,1);
@@ -353,7 +353,7 @@ button { font-family: inherit; cursor: pointer; }
    ========================================================= */
 .hero {
   position: relative;
-  padding: 110px 0 80px;
+  padding: 60px 0 50px;
   overflow: hidden;
   background:
     radial-gradient(80% 60% at 80% 10%, var(--accent-glow) 0%, transparent 55%),
@@ -394,7 +394,7 @@ button { font-family: inherit; cursor: pointer; }
   z-index: 2;
   display: flex;
   flex-direction: column;
-  gap: clamp(20px, 2.4vw, 36px);
+  gap: clamp(14px, 1.6vw, 24px);
 }
 
 .hero-title {
@@ -402,7 +402,7 @@ button { font-family: inherit; cursor: pointer; }
   z-index: 3;
   font-family: var(--display);
   font-weight: 500;
-  font-size: clamp(54px, 8.6vw, 138px);
+  font-size: clamp(18px, 2.9vw, 46px);
   line-height: 0.94;
   letter-spacing: -0.04em;
   margin: 0;
@@ -429,13 +429,13 @@ button { font-family: inherit; cursor: pointer; }
   line-height: 1.55;
   color: var(--fg-300);
   max-width: 50ch;
-  margin: 0 0 44px;
+  margin: 0 0 28px;
   font-weight: 400;
 }
 
 .hero-cta {
   display: flex; gap: 14px; flex-wrap: wrap;
-  margin-bottom: 56px;
+  margin-bottom: 36px;
 }
 
 .hero-metrics {
@@ -538,8 +538,8 @@ button { font-family: inherit; cursor: pointer; }
 .section-head {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  margin-bottom: 32px;
+  gap: 28px;
+  margin-bottom: 20px;
   align-items: end;
 }
 .section-head .right { color: var(--fg-300); max-width: 44ch; }
@@ -718,7 +718,7 @@ button { font-family: inherit; cursor: pointer; }
    ========================================================= */
 .process { background: var(--ink-bg); }
 
-.process-line { position: relative; margin-top: 60px; }
+.process-line { position: relative; margin-top: 36px; }
 .process-line::before {
   content: "";
   position: absolute;
@@ -921,7 +921,7 @@ button { font-family: inherit; cursor: pointer; }
   grid-template-columns: repeat(7, 1fr);
   border-top: 1px solid var(--ink-line);
   border-bottom: 1px solid var(--ink-line);
-  margin-top: 60px;
+  margin-top: 36px;
 }
 .ind {
   padding: 36px 18px;
@@ -971,10 +971,10 @@ button { font-family: inherit; cursor: pointer; }
     linear-gradient(135deg, var(--cta-stop-a) 0%, var(--cta-stop-b) 100%);
   border: 1px solid var(--ink-line-2);
   border-radius: 28px;
-  padding: clamp(40px, 5vw, 72px);
+  padding: clamp(28px, 3.5vw, 48px);
   display: grid;
   grid-template-columns: 1.05fr 1fr;
-  gap: clamp(40px, 5vw, 64px);
+  gap: clamp(24px, 3vw, 40px);
   align-items: stretch;
   position: relative;
   overflow: hidden;
@@ -1311,7 +1311,7 @@ button { font-family: inherit; cursor: pointer; }
    FOOTER
    ========================================================= */
 .footer {
-  padding: 80px 0 40px;
+  padding: 50px 0 30px;
   background: var(--ink-bg);
   border-top: 1px solid var(--ink-line);
 }
@@ -1530,13 +1530,13 @@ button { font-family: inherit; cursor: pointer; }
 .split-2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: clamp(40px, 5vw, 80px);
+  gap: clamp(24px, 3vw, 48px);
   align-items: start;
 }
 .split-2-narrow {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
-  gap: clamp(40px, 5vw, 80px);
+  gap: clamp(24px, 3vw, 48px);
   align-items: start;
 }
 
@@ -2358,7 +2358,7 @@ button { font-family: inherit; cursor: pointer; }
 .blog-tabs {
   display: flex;
   gap: 0;
-  margin-bottom: 40px;
+  margin-bottom: 28px;
   border-bottom: 1px solid var(--ink-line);
   overflow-x: auto;
 }
@@ -2489,7 +2489,7 @@ button { font-family: inherit; cursor: pointer; }
   border: 1px solid var(--ink-line);
   border-radius: 20px;
   overflow: hidden;
-  margin-bottom: 48px;
+  margin-bottom: 32px;
   transition: all .35s;
 }
 .blog-featured:hover { border-color: var(--ink-line-2); }
@@ -2574,7 +2574,7 @@ button { font-family: inherit; cursor: pointer; }
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
-  margin-bottom: 48px;
+  margin-bottom: 32px;
   padding: 18px;
   background: var(--ink-elev);
   border: 1px solid var(--ink-line);
@@ -2655,7 +2655,7 @@ button { font-family: inherit; cursor: pointer; }
    ========================================================= */
 .tnved-search {
   position: relative;
-  margin-bottom: 40px;
+  margin-bottom: 28px;
 }
 .tnved-search input {
   width: 100%;
@@ -2806,7 +2806,7 @@ button { font-family: inherit; cursor: pointer; }
   position: relative; z-index: 2;
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
-  gap: clamp(40px, 5vw, 80px);
+  gap: clamp(24px, 3vw, 48px);
   align-items: center;
 }
 
@@ -3109,7 +3109,7 @@ button { font-family: inherit; cursor: pointer; }
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  margin-top: 40px;
+  margin-top: 28px;
   position: relative; z-index: 2;
 }
 .risk-card {
@@ -3238,7 +3238,7 @@ button { font-family: inherit; cursor: pointer; }
 .quiz-inner {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: clamp(40px, 5vw, 80px);
+  gap: clamp(24px, 3vw, 48px);
   align-items: center;
   position: relative; z-index: 2;
 }
