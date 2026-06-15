@@ -353,7 +353,7 @@ button { font-family: inherit; cursor: pointer; }
    ========================================================= */
 .hero {
   position: relative;
-  padding: 60px 0 50px;
+  padding: 110px 0 50px;
   overflow: hidden;
   background:
     radial-gradient(80% 60% at 80% 10%, var(--accent-glow) 0%, transparent 55%),
