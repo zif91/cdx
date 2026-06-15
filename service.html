@@ -61,6 +61,73 @@
   .key-facts dd.warm { color: var(--warm); }
   .key-facts dd.accent { color: var(--accent-soft); }
   .key-facts .btn { width: 100%; margin-top: 18px; }
+
+/* USP grid */
+.usp-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+}
+@media (max-width: 1000px) {
+  .usp-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .usp-grid { grid-template-columns: 1fr; }
+}
+.usp-item {
+  background: var(--ink-elev);
+  border: 1px solid var(--ink-line);
+  border-radius: 14px;
+  padding: 24px;
+}
+.usp-num {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: 28px;
+  letter-spacing: -0.02em;
+  color: var(--accent-soft);
+  margin: 0 0 12px;
+  line-height: 1;
+}
+.usp-title {
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: -0.01em;
+  color: var(--fg-100);
+  margin: 0 0 8px;
+}
+.usp-desc {
+  font-family: var(--sans);
+  font-size: 13px;
+  color: var(--fg-400);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Takeaway */
+.takeaway {
+  background: var(--ink-elev);
+  border: 1px solid var(--accent);
+  border-radius: 14px;
+  padding: 28px 32px;
+  margin-top: 40px;
+}
+.takeaway-title {
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: -0.01em;
+  color: var(--accent-soft);
+  margin: 0 0 10px;
+}
+.takeaway p {
+  font-family: var(--sans);
+  font-size: 14px;
+  color: var(--fg-200);
+  line-height: 1.55;
+  margin: 0;
+}
 </style>
 </head>
 <body>
@@ -103,10 +170,10 @@
   </div>
 </nav>
 
-<!-- SALES HERO -->
-<section class="sales-hero">
+<!-- PAGE HEAD -->
+<section class="page-head">
   <div class="container">
-    <nav class="breadcrumbs reveal" style="margin-bottom:20px">
+    <nav class="breadcrumbs reveal">
       <a href="index.html">Главная</a>
       <span class="sep">/</span>
       <a href="services.html">Услуги</a>
@@ -115,176 +182,7 @@
       <span class="sep">/</span>
       <span class="current">Нотификация ФСБ</span>
     </nav>
-
-    <div class="sales-hero-inner">
-
-      <div class="reveal">
-        <span class="sales-hero-pre">Нотификация ФСБ · криптотехника</span>
-
-        <h1 class="sales-headline">
-          Нотификация за <em>10 дней.</em><br>
-          Без участия<br>
-          <span class="accent">в ЦЛСЗ ФСБ.</span>
-        </h1>
-
-        <p class="sales-sub">
-          Без нотификации таможня не выпустит ни смартфон, ни роутер, ни любую технику с шифрованием. Берём весь цикл на себя — от проверки криптофункций до получения регистрации в реестре ЕЭК.
-        </p>
-
-        <ul class="sales-bullets">
-          <li><strong>Бесплатная проверка</strong> криптофункций товара за 1 день</li>
-          <li><strong>Получение разрешения от производителя</strong> — для OEM и ЧТМ</li>
-          <li><strong>Полный пакет под ключ</strong> — перевод, спецификации, подача</li>
-          <li><strong>Бессрочное действие</strong> нотификации — оформляется один раз</li>
-        </ul>
-
-        <div class="sales-meta">
-          <div class="sales-price">
-            <span class="from">От</span>35 000<span class="sales-price-currency">₽</span>
-          </div>
-          <div class="sales-time">10–25 дней</div>
-        </div>
-
-        <form class="sales-quick-form" onsubmit="event.preventDefault(); this.querySelector('button span').textContent='Готово, перезвоним!';">
-          <div class="sales-quick-form-label">Бесплатная проверка криптофункций товара</div>
-          <div class="sales-quick-form-row">
-            <input type="text" placeholder="Ваше имя" required/>
-            <input type="tel" placeholder="+7 ___ ___ __ __" required/>
-            <button type="submit">
-              <span>Проверить товар</span>
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 11 L11 3 M11 3 H5 M11 3 V9" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg>
-            </button>
-          </div>
-          <div class="sales-quick-form-hint">Скажем за 1 час, нужна ли нотификация вашему товару — без обязательств.</div>
-        </form>
-      </div>
-
-      <!-- Visual: lock + crypto waves -->
-      <div class="sales-visual reveal" style="transition-delay:.15s">
-        <svg viewBox="0 0 480 520" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <radialGradient id="lockOrb" cx="50%" cy="50%" r="50%">
-              <stop offset="0%" style="stop-color: var(--accent); stop-opacity: 0.32"/>
-              <stop offset="60%" style="stop-color: var(--accent); stop-opacity: 0.06"/>
-              <stop offset="100%" style="stop-color: var(--accent); stop-opacity: 0"/>
-            </radialGradient>
-            <linearGradient id="shieldFill" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" style="stop-color: var(--accent); stop-opacity: 0.18"/>
-              <stop offset="100%" style="stop-color: var(--accent); stop-opacity: 0.02"/>
-            </linearGradient>
-            <radialGradient id="approvedGlow">
-              <stop offset="0%" style="stop-color: var(--live); stop-opacity: 0.4"/>
-              <stop offset="100%" style="stop-color: var(--live); stop-opacity: 0"/>
-            </radialGradient>
-          </defs>
-
-          <!-- ambient orb -->
-          <circle cx="240" cy="260" r="220" fill="url(#lockOrb)"/>
-
-          <!-- concentric crypto rings -->
-          <g stroke="var(--accent)" fill="none">
-            <circle cx="240" cy="260" r="180" stroke-width="1" stroke-dasharray="2 6" opacity="0.35"/>
-            <circle cx="240" cy="260" r="140" stroke-width="1" stroke-dasharray="3 4" opacity="0.45"/>
-            <circle cx="240" cy="260" r="100" stroke-width="1" opacity="0.4"/>
-          </g>
-
-          <!-- Device dots around shield (RF, Wi-Fi, Bluetooth nodes) -->
-          <g>
-            <!-- top devices -->
-            <g transform="translate(240, 90)">
-              <rect x="-12" y="-18" width="24" height="36" rx="3" fill="none" stroke="var(--accent-soft)" stroke-width="1.4"/>
-              <circle cx="0" cy="14" r="1.5" fill="var(--accent-soft)"/>
-              <text x="0" y="36" fill="var(--fg-400)" text-anchor="middle" font-family="Onest,sans-serif" font-weight="500" font-size="9" letter-spacing="1.2">SMARTPHONE</text>
-            </g>
-            <!-- left router -->
-            <g transform="translate(105, 220)">
-              <rect x="-18" y="-10" width="36" height="20" rx="3" fill="none" stroke="var(--accent-soft)" stroke-width="1.4"/>
-              <path d="M-10 -16 L-6 -22 M0 -16 L0 -24 M10 -16 L6 -22" stroke="var(--accent-soft)" stroke-width="1.3" stroke-linecap="square"/>
-              <circle cx="-8" cy="0" r="1.2" fill="var(--accent-soft)"/>
-              <circle cx="0" cy="0" r="1.2" fill="var(--accent-soft)"/>
-              <circle cx="8" cy="0" r="1.2" fill="var(--accent-soft)"/>
-              <text x="0" y="26" fill="var(--fg-400)" text-anchor="middle" font-family="Onest,sans-serif" font-weight="500" font-size="9" letter-spacing="1.2">ROUTER</text>
-            </g>
-            <!-- right laptop -->
-            <g transform="translate(375, 220)">
-              <path d="M-20 -10 L-20 8 L20 8 L20 -10 Z" fill="none" stroke="var(--accent-soft)" stroke-width="1.4"/>
-              <path d="M-24 8 L24 8 L22 14 L-22 14 Z" fill="none" stroke="var(--accent-soft)" stroke-width="1.4"/>
-              <text x="0" y="32" fill="var(--fg-400)" text-anchor="middle" font-family="Onest,sans-serif" font-weight="500" font-size="9" letter-spacing="1.2">LAPTOP</text>
-            </g>
-            <!-- bottom IoT -->
-            <g transform="translate(240, 420)">
-              <circle r="14" fill="none" stroke="var(--accent-soft)" stroke-width="1.4"/>
-              <circle r="4" fill="var(--accent-soft)"/>
-              <text x="0" y="32" fill="var(--fg-400)" text-anchor="middle" font-family="Onest,sans-serif" font-weight="500" font-size="9" letter-spacing="1.2">IoT-DEVICE</text>
-            </g>
-          </g>
-
-          <!-- Connection lines -->
-          <g stroke="var(--accent)" stroke-width="1" stroke-dasharray="3 4" opacity="0.4" fill="none">
-            <line x1="240" y1="120" x2="240" y2="180"/>
-            <line x1="135" y1="220" x2="180" y2="240"/>
-            <line x1="345" y1="220" x2="300" y2="240"/>
-            <line x1="240" y1="390" x2="240" y2="340"/>
-          </g>
-
-          <!-- Central shield with lock -->
-          <g transform="translate(240, 260)">
-            <!-- Shield -->
-            <path d="M0 -80 L60 -55 L60 25 C60 60 30 80 0 90 C-30 80 -60 60 -60 25 L-60 -55 Z"
-                  fill="url(#shieldFill)"
-                  stroke="var(--accent)"
-                  stroke-width="2"
-                  stroke-linejoin="round"/>
-
-            <!-- Inner shield decoration -->
-            <path d="M0 -65 L48 -45 L48 22 C48 50 24 65 0 75 C-24 65 -48 50 -48 22 L-48 -45 Z"
-                  fill="none"
-                  stroke="var(--accent-soft)"
-                  stroke-width="0.8"
-                  stroke-dasharray="1 3"
-                  opacity="0.5"/>
-
-            <!-- Lock body -->
-            <rect x="-22" y="-15" width="44" height="38" rx="5" fill="var(--ink-elev)" stroke="var(--accent-soft)" stroke-width="1.6"/>
-            <path d="M-14 -15 L-14 -25 A14 14 0 0 1 14 -25 L14 -15"
-                  fill="none"
-                  stroke="var(--accent-soft)"
-                  stroke-width="2.5"
-                  stroke-linecap="round"/>
-
-            <!-- Lock keyhole -->
-            <circle cx="0" cy="0" r="4" fill="var(--accent)"/>
-            <rect x="-1.5" y="0" width="3" height="10" fill="var(--accent)"/>
-
-            <!-- Approved checkmark below -->
-            <g transform="translate(35, 50)">
-              <circle r="22" fill="url(#approvedGlow)"/>
-              <circle r="16" fill="var(--ink-elev)" stroke="var(--live)" stroke-width="1.8"/>
-              <path d="M-7 0 L-2 5 L8 -6" stroke="var(--live)" stroke-width="2.2" fill="none" stroke-linecap="square"/>
-            </g>
-          </g>
-
-          <!-- Code label -->
-          <g transform="translate(70, 480)">
-            <text fill="var(--fg-400)" font-family="JetBrains Mono,monospace" font-weight="500" font-size="11" letter-spacing="1">ЦЛСЗ ФСБ · РЕЕСТР ЕЭК</text>
-          </g>
-        </svg>
-
-        <div class="live-card">
-          <span class="live-card-dot"></span>
-          <span class="live-card-text"><strong>сейчас в работе</strong> · 12 нотификаций</span>
-        </div>
-
-        <div class="rating-card">
-          <div class="rating-card-num">100%</div>
-          <div class="rating-card-text">
-            <div class="rating-card-label" style="font-family:var(--sans);font-weight:500;font-size:12.5px;color:var(--fg-100)">Гарантия выдачи</div>
-            <div class="rating-card-label">за 10 лет · 0 отказов</div>
-          </div>
-        </div>
-      </div>
-
-    </div>
+    <h1 class="page-title reveal">Нотификация ФСБ</h1>
   </div>
 </section>
 
@@ -341,6 +239,40 @@
           </svg>
         </a>
       </aside>
+    </div>
+  </div>
+</section>
+
+<!-- USP -->
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal single">
+      <div>
+        <h2 class="h-section">Почему<br><span class="soft">CDX</span></h2>
+      </div>
+    </div>
+
+    <div class="usp-grid reveal">
+      <div class="usp-item">
+        <div class="usp-num">01</div>
+        <h3 class="usp-title">Фиксированная цена в договоре</h3>
+        <p class="usp-desc">Никаких доплат «по факту». Стоимость, названная на старте, фиксируется в договоре и не меняется.</p>
+      </div>
+      <div class="usp-item">
+        <div class="usp-num">02</div>
+        <h3 class="usp-title">Под ключ без вашего участия</h3>
+        <p class="usp-desc">Вы присылаете описание товара — мы берём на себя всё: сбор документов, перевод, подачу, сопровождение.</p>
+      </div>
+      <div class="usp-item">
+        <div class="usp-num">03</div>
+        <h3 class="usp-title">100% гарантия выдачи</h3>
+        <p class="usp-desc">Если документ невозможно получить по объективным причинам — возвращаем 100% оплаты. За 10 лет — 0 отказов по нашей вине.</p>
+      </div>
+      <div class="usp-item">
+        <div class="usp-num">04</div>
+        <h3 class="usp-title">40+ лабораторий-партнёров</h3>
+        <p class="usp-desc">Аккредитованные лаборатории по всем направлениям: от пожарной безопасности до радиоэлектроники и пищевой продукции.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -590,6 +522,16 @@
   </div>
 </section>
 
+<!-- TAKEAWAY -->
+<section class="section">
+  <div class="container">
+    <div class="takeaway reveal">
+      <div class="takeaway-title">Вывод</div>
+      <p>Нотификация ФСБ — обязательный документ для ввоза любой техники с шифрованием в ЕАЭС. Оформляется один раз и действует бессрочно. CDX закрывает весь цикл под ключ: от проверки криптофункций до регистрации в реестре ЕЭК. Срок — от 10 дней, фиксированная цена в договоре, гарантия выдачи или возврат.</p>
+    </div>
+  </div>
+</section>
+
 <!-- CTA -->
 <section class="section cta" id="cta">
   <div class="container">
@@ -687,115 +629,6 @@
     else { root.setAttribute('data-theme', 'light'); localStorage.setItem('cdx-theme', 'light'); }
   });
 
-  // Quiz logic — tailored for Нотификация ФСБ
-  let quizStep = 1;
-  const quizAnswers = {};
-  const quizSteps = [
-    {
-      q: 'Какой тип товара планируете ввезти?',
-      opts: [
-        ['phone', 'Смартфоны, планшеты или ноутбуки'],
-        ['network', 'Сетевое оборудование (роутеры, точки доступа)'],
-        ['iot', 'IoT и носимые устройства'],
-        ['industrial', 'Промышленные контроллеры или POS-системы'],
-        ['other', 'Другое — расскажу при звонке'],
-      ]
-    },
-    {
-      q: 'Кто производитель товара?',
-      opts: [
-        ['known', 'Известный мировой бренд (Apple, Samsung, Huawei...)'],
-        ['oem', 'OEM или малый китайский производитель'],
-        ['own', 'Своя торговая марка / частный лейбл'],
-        ['contract', 'Контрактное производство под заказ'],
-        ['unknown', 'Не знаю — нужно уточнить'],
-      ]
-    },
-    {
-      q: 'Когда планируете ввезти?',
-      opts: [
-        ['urgent', 'Срочно — груз уже в пути или на таможне'],
-        ['week', 'В течение 1–2 недель'],
-        ['month', 'В течение месяца'],
-        ['planning', 'Планирую — точных сроков пока нет'],
-      ]
-    },
-    {
-      q: 'Куда отправить результат проверки?',
-      form: true
-    }
-  ];
-
-  function renderQuiz() {
-    const content = document.getElementById('quizContent');
-    const stepEl = document.getElementById('quizStep');
-    const fillEl = document.getElementById('quizFill');
-    const data = quizSteps[quizStep - 1];
-
-    stepEl.textContent = `Шаг ${quizStep} из 4`;
-    fillEl.style.width = (quizStep / 4 * 100) + '%';
-
-    if (data.form) {
-      content.innerHTML = `
-        <h3 class="quiz-question">${data.q}</h3>
-        <div style="display:flex;flex-direction:column;gap:14px;margin-bottom:24px">
-          <input type="tel" placeholder="+7 ___ ___ __ __" required style="height:50px;padding:0 18px;background:rgba(127,127,127,0.04);border:1px solid var(--ink-line);border-radius:999px;color:var(--fg-100);font-family:var(--sans);font-size:14.5px;outline:none"/>
-          <input type="text" placeholder="Telegram или email (по желанию)" style="height:50px;padding:0 18px;background:rgba(127,127,127,0.04);border:1px solid var(--ink-line);border-radius:999px;color:var(--fg-100);font-family:var(--sans);font-size:14.5px;outline:none"/>
-        </div>
-        <div class="quiz-actions">
-          <button class="btn btn-ghost" onclick="quizBack()">Назад</button>
-          <button class="btn btn-primary" onclick="quizSubmit()">
-            <span>Получить результат</span>
-            <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 11 L11 3 M11 3 H5 M11 3 V9" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg>
-          </button>
-        </div>`;
-    } else {
-      content.innerHTML = `
-        <h3 class="quiz-question">${data.q}</h3>
-        <div class="quiz-options">
-          ${data.opts.map(([v, t]) => `<label class="quiz-option" data-value="${v}"><span class="quiz-option-radio"></span>${t}</label>`).join('')}
-        </div>
-        <div class="quiz-actions">
-          ${quizStep > 1 ? '<button class="btn btn-ghost" onclick="quizBack()">Назад</button>' : ''}
-          <button class="btn btn-primary" onclick="quizNext()">
-            <span>Дальше</span>
-            <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 11 L11 3 M11 3 H5 M11 3 V9" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg>
-          </button>
-        </div>`;
-      content.querySelectorAll('.quiz-option').forEach(o => {
-        o.addEventListener('click', () => {
-          content.querySelectorAll('.quiz-option').forEach(x => x.classList.remove('selected'));
-          o.classList.add('selected');
-          quizAnswers[`q${quizStep}`] = o.dataset.value;
-        });
-      });
-    }
-  }
-  function quizNext() {
-    if (quizStep < 4) { quizStep++; renderQuiz(); }
-  }
-  function quizBack() {
-    if (quizStep > 1) { quizStep--; renderQuiz(); }
-  }
-  function quizSubmit() {
-    const card = document.getElementById('quizCard');
-    card.innerHTML = `
-      <div style="text-align:center;padding:24px 0">
-        <div style="width:64px;height:64px;border-radius:50%;background:color-mix(in oklab,var(--live) 18%,transparent);display:grid;place-items:center;margin:0 auto 18px">
-          <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M7 14 L12 19 L21 8" stroke="#4ADE80" stroke-width="2.4" stroke-linecap="square" fill="none"/></svg>
-        </div>
-        <h3 style="font-family:var(--display);font-weight:500;font-size:22px;letter-spacing:-0.02em;color:var(--fg-100);margin:0 0 10px">Готово!</h3>
-        <p style="font-size:14.5px;color:var(--fg-300);line-height:1.55;margin:0 0 4px">Эксперт проверит товар и пришлёт результат с расчётом.</p>
-        <p style="font-size:13px;color:var(--fg-400);margin:0">Перезвонит в течение часа в рабочее время.</p>
-      </div>`;
-  }
-  document.querySelectorAll('#quizContent .quiz-option').forEach(o => {
-    o.addEventListener('click', () => {
-      document.querySelectorAll('#quizContent .quiz-option').forEach(x => x.classList.remove('selected'));
-      o.classList.add('selected');
-      quizAnswers['q1'] = o.dataset.value;
-    });
-  });
 </script>
 
 </body>
