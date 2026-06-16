@@ -1505,6 +1505,8 @@ button { font-family: inherit; cursor: pointer; }
   margin: 0;
   font-weight: 400;
 }
+.page-title + .page-lede { margin-top: -14px; }
+.page-lede + .breadcrumbs { margin-top: 22px; }
 
 .page-meta {
   position: relative; z-index: 2;
