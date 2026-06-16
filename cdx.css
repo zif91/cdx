@@ -1638,6 +1638,8 @@ button { font-family: inherit; cursor: pointer; }
 .toc {
   position: sticky;
   top: 100px;
+  max-height: calc(100vh - 130px);
+  overflow-y: auto;
   padding: 24px;
   background: var(--ink-elev);
   border: 1px solid var(--ink-line);
