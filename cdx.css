@@ -1812,6 +1812,8 @@ button { font-family: inherit; cursor: pointer; }
   gap: 0;
   border-left: 1px solid var(--ink-line);
   border-top: 1px solid var(--ink-line);
+  border-radius: 16px;
+  overflow: hidden;
 }
 .principle {
   padding: 36px;
