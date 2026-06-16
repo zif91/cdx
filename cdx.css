@@ -2680,7 +2680,7 @@ button { font-family: inherit; cursor: pointer; }
 .tnved-search input::placeholder { color: var(--fg-500); }
 .tnved-search-ico {
   position: absolute;
-  left: 22px; top: 50%; transform: translateY(-50%);
+  left: 22px; top: 32px; transform: translateY(-50%);
   color: var(--fg-400);
 }
 .tnved-search-hint {
