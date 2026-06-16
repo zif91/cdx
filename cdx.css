@@ -476,7 +476,7 @@ button { font-family: inherit; cursor: pointer; }
   flex-direction: column;
   gap: 16px;
   min-height: 460px;
-  margin-top: 0;
+  margin-top: -50px;
   z-index: 0;
   opacity: 0.85;
 }
