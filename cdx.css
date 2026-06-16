@@ -1721,8 +1721,10 @@ button { font-family: inherit; cursor: pointer; }
 .stats-strip {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  border-top: 1px solid var(--ink-line);
-  border-bottom: 1px solid var(--ink-line);
+  background: var(--ink-elev);
+  border: 1px solid var(--ink-line-2);
+  border-radius: 16px;
+  overflow: hidden;
 }
 .stat {
   padding: 36px 28px;
