@@ -10,91 +10,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;500;600;700;800&family=Onest:wght@300;400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap&subset=cyrillic,cyrillic-ext,latin,latin-ext" rel="stylesheet" />
 <link rel="stylesheet" href="cdx.css">
-
-<style>
-  /* Services list — structured rows */
-  .svc-group {
-    margin-bottom: 52px;
-  }
-  .svc-group:last-child {
-    margin-bottom: 0;
-  }
-  .svc-group-title {
-    font-family: var(--display);
-    font-weight: 500;
-    font-size: 18px;
-    letter-spacing: -0.01em;
-    color: var(--fg-200);
-    margin: 0 0 18px;
-    padding-bottom: 14px;
-    border-bottom: 1px solid var(--ink-line);
-  }
-
-  .svc-list {
-    display: flex;
-    flex-direction: column;
-  }
-  .svc-row {
-    display: grid;
-    grid-template-columns: 220px 1fr 180px;
-    gap: 24px;
-    align-items: baseline;
-    padding: 15px 0;
-    border-bottom: 1px solid var(--ink-line-2);
-    text-decoration: none;
-    color: inherit;
-    transition: background 0.15s;
-  }
-  .svc-row:last-child {
-    border-bottom: none;
-  }
-  .svc-row:hover {
-    background: var(--ink-elev);
-    margin: 0 -12px;
-    padding-left: 12px;
-    padding-right: 12px;
-    border-radius: 8px;
-  }
-  .svc-row:hover .svc-row-name {
-    color: var(--accent-soft);
-  }
-
-  .svc-row-name {
-    font-family: var(--display);
-    font-weight: 500;
-    font-size: 15px;
-    letter-spacing: -0.01em;
-    color: var(--fg-100);
-    transition: color 0.15s;
-  }
-  .svc-row-desc {
-    font-family: var(--sans);
-    font-size: 13px;
-    color: var(--fg-400);
-    line-height: 1.45;
-  }
-  .svc-row-meta {
-    font-family: var(--sans);
-    font-size: 12.5px;
-    color: var(--fg-300);
-    text-align: right;
-    white-space: nowrap;
-  }
-
-  @media (max-width: 900px) {
-    .svc-row {
-      grid-template-columns: 1fr;
-      gap: 6px;
-      padding: 16px 0;
-    }
-    .svc-row-meta {
-      text-align: left;
-    }
-    .svc-row-desc {
-      font-size: 12.5px;
-    }
-  }
-</style>
 </head>
 <body>
 
@@ -144,86 +59,179 @@
       <span class="sep">/</span>
       <span class="current">Услуги</span>
     </nav>
-    <h1 class="page-title reveal">Услуги</h1>
+    <h1 class="page-title reveal">Полный цикл ВЭД<br><span class="soft">в одних руках</span></h1>
+    <p class="page-lede reveal">
+      Восемь направлений внешнеэкономической деятельности — все внутри CDX. Один договор, один менеджер, фиксированная стоимость от первого расчёта до товара на вашем складе.
+    </p>
+    <div class="page-meta reveal">
+      <span class="chip accent">8 направлений</span>
+      <span class="chip">50+ типов услуг</span>
+      <span class="chip warm">Без передачи на подряд</span>
+    </div>
   </div>
 </section>
 
-<!-- SERVICES LIST -->
+<!-- 8 DIRECTIONS -->
 <section class="section">
   <div class="container">
+    <div class="hub-grid reveal">
 
-    <!-- 1. ВЭД и логистика -->
-    <div class="svc-group reveal">
-      <h2 class="svc-group-title">ВЭД и логистика</h2>
-      <div class="svc-list">
+      <!-- 01: Таможенное оформление -->
+      <a href="service-hub.html" class="hub-tile">
+        <div class="hub-tile-icon">
+          <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+            <path d="M13 2 L22 6 V13 C22 18 18 21 13 23 C8 21 4 18 4 13 V6 Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+            <path d="M9 13 L12 16 L17 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h2 class="hub-tile-title">Таможенное оформление</h2>
+        <p class="hub-tile-desc">Декларирование в ЕАЭС, подбор кодов ТН ВЭД, расчёт платежей, импорт/экспорт/реэкспорт, ввоз культурных ценностей, ведение арестованных грузов.</p>
+        <div class="hub-tile-meta">
+          <span><strong>10</strong> подразделов · от 5 дней</span>
+          <span class="hub-tile-arrow">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12 L12 4 M12 4 H6 M12 4 V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></svg>
+          </span>
+        </div>
+      </a>
 
-        <a href="service-hub.html" class="svc-row">
-          <span class="svc-row-name">Таможенное оформление</span>
-          <span class="svc-row-desc">Импорт, экспорт, реэкспорт, подбор кодов ТН ВЭД, расчёт платежей</span>
-          <span class="svc-row-meta">10 подразделов · от 5 дней</span>
-        </a>
+      <!-- 02: Логистика -->
+      <a href="service-hub.html" class="hub-tile">
+        <div class="hub-tile-icon">
+          <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+            <circle cx="13" cy="13" r="10" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M3 13 H23" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M13 3 C16 7 16 19 13 23 C10 19 10 7 13 3 Z" stroke="currentColor" stroke-width="1.5"/>
+            <circle cx="8" cy="8" r="1.5" fill="currentColor"/>
+            <circle cx="18" cy="17" r="1.5" fill="currentColor"/>
+          </svg>
+        </div>
+        <h2 class="hub-tile-title">Международная логистика</h2>
+        <p class="hub-tile-desc">Авиа, морем, авто, ж/д. Прямые направления из Китая, Гонконга, Индии, ОАЭ, Европейского Союза, Турции. Мультимодальные маршруты со страхованием.</p>
+        <div class="hub-tile-meta">
+          <span><strong>6</strong> направлений · любая страна</span>
+          <span class="hub-tile-arrow">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12 L12 4 M12 4 H6 M12 4 V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></svg>
+          </span>
+        </div>
+      </a>
 
-        <a href="service-hub.html" class="svc-row">
-          <span class="svc-row-name">Международная логистика</span>
-          <span class="svc-row-desc">Авиа, море, авто, ж/д. Китай, Индия, ОАЭ, ЕС, Турция. Мультимодальные маршруты</span>
-          <span class="svc-row-meta">6 направлений · любая страна</span>
-        </a>
+      <!-- 03: Сертификация -->
+      <a href="service-hub.html" class="hub-tile">
+        <div class="hub-tile-icon">
+          <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+            <circle cx="13" cy="11" r="6" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M9 16 L7 23 L13 20 L19 23 L17 16" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+            <circle cx="13" cy="11" r="2.5" fill="currentColor"/>
+          </svg>
+        </div>
+        <h2 class="hub-tile-title">Сертификация и испытания</h2>
+        <p class="hub-tile-desc">Сертификаты ТР ТС / ЕАЭС, ГОСТ Р, СГР, добровольная сертификация, ИСО, пожарные, связи. Полный цикл в аккредитованных лабораториях.</p>
+        <div class="hub-tile-meta">
+          <span><strong>15</strong> типов документов · от 7 дней</span>
+          <span class="hub-tile-arrow">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12 L12 4 M12 4 H6 M12 4 V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></svg>
+          </span>
+        </div>
+      </a>
 
-        <a href="service-hub.html" class="svc-row">
-          <span class="svc-row-name">Специальные процедуры</span>
-          <span class="svc-row-desc">Экологический сбор, сертификаты происхождения CT-1/CT-2, согласования с Минкультом</span>
-          <span class="svc-row-meta">3 направления · по запросу</span>
-        </a>
+      <!-- 04: Нетарифное регулирование -->
+      <a href="service-hub.html" class="hub-tile">
+        <div class="hub-tile-icon">
+          <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+            <path d="M7 4 H17 L21 8 V22 H7 Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+            <path d="M17 4 V8 H21" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+            <path d="M10 13 H18 M10 16.5 H16 M10 20 H14" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
+          </svg>
+        </div>
+        <h2 class="hub-tile-title">Нетарифное регулирование</h2>
+        <p class="hub-tile-desc">Нотификации ФСБ / КНБ, разрешения на временный ввоз РЭС, заключения РЧЦ / Росприроднадзора / ХАЛ, лицензии Минпромторга, выписки из РКН.</p>
+        <div class="hub-tile-meta">
+          <span><strong>11</strong> типов разрешений · от 5 дней</span>
+          <span class="hub-tile-arrow">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12 L12 4 M12 4 H6 M12 4 V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></svg>
+          </span>
+        </div>
+      </a>
 
-      </div>
+      <!-- 05: Экспортный контроль -->
+      <a href="service-hub.html" class="hub-tile">
+        <div class="hub-tile-icon">
+          <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+            <path d="M13 3 L20 7 V14 C20 18 17 21 13 23 C9 21 6 18 6 14 V7 Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+            <path d="M13 8 V18 M9 13 H17" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
+          </svg>
+        </div>
+        <h2 class="hub-tile-title">Экспортный контроль</h2>
+        <p class="hub-tile-desc">Лицензия ФСТЭК, заключение ФСТЭК / ФСВТС, разрешение Комиссии по экспортному контролю. Товары двойного назначения и подконтрольная продукция.</p>
+        <div class="hub-tile-meta">
+          <span><strong>4</strong> типа документов · от 14 дней</span>
+          <span class="hub-tile-arrow">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12 L12 4 M12 4 H6 M12 4 V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></svg>
+          </span>
+        </div>
+      </a>
+
+      <!-- 06: Консалтинг -->
+      <a href="service-hub.html" class="hub-tile">
+        <div class="hub-tile-icon">
+          <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+            <path d="M13 3 V21" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M6 8 H20" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M6 8 L3 15 H9 Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" fill="none"/>
+            <path d="M20 8 L17 15 H23 Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" fill="none"/>
+            <path d="M9 22 H17" stroke="currentColor" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <h2 class="hub-tile-title">Консалтинг и право</h2>
+        <p class="hub-tile-desc">Правовая экспертиза внешнеторговых договоров, ведомственное обжалование решений таможни, доказывание таможенной стоимости, ПКР.</p>
+        <div class="hub-tile-meta">
+          <span><strong>4</strong> направления · постоянно</span>
+          <span class="hub-tile-arrow">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12 L12 4 M12 4 H6 M12 4 V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></svg>
+          </span>
+        </div>
+      </a>
+
+      <!-- 07: Аутсорсинг ВЭД -->
+      <a href="service-hub.html" class="hub-tile">
+        <div class="hub-tile-icon">
+          <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+            <circle cx="9" cy="9" r="3.5" stroke="currentColor" stroke-width="1.5"/>
+            <circle cx="17" cy="9" r="3.5" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M3 22 C3 17.5 5.5 15 9 15 C12.5 15 15 17.5 15 22" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
+            <path d="M11 22 C11 17.5 13.5 15 17 15 C20.5 15 23 17.5 23 22" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
+          </svg>
+        </div>
+        <h2 class="hub-tile-title">Аутсорсинг отдела ВЭД</h2>
+        <p class="hub-tile-desc">Полная замена штатных специалистов: брокер, логист, юрист, бухгалтер ВЭД. «Наш контракт» и «Белый импорт» — две модели работы.</p>
+        <div class="hub-tile-meta">
+          <span><strong>2</strong> модели · подписка</span>
+          <span class="hub-tile-arrow">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12 L12 4 M12 4 H6 M12 4 V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></svg>
+          </span>
+        </div>
+      </a>
+
+      <!-- 08: Специальные процедуры -->
+      <a href="service-hub.html" class="hub-tile">
+        <div class="hub-tile-icon">
+          <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+            <rect x="4" y="4" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M9 13 L12 16 L17 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"/>
+            <path d="M8 5 V8 M14 5 V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
+          </svg>
+        </div>
+        <h2 class="hub-tile-title">Специальные процедуры</h2>
+        <p class="hub-tile-desc">Отчёт по экологическому сбору, сертификаты происхождения CT-1 / CT-2, согласования с Минкультом для культурных ценностей.</p>
+        <div class="hub-tile-meta">
+          <span><strong>3</strong> направления · по запросу</span>
+          <span class="hub-tile-arrow">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12 L12 4 M12 4 H6 M12 4 V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></svg>
+          </span>
+        </div>
+      </a>
+
     </div>
-
-    <!-- 2. Разрешительные документы -->
-    <div class="svc-group reveal">
-      <h2 class="svc-group-title">Разрешительные документы</h2>
-      <div class="svc-list">
-
-        <a href="service-hub.html" class="svc-row">
-          <span class="svc-row-name">Сертификация и испытания</span>
-          <span class="svc-row-desc">Сертификаты ТР ТС / ЕАЭС, ГОСТ Р, СГР, связь, пожарные, ИСО, добровольная сертификация</span>
-          <span class="svc-row-meta">15 типов документов · от 7 дней</span>
-        </a>
-
-        <a href="service-hub.html" class="svc-row">
-          <span class="svc-row-name">Нетарифное регулирование</span>
-          <span class="svc-row-desc">Нотификации ФСБ/КНБ, лицензии Минпромторга, заключения РЧЦ, Росприроднадзора, выписки РКН</span>
-          <span class="svc-row-meta">11 типов разрешений · от 5 дней</span>
-        </a>
-
-        <a href="service-hub.html" class="svc-row">
-          <span class="svc-row-name">Экспортный контроль</span>
-          <span class="svc-row-desc">Лицензия ФСТЭК, заключения ФСТЭК/ФСВТС, разрешения КЭК. Товары двойного назначения</span>
-          <span class="svc-row-meta">4 типа документов · от 14 дней</span>
-        </a>
-
-      </div>
-    </div>
-
-    <!-- 3. Консалтинг и аутсорсинг -->
-    <div class="svc-group reveal">
-      <h2 class="svc-group-title">Консалтинг и аутсорсинг</h2>
-      <div class="svc-list">
-
-        <a href="service-hub.html" class="svc-row">
-          <span class="svc-row-name">Консалтинг и право</span>
-          <span class="svc-row-desc">Правовая экспертиза ВЭД-договоров, обжалование решений таможни, доказывание таможенной стоимости</span>
-          <span class="svc-row-meta">4 направления</span>
-        </a>
-
-        <a href="service-hub.html" class="svc-row">
-          <span class="svc-row-name">Аутсорсинг отдела ВЭД</span>
-          <span class="svc-row-desc">Полная замена штатных специалистов: брокер, логист, юрист, бухгалтер ВЭД</span>
-          <span class="svc-row-meta">2 модели · подписка</span>
-        </a>
-
-      </div>
-    </div>
-
   </div>
 </section>
 
