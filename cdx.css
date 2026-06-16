@@ -429,7 +429,7 @@ button { font-family: inherit; cursor: pointer; }
   line-height: 1.55;
   color: var(--fg-300);
   max-width: 50ch;
-  margin: 0 0 28px;
+  margin: 20px 0 28px;
   font-weight: 400;
 }
 
@@ -476,7 +476,7 @@ button { font-family: inherit; cursor: pointer; }
   flex-direction: column;
   gap: 16px;
   min-height: 460px;
-  margin-top: -170px;
+  margin-top: -150px;
   z-index: 0;
   opacity: 0.85;
 }
