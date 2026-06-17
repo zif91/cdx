@@ -13,48 +13,76 @@
 
 <style>
   /* About — page-specific */
-  .story-visual {
-    aspect-ratio: 4/5;
+  /* Specialist cards */
+  .specialist-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .specialist-card {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 28px 28px;
+    background: var(--ink-elev);
+    border: 1px solid var(--ink-line);
     border-radius: 20px;
-    background:
-      radial-gradient(60% 50% at 50% 30%, color-mix(in oklab, var(--accent) 24%, transparent) 0%, transparent 60%),
-      linear-gradient(160deg, var(--brand-navy) 0%, var(--ink-elev) 100%);
-    border: 1px solid var(--ink-line-2);
-    position: relative;
-    overflow: hidden;
+    transition: border-color .3s, transform .3s var(--ease-out);
   }
-  .story-visual::before {
-    content: "";
-    position: absolute; inset: 0;
-    background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.06) 1px, transparent 0);
-    background-size: 20px 20px;
-    mask-image: radial-gradient(ellipse 90% 80% at 50% 50%, black 30%, transparent 80%);
+  .specialist-card:hover {
+    border-color: var(--ink-line-2);
+    transform: translateY(-2px);
   }
-  .story-visual-card {
-    position: absolute;
-    left: 30px; bottom: 30px; right: 30px;
-    background: rgba(15, 22, 38, 0.85);
-    backdrop-filter: blur(10px);
-    border: 1px solid var(--ink-line-2);
-    border-radius: 14px;
-    padding: 22px 24px;
+  .specialist-card.flip { flex-direction: row-reverse; }
+  .spec-avatar {
+    flex-shrink: 0;
+    width: 88px; height: 88px;
+    border-radius: 18px;
+    background: linear-gradient(145deg, var(--brand-navy), var(--accent-strong));
+    display: grid; place-items: center;
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: 28px;
+    letter-spacing: -0.02em;
+    color: #fff;
   }
-  .story-visual-card-label {
+  .spec-info {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .spec-name {
+    font-family: var(--display);
+    font-weight: 500;
+    font-size: 19px;
+    letter-spacing: -0.015em;
+    color: var(--fg-100);
+  }
+  .spec-role {
     font-family: var(--sans);
     font-weight: 500;
     font-size: 11px;
     text-transform: uppercase;
-    letter-spacing: 0.12em;
+    letter-spacing: 0.1em;
     color: var(--accent-soft);
-    margin-bottom: 8px;
   }
-  .story-visual-card-text {
-    font-family: var(--display);
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 1.25;
-    letter-spacing: -0.015em;
-    color: #fff;
+  .spec-meta {
+    font-size: 13px;
+    color: var(--fg-300);
+    display: flex; gap: 12px;
+    flex-wrap: wrap;
+  }
+  .spec-fact {
+    font-size: 13.5px;
+    color: var(--fg-200);
+    line-height: 1.5;
+    font-style: italic;
+    padding-top: 4px;
+    border-top: 1px solid var(--ink-line);
+  }
+  @media (max-width: 680px) {
+    .specialist-card, .specialist-card.flip { flex-direction: column; text-align: center; }
+    .spec-meta { justify-content: center; }
   }
 
   /* Licenses strip */
@@ -202,10 +230,30 @@
         </div>
       </div>
 
-      <div class="story-visual">
-        <div class="story-visual-card">
-          <div class="story-visual-card-label">Офис в Москве</div>
-          <div class="story-visual-card-text">Пресненская наб. 12, БЦ «Башня Федерация»</div>
+      <div class="specialist-stack">
+        <div class="specialist-card">
+          <div class="spec-avatar">АВ</div>
+          <div class="spec-info">
+            <div class="spec-name">Александр Воронов</div>
+            <div class="spec-role">Генеральный директор, основатель</div>
+            <div class="spec-meta">
+              <span>16 лет в ВЭД</span>
+              <span>МГИМО</span>
+            </div>
+            <div class="spec-fact">Лично ведёт ключевых клиентов. Знает таможенное законодательство ЕАЭС на уровне соавторов поправок.</div>
+          </div>
+        </div>
+        <div class="specialist-card flip">
+          <div class="spec-avatar">МК</div>
+          <div class="spec-info">
+            <div class="spec-name">Мария Кузнецова</div>
+            <div class="spec-role">Главный таможенный брокер</div>
+            <div class="spec-meta">
+              <span>14 лет в ВЭД</span>
+              <span>ВАВТ</span>
+            </div>
+            <div class="spec-fact">Выпустила 5 000+ деклараций. Знает все посты московского региона — инспекторов, требования, нюансы.</div>
+          </div>
         </div>
       </div>
     </div>
