@@ -681,26 +681,12 @@ button { font-family: inherit; cursor: pointer; }
 .service-cta-cell:hover::after { opacity: 1; }
 .service-cta-cell:hover { transform: translateY(-2px); }
 
-.service-cta-cell .cell-arrow {
-  width: 56px; height: 56px;
-  border-radius: 14px;
+.service-cta-cell .service-icon {
   background: var(--accent);
-  display: grid; place-items: center;
+  border-color: var(--accent);
   color: #fff;
-  transition: transform .4s var(--ease-out);
-  position: relative; z-index: 2;
 }
-.service-cta-cell:hover .cell-arrow { transform: rotate(-12deg); }
-.service-cta-cell h3 {
-  font-family: var(--display);
-  font-weight: 500;
-  font-size: 22px;
-  line-height: 1.15;
-  letter-spacing: -0.015em;
-  margin: 24px 0 12px;
-  color: var(--fg-100);
-  position: relative; z-index: 2;
-}
+.service-cta-cell:hover .service-icon { transform: rotate(-12deg); }
 .service-cta-cell p {
   font-size: 14.5px;
   line-height: 1.5;
@@ -1774,13 +1760,13 @@ button { font-family: inherit; cursor: pointer; }
       <a href="#contact" class="service-cta-cell">
         <div>
           <div class="service-top">
-            <div class="cell-arrow">
+            <div class="service-icon">
               <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
                 <path d="M5 17 L17 5 M17 5 H8 M17 5 V14" stroke="currentColor" stroke-width="1.8" stroke-linecap="square"/>
               </svg>
             </div>
+            <h3 class="service-title">Нужна нестандартная услуга?</h3>
           </div>
-          <h3>Нужна нестандартная услуга?</h3>
           <p>Опишите задачу — соберём индивидуальную схему: от перевозки опасных грузов до сертификации новой категории товара.</p>
         </div>
         <span class="cell-link">
@@ -2142,7 +2128,7 @@ button { font-family: inherit; cursor: pointer; }
         </button>
 
         <p class="form-disclaimer">
-          Перезвоним в течение одного часа в рабочее время. Все данные передаются по защищённому каналу.
+          Все данные передаются по защищённому каналу.
         </p>
       </form>
 
