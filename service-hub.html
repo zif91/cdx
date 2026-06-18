@@ -77,6 +77,40 @@
   .key-facts dd.warm { color: var(--warm); }
   .key-facts dd.accent { color: var(--accent-soft); }
 
+  .key-docs {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .key-docs li {
+    font-size: 13px;
+    color: var(--fg-200);
+    line-height: 1.45;
+    padding-left: 16px;
+    position: relative;
+  }
+  .key-docs li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 7px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--accent-soft);
+  }
+  .key-docs-hint {
+    font-size: 11.5px;
+    color: var(--fg-400);
+    line-height: 1.45;
+    margin: 0;
+    padding-top: 12px;
+    border-top: 1px solid var(--ink-line);
+  }
+
   .usp-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -268,72 +302,17 @@
       </div>
 
       <aside class="key-facts">
-        <div class="key-facts-title">Параметры услуги</div>
-        <dl>
-          <div><dt>Виды документов</dt><dd>15+</dd></div>
-          <div><dt>Срок действия сертификата</dt><dd>1–5 лет</dd></div>
-          <div><dt>Лабораторий-партнёров</dt><dd>40+</dd></div>
-          <div><dt>Гарантия выдачи</dt><dd class="warm">100%</dd></div>
-        </dl>
+        <div class="key-facts-title">Что от вас нужно</div>
+        <ul class="key-docs">
+          <li>Техническая спецификация товара</li>
+          <li>Описание функциональных характеристик</li>
+          <li>Доверенность на представление интересов</li>
+          <li>Карточка компании (заявитель)</li>
+          <li>Договор с производителем / инвойс</li>
+          <li>Фото / каталог товара</li>
+        </ul>
+        <p class="key-docs-hint">Если чего-то нет — поможем запросить у производителя</p>
       </aside>
-    </div>
-  </div>
-</section>
-
-<!-- DOCS REQUIRED -->
-<section class="section">
-  <div class="container">
-    <div class="section-head reveal">
-      <div>
-        <h2 class="h-section">Что от вас<br><span class="soft">нужно</span></h2>
-      </div>
-      <div class="right">
-        Простой комплект документов. Если чего-то нет — поможем запросить у производителя.
-      </div>
-    </div>
-
-    <div class="prose reveal">
-      <table>
-        <thead>
-          <tr>
-            <th>Документ</th>
-            <th>Кто предоставляет</th>
-            <th>Формат</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Техническая спецификация товара</td>
-            <td>Производитель</td>
-            <td>PDF</td>
-          </tr>
-          <tr>
-            <td>Описание товара / функциональных характеристик</td>
-            <td>Производитель</td>
-            <td>PDF / DOCX</td>
-          </tr>
-          <tr>
-            <td>Доверенность на представление интересов</td>
-            <td>Клиент</td>
-            <td>оригинал</td>
-          </tr>
-          <tr>
-            <td>Карточка компании (заявитель)</td>
-            <td>Клиент</td>
-            <td>PDF</td>
-          </tr>
-          <tr>
-            <td>Договор с производителем / инвойс</td>
-            <td>Клиент</td>
-            <td>PDF</td>
-          </tr>
-          <tr>
-            <td>Фото / каталог товара</td>
-            <td>Клиент</td>
-            <td>JPG / PDF</td>
-          </tr>
-        </tbody>
-      </table>
     </div>
   </div>
 </section>
