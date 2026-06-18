@@ -76,6 +76,71 @@
   }
   .key-facts dd.warm { color: var(--warm); }
   .key-facts dd.accent { color: var(--accent-soft); }
+
+  .usp-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 28px;
+  }
+  @media (max-width: 1000px) {
+    .usp-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 600px) {
+    .usp-grid { grid-template-columns: 1fr; }
+  }
+  .usp-item {
+    background: var(--ink-elev);
+    border: 1px solid var(--ink-line);
+    border-radius: 14px;
+    padding: 24px;
+  }
+  .usp-num {
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: 28px;
+    letter-spacing: -0.02em;
+    color: var(--accent-soft);
+    margin: 0 0 12px;
+    line-height: 1;
+  }
+  .usp-title {
+    font-family: var(--display);
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: -0.01em;
+    color: var(--fg-100);
+    margin: 0 0 8px;
+  }
+  .usp-desc {
+    font-family: var(--sans);
+    font-size: 13px;
+    color: var(--fg-400);
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  .takeaway {
+    background: var(--ink-elev);
+    border: 1px solid var(--accent);
+    border-radius: 14px;
+    padding: 28px 32px;
+    margin-top: 40px;
+  }
+  .takeaway-title {
+    font-family: var(--display);
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: -0.01em;
+    color: var(--accent-soft);
+    margin: 0 0 10px;
+  }
+  .takeaway p {
+    font-family: var(--sans);
+    font-size: 14px;
+    color: var(--fg-200);
+    line-height: 1.55;
+    margin: 0;
+  }
 </style>
 </head>
 <body>
@@ -215,6 +280,64 @@
   </div>
 </section>
 
+<!-- DOCS REQUIRED -->
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <h2 class="h-section">Что от вас<br><span class="soft">нужно</span></h2>
+      </div>
+      <div class="right">
+        Простой комплект документов. Если чего-то нет — поможем запросить у производителя.
+      </div>
+    </div>
+
+    <div class="prose reveal">
+      <table>
+        <thead>
+          <tr>
+            <th>Документ</th>
+            <th>Кто предоставляет</th>
+            <th>Формат</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Техническая спецификация товара</td>
+            <td>Производитель</td>
+            <td>PDF</td>
+          </tr>
+          <tr>
+            <td>Описание товара / функциональных характеристик</td>
+            <td>Производитель</td>
+            <td>PDF / DOCX</td>
+          </tr>
+          <tr>
+            <td>Доверенность на представление интересов</td>
+            <td>Клиент</td>
+            <td>оригинал</td>
+          </tr>
+          <tr>
+            <td>Карточка компании (заявитель)</td>
+            <td>Клиент</td>
+            <td>PDF</td>
+          </tr>
+          <tr>
+            <td>Договор с производителем / инвойс</td>
+            <td>Клиент</td>
+            <td>PDF</td>
+          </tr>
+          <tr>
+            <td>Фото / каталог товара</td>
+            <td>Клиент</td>
+            <td>JPG / PDF</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
 <!-- SUBSERVICES -->
 <section class="section" style="background:var(--ink-bg-2); border-top: 1px solid var(--ink-line); border-bottom: 1px solid var(--ink-line);">
   <div class="container">
@@ -228,7 +351,7 @@
     </div>
 
     <div class="subs-grid reveal">
-      <a href="service.html" class="sub-tile">
+      <a href="service-hub.html" class="sub-tile">
         <div class="sub-tile-icon">ТР</div>
         <div class="sub-tile-text">
           <h3 class="sub-tile-title">Сертификат ТР ТС / ТР ЕАЭС</h3>
@@ -237,7 +360,7 @@
         <span class="sub-tile-go"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12 L12 4 M12 4 H6 M12 4 V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></svg></span>
       </a>
 
-      <a href="service.html" class="sub-tile">
+      <a href="service-hub.html" class="sub-tile">
         <div class="sub-tile-icon">ДС</div>
         <div class="sub-tile-text">
           <h3 class="sub-tile-title">Декларация ТР ЕАЭС</h3>
@@ -246,7 +369,7 @@
         <span class="sub-tile-go"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12 L12 4 M12 4 H6 M12 4 V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></svg></span>
       </a>
 
-      <a href="service.html" class="sub-tile">
+      <a href="service-hub.html" class="sub-tile">
         <div class="sub-tile-icon">СГР</div>
         <div class="sub-tile-text">
           <h3 class="sub-tile-title">Свидетельство о госрегистрации</h3>
@@ -255,7 +378,7 @@
         <span class="sub-tile-go"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12 L12 4 M12 4 H6 M12 4 V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></svg></span>
       </a>
 
-      <a href="service.html" class="sub-tile">
+      <a href="service-hub.html" class="sub-tile">
         <div class="sub-tile-icon">ОП</div>
         <div class="sub-tile-text">
           <h3 class="sub-tile-title">Отказное письмо</h3>
@@ -264,7 +387,7 @@
         <span class="sub-tile-go"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12 L12 4 M12 4 H6 M12 4 V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></svg></span>
       </a>
 
-      <a href="service.html" class="sub-tile">
+      <a href="service-hub.html" class="sub-tile">
         <div class="sub-tile-icon">ОР</div>
         <div class="sub-tile-text">
           <h3 class="sub-tile-title">Отрицательное решение</h3>
@@ -273,7 +396,7 @@
         <span class="sub-tile-go"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12 L12 4 M12 4 H6 M12 4 V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></svg></span>
       </a>
 
-      <a href="service.html" class="sub-tile">
+      <a href="service-hub.html" class="sub-tile">
         <div class="sub-tile-icon">ОПС</div>
         <div class="sub-tile-text">
           <h3 class="sub-tile-title">Отказное письмо СГР</h3>
@@ -282,7 +405,7 @@
         <span class="sub-tile-go"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12 L12 4 M12 4 H6 M12 4 V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></svg></span>
       </a>
 
-      <a href="service.html" class="sub-tile">
+      <a href="service-hub.html" class="sub-tile">
         <div class="sub-tile-icon">ГР</div>
         <div class="sub-tile-text">
           <h3 class="sub-tile-title">Сертификат ГОСТ Р</h3>
@@ -291,7 +414,7 @@
         <span class="sub-tile-go"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12 L12 4 M12 4 H6 M12 4 V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></svg></span>
       </a>
 
-      <a href="service.html" class="sub-tile">
+      <a href="service-hub.html" class="sub-tile">
         <div class="sub-tile-icon">ДГ</div>
         <div class="sub-tile-text">
           <h3 class="sub-tile-title">Декларация ГОСТ Р</h3>
@@ -300,7 +423,7 @@
         <span class="sub-tile-go"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12 L12 4 M12 4 H6 M12 4 V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></svg></span>
       </a>
 
-      <a href="service.html" class="sub-tile">
+      <a href="service-hub.html" class="sub-tile">
         <div class="sub-tile-icon">СС</div>
         <div class="sub-tile-text">
           <h3 class="sub-tile-title">Сертификат связи</h3>
@@ -309,7 +432,7 @@
         <span class="sub-tile-go"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12 L12 4 M12 4 H6 M12 4 V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></svg></span>
       </a>
 
-      <a href="service.html" class="sub-tile">
+      <a href="service-hub.html" class="sub-tile">
         <div class="sub-tile-icon">ДС</div>
         <div class="sub-tile-text">
           <h3 class="sub-tile-title">Декларация связи</h3>
@@ -318,7 +441,7 @@
         <span class="sub-tile-go"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12 L12 4 M12 4 H6 M12 4 V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></svg></span>
       </a>
 
-      <a href="service.html" class="sub-tile">
+      <a href="service-hub.html" class="sub-tile">
         <div class="sub-tile-icon">ТБ</div>
         <div class="sub-tile-text">
           <h3 class="sub-tile-title">Сертификат ТБ (ПП 969)</h3>
@@ -327,7 +450,7 @@
         <span class="sub-tile-go"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12 L12 4 M12 4 H6 M12 4 V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></svg></span>
       </a>
 
-      <a href="service.html" class="sub-tile">
+      <a href="service-hub.html" class="sub-tile">
         <div class="sub-tile-icon">ДС</div>
         <div class="sub-tile-text">
           <h3 class="sub-tile-title">Добровольная сертификация</h3>
@@ -336,7 +459,7 @@
         <span class="sub-tile-go"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12 L12 4 M12 4 H6 M12 4 V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></svg></span>
       </a>
 
-      <a href="service.html" class="sub-tile">
+      <a href="service-hub.html" class="sub-tile">
         <div class="sub-tile-icon">ИСО</div>
         <div class="sub-tile-text">
           <h3 class="sub-tile-title">Сертификат ИСО 9001 / 14001</h3>
@@ -345,7 +468,7 @@
         <span class="sub-tile-go"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12 L12 4 M12 4 H6 M12 4 V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></svg></span>
       </a>
 
-      <a href="service.html" class="sub-tile">
+      <a href="service-hub.html" class="sub-tile">
         <div class="sub-tile-icon">ПБ</div>
         <div class="sub-tile-text">
           <h3 class="sub-tile-title">Пожарный сертификат</h3>
@@ -353,6 +476,98 @@
         </div>
         <span class="sub-tile-go"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12 L12 4 M12 4 H6 M12 4 V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></svg></span>
       </a>
+    </div>
+  </div>
+</section>
+
+<!-- USP -->
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal single">
+      <div>
+        <h2 class="h-section">Почему<br><span class="soft">CDX</span></h2>
+      </div>
+    </div>
+
+    <div class="usp-grid reveal">
+      <div class="usp-item">
+        <div class="usp-num">01</div>
+        <h3 class="usp-title">Фиксированная цена в договоре</h3>
+        <p class="usp-desc">Никаких доплат «по факту». Стоимость, названная на старте, фиксируется в договоре и не меняется.</p>
+      </div>
+      <div class="usp-item">
+        <div class="usp-num">02</div>
+        <h3 class="usp-title">Под ключ без вашего участия</h3>
+        <p class="usp-desc">Вы присылаете описание товара — мы берём на себя всё: сбор документов, перевод, подачу, сопровождение.</p>
+      </div>
+      <div class="usp-item">
+        <div class="usp-num">03</div>
+        <h3 class="usp-title">100% гарантия выдачи</h3>
+        <p class="usp-desc">Если документ невозможно получить по объективным причинам — возвращаем 100% оплаты. За 10 лет — 0 отказов по нашей вине.</p>
+      </div>
+      <div class="usp-item">
+        <div class="usp-num">04</div>
+        <h3 class="usp-title">40+ лабораторий-партнёров</h3>
+        <p class="usp-desc">Аккредитованные лаборатории по всем направлениям: от пожарной безопасности до радиоэлектроники и пищевой продукции.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TARIFFS -->
+<section class="section" style="background:var(--ink-bg-2); border-top: 1px solid var(--ink-line); border-bottom: 1px solid var(--ink-line);">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <h2 class="h-section">Тарифы<br><span class="soft">на оформление</span></h2>
+      </div>
+      <div class="right">
+        Цена зависит от срочности и сложности технической документации. Большинство заявок — стандартный тариф.
+      </div>
+    </div>
+
+    <div class="pricing reveal">
+      <div class="tariff">
+        <h3 class="tariff-name">Стандарт</h3>
+        <div class="tariff-price">35 000 <span class="from">₽</span></div>
+        <div class="tariff-unit">срок 18–25 дней</div>
+        <ul class="tariff-features">
+          <li>Проверка товара и подбор схемы</li>
+          <li>Подготовка комплекта документов</li>
+          <li>Подача в аккредитованную лабораторию</li>
+          <li>Регистрация в реестре</li>
+          <li>Перевод спецификаций (до 10 стр.)</li>
+        </ul>
+        <a href="#cta" class="btn-tariff">Выбрать</a>
+      </div>
+
+      <div class="tariff featured">
+        <h3 class="tariff-name">Срочный</h3>
+        <div class="tariff-price">55 000 <span class="from">₽</span></div>
+        <div class="tariff-unit">срок 10–14 дней</div>
+        <ul class="tariff-features">
+          <li>Всё из тарифа «Стандарт»</li>
+          <li>Приоритетная подача и очередь</li>
+          <li>Менеджер на сопровождении 24/7</li>
+          <li>Доплата за срочность включена</li>
+          <li>Расширенный перевод (до 30 стр.)</li>
+        </ul>
+        <a href="#cta" class="btn-tariff">Выбрать</a>
+      </div>
+
+      <div class="tariff">
+        <h3 class="tariff-name">Сложный кейс</h3>
+        <div class="tariff-price">от 85 000 <span class="from">₽</span></div>
+        <div class="tariff-unit">срок индивидуально</div>
+        <ul class="tariff-features">
+          <li>OEM / частные торговые марки</li>
+          <li>Получение разрешения производителя</li>
+          <li>Сопровождение нестандартных схем</li>
+          <li>Полная техническая экспертиза</li>
+          <li>Защита при запросе доп. материалов</li>
+        </ul>
+        <a href="#cta" class="btn-tariff">Обсудить</a>
+      </div>
     </div>
   </div>
 </section>
@@ -466,6 +681,16 @@
           Да, это одно из основных направлений. Оформляем декларации, СГР, отказные письма под требования конкретного маркетплейса. Знаем все нюансы их проверочных систем — заранее закладываем правильные коды и формулировки, чтобы карточка прошла модерацию с первого раза.
         </div>
       </details>
+    </div>
+  </div>
+</section>
+
+<!-- TAKEAWAY -->
+<section class="section">
+  <div class="container">
+    <div class="takeaway reveal">
+      <div class="takeaway-title">Вывод</div>
+      <p>Сертификация — обязательный этап для большинства товаров, попадающих под технические регламенты ЕАЭС. CDX закрывает весь цикл под ключ: от подбора схемы до регистрации документа в реестре. Срок — от 7 дней, фиксированная цена в договоре, гарантия выдачи или возврат.</p>
     </div>
   </div>
 </section>
